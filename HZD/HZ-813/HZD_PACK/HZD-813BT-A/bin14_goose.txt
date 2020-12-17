@@ -1,0 +1,247 @@
+[GOOSE Tx]
+numGoCb = 1
+
+[GoCB1] #本体模块
+[Common]
+GoCBRef = HZMTRPIT/LLN0$GO$gocb0
+AppID = HZMTRPIT/LLN0.gocb0
+DatSet = HZMTRPIT/LLN0$dsGOOSE1
+ConfRev = 1
+numDatSetEntries = 35
+FiberChNo = 1,10,11,12,13,14,2,3,4,5,6,7,8,9
+
+[DstAddr]
+Addr = 01-0C-CD-01-50-05
+Priority = 4
+VID = 0
+Appid = 5005
+MinTime = 2
+MaxTime = 5000
+
+[FCDA1] #GOOSE1接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind1$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_0
+ACT = 0
+
+[FCDA2] #GOOSE1接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind2$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_0
+ACT = 0
+
+[FCDA3] #GOOSE2接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind3$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_1
+ACT = 0
+
+[FCDA4] #GOOSE2接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind4$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_1
+ACT = 0
+
+[FCDA5] #GOOSE3接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO1$ST$Ind62$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_2
+ACT = 0
+
+[FCDA6] #GOOSE3接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO1$ST$Ind63$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_2
+ACT = 0
+
+[FCDA7] #GOOSE4接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO1$ST$Ind64$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_3
+ACT = 0
+
+[FCDA8] #GOOSE4接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind13$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_3
+ACT = 0
+
+[FCDA9] #GOOSE5接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind14$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_4
+ACT = 0
+
+[FCDA10] #GOOSE5接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind15$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_4
+ACT = 0
+
+[FCDA11] #GOOSE6接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind16$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_5
+ACT = 0
+
+[FCDA12] #GOOSE6接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind17$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_5
+ACT = 0
+
+[FCDA13] #GOOSE7接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind18$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_6
+ACT = 0
+
+[FCDA14] #GOOSE7接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind19$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_6
+ACT = 0
+
+[FCDA15] #GOOSE8接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind20$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_7
+ACT = 0
+
+[FCDA16] #GOOSE8接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind21$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_7
+ACT = 0
+
+[FCDA17] #GOOSE9接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind22$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_8
+ACT = 0
+
+[FCDA18] #GOOSE9接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind23$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_8
+ACT = 0
+
+[FCDA19] #GOOSE10接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind24$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_9
+ACT = 0
+
+[FCDA20] #GOOSE10接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind25$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_9
+ACT = 0
+
+[FCDA21] #GOOSE11接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind26$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_10
+ACT = 0
+
+[FCDA22] #GOOSE11接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind27$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_10
+ACT = 0
+
+[FCDA23] #GOOSE12接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind28$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_11
+ACT = 0
+
+[FCDA24] #GOOSE12接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind29$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_11
+ACT = 0
+
+[FCDA25] #GOOSE13接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind30$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_12
+ACT = 0
+
+[FCDA26] #GOOSE13接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind31$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_12
+ACT = 0
+
+[FCDA27] #GOOSE14接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind32$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_13
+ACT = 0
+
+[FCDA28] #GOOSE14接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind33$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_13
+ACT = 0
+
+[FCDA29] #GOOSE15接收A网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind34$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_14
+ACT = 0
+
+[FCDA30] #GOOSE15接收B网断链
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind35$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_14
+ACT = 0
+
+[FCDA31] #GOOSE总告警
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind5$stVal
+Type = Bool
+InVarName = B01.goose1.bjj
+ACT = 0
+
+[FCDA32] #B02_GOOSE总告警
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind36$stVal
+Type = Bool
+InVarName = B02.goose1.bjj
+ACT = 0
+
+[FCDA33] #光耦电源异常
+Ref = HZMTRPIT/DEVAlmGGIO1$ST$Ind11$stVal
+Type = Bool
+InVarName = B01.BI1.opt_err
+ACT = 0
+
+[FCDA34] #运行异常
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind9$stVal
+Type = Bool
+InVarName = B01.BS_BJ.bjj_sum
+ACT = 0
+
+[FCDA35] #装置故障
+Ref = HZMTRPIT/DEVAlmGGIO2$ST$Ind10$stVal
+Type = Bool
+InVarName = B01.BS_BJ.bsj_sum
+ACT = 0
+
+[GOOSE Rx]
+numGoCb = 0
+numInput = 0
+
+[SMV Tx]
+numSmvCb = 0
+
+[SMV Rx]
+numSmvCb = 0
+numInput = 0
+
+[FILE INFO]
+IcdCrc = 88A4488B
+
+[Private Info]
+slotId = B01
+fileCrc = D6FBBB30

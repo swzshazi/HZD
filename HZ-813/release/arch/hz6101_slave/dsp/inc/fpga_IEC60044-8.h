@@ -1,0 +1,508 @@
+#include "fpga_base.h"
+
+#ifndef _IEC60044_8_
+#define _IEC60044_8_
+
+//baud rate
+#define IEC_BAUDRATE_10M				0x0000		// 10 Mbps
+#define IEC_BAUDRATE_5M					0x0001		// 5 Mbps
+#define IEC_BAUDRATE_2M5				0x0002		// 2.5 Mbps
+#define IEC_BAUDRATE_14M				0x0003		// 14 Mbps
+
+
+#define IEC_FRAME_HEAD					0x7E7E
+#define IEC_FRAME_EOF					0x55AA
+
+
+#define OPT_LOGIC_POSITIVE			    0x0000
+#define OPT_LOGIC_NEGATIVE				0x0040
+
+
+#define CTRLWORD_TX_ON_TIME             0x0000          
+#define CTRLWORD_TX_AT_ONCE             0x0004         
+
+
+#define FPGA_RX_ENA_BIT                 0x0080
+#define FPGA_RX_DIS_BIT                 0xFF7F
+
+
+#define FPGA_RX_TIMEOUT_BIT             0x01
+#define FPGA_RX_LINKERR_BIT             0x02
+
+
+#define FPGA_TX_ERROR_BIT               0x01
+
+
+#define FPGA_TX_ENA_BIT                 0x0080
+#define FPGA_TX_DIS_BIT                 0xFF7F
+
+
+#define FRAME_LEN_32                    32
+#define FRAME_LEN_48                    48
+#define FRAME_LEN_64                    64
+
+
+#define IEC_RXMODULE1_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0000*2)
+#define IEC_RXMODULE1_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0001*2)
+#define IEC_RXMODULE1_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0002*2)
+#define IEC_RXMODULE1_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0003*2)
+#define IEC_RXMODULE1_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0004*2)
+#define IEC_RXMODULE1_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0008*2)
+#define IEC_RXMODULE1_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0009*2)
+#define IEC_RXMODULE1_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x000A*2)
+#define IEC_RXMODULE1_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x000B*2)
+#define IEC_RXMODULE1_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x000C*2)
+
+#define IEC_RXMODULE2_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0010*2)
+#define IEC_RXMODULE2_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0011*2)
+#define IEC_RXMODULE2_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0012*2)
+#define IEC_RXMODULE2_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0013*2)
+#define IEC_RXMODULE2_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0014*2)
+#define IEC_RXMODULE2_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0018*2)
+#define IEC_RXMODULE2_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0019*2)
+#define IEC_RXMODULE2_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x001A*2)
+#define IEC_RXMODULE2_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x001B*2)
+#define IEC_RXMODULE2_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x001C*2)
+                                                                                  
+#define IEC_RXMODULE3_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0020*2)
+#define IEC_RXMODULE3_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0021*2)
+#define IEC_RXMODULE3_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0022*2)
+#define IEC_RXMODULE3_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0023*2)
+#define IEC_RXMODULE3_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0024*2)
+#define IEC_RXMODULE3_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0028*2)
+#define IEC_RXMODULE3_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0029*2)
+#define IEC_RXMODULE3_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x002A*2)
+#define IEC_RXMODULE3_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x002B*2)
+#define IEC_RXMODULE3_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x002C*2)
+                                                                                  
+#define IEC_RXMODULE4_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0030*2)
+#define IEC_RXMODULE4_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0031*2)
+#define IEC_RXMODULE4_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0032*2)
+#define IEC_RXMODULE4_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0033*2)
+#define IEC_RXMODULE4_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0034*2)
+#define IEC_RXMODULE4_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0038*2)
+#define IEC_RXMODULE4_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0039*2)
+#define IEC_RXMODULE4_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x003A*2)
+#define IEC_RXMODULE4_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x003B*2)
+#define IEC_RXMODULE4_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x003C*2)
+                                                                                  
+#define IEC_RXMODULE5_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0040*2)
+#define IEC_RXMODULE5_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0041*2)
+#define IEC_RXMODULE5_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0042*2)
+#define IEC_RXMODULE5_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0043*2)
+#define IEC_RXMODULE5_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0044*2)
+#define IEC_RXMODULE5_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0048*2)
+#define IEC_RXMODULE5_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0049*2)
+#define IEC_RXMODULE5_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x004A*2)
+#define IEC_RXMODULE5_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x004B*2)
+#define IEC_RXMODULE5_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x004C*2)
+                                                                                  
+#define IEC_RXMODULE6_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0050*2)
+#define IEC_RXMODULE6_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0051*2)
+#define IEC_RXMODULE6_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0052*2)
+#define IEC_RXMODULE6_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0053*2)
+#define IEC_RXMODULE6_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0054*2)
+#define IEC_RXMODULE6_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0058*2)
+#define IEC_RXMODULE6_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0059*2)
+#define IEC_RXMODULE6_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x005A*2)
+#define IEC_RXMODULE6_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x005B*2)
+#define IEC_RXMODULE6_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x005C*2)
+                                                                                  
+#define IEC_RXMODULE7_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0060*2)
+#define IEC_RXMODULE7_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0061*2)
+#define IEC_RXMODULE7_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0062*2)
+#define IEC_RXMODULE7_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0063*2)
+#define IEC_RXMODULE7_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0064*2)
+#define IEC_RXMODULE7_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0068*2)
+#define IEC_RXMODULE7_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0069*2)
+#define IEC_RXMODULE7_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x006A*2)
+#define IEC_RXMODULE7_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x006B*2)
+#define IEC_RXMODULE7_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x006C*2)
+                                                                                  
+#define IEC_RXMODULE8_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0070*2)
+#define IEC_RXMODULE8_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0071*2)
+#define IEC_RXMODULE8_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0072*2)
+#define IEC_RXMODULE8_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0073*2)
+#define IEC_RXMODULE8_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0074*2)
+#define IEC_RXMODULE8_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0078*2)
+#define IEC_RXMODULE8_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0079*2)
+#define IEC_RXMODULE8_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x007A*2)
+#define IEC_RXMODULE8_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x007B*2)
+#define IEC_RXMODULE8_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x007C*2)
+
+#define IEC_RXMODULE9_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0080*2)
+#define IEC_RXMODULE9_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0081*2)
+#define IEC_RXMODULE9_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0082*2)
+#define IEC_RXMODULE9_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0083*2)
+#define IEC_RXMODULE9_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0084*2)
+#define IEC_RXMODULE9_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0088*2)
+#define IEC_RXMODULE9_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0089*2)
+#define IEC_RXMODULE9_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x008A*2)
+#define IEC_RXMODULE9_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x008B*2)
+#define IEC_RXMODULE9_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x008C*2)
+
+#define IEC_RXMODULE10_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0090*2)
+#define IEC_RXMODULE10_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0091*2)
+#define IEC_RXMODULE10_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0092*2)
+#define IEC_RXMODULE10_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0093*2)
+#define IEC_RXMODULE10_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0094*2)
+#define IEC_RXMODULE10_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0098*2)
+#define IEC_RXMODULE10_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0099*2)
+#define IEC_RXMODULE10_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x009A*2)
+#define IEC_RXMODULE10_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x009B*2)
+#define IEC_RXMODULE10_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x009C*2)
+
+#define IEC_RXMODULE11_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00A0*2)
+#define IEC_RXMODULE11_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00A1*2)
+#define IEC_RXMODULE11_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00A2*2)
+#define IEC_RXMODULE11_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00A3*2)
+#define IEC_RXMODULE11_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00A4*2)
+#define IEC_RXMODULE11_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00A8*2)
+#define IEC_RXMODULE11_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00A9*2)
+#define IEC_RXMODULE11_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00AA*2)
+#define IEC_RXMODULE11_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00AB*2)
+#define IEC_RXMODULE11_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00AC*2)
+
+#define IEC_RXMODULE12_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00B0*2)
+#define IEC_RXMODULE12_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00B1*2)
+#define IEC_RXMODULE12_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00B2*2)
+#define IEC_RXMODULE12_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00B3*2)
+#define IEC_RXMODULE12_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00B4*2)
+#define IEC_RXMODULE12_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00B8*2)
+#define IEC_RXMODULE12_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00B9*2)
+#define IEC_RXMODULE12_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00BA*2)
+#define IEC_RXMODULE12_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00BB*2)
+#define IEC_RXMODULE12_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00BC*2)
+
+#define IEC_RXMODULE13_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00C0*2)
+#define IEC_RXMODULE13_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00C1*2)
+#define IEC_RXMODULE13_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00C2*2)
+#define IEC_RXMODULE13_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00C3*2)
+#define IEC_RXMODULE13_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00C4*2)
+#define IEC_RXMODULE13_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00C8*2)
+#define IEC_RXMODULE13_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00C9*2)
+#define IEC_RXMODULE13_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00CA*2)
+#define IEC_RXMODULE13_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00CB*2)
+#define IEC_RXMODULE13_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00CC*2)
+
+#define IEC_RXMODULE14_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00D0*2)
+#define IEC_RXMODULE14_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00D1*2)
+#define IEC_RXMODULE14_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00D2*2)
+#define IEC_RXMODULE14_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00D3*2)
+#define IEC_RXMODULE14_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00D4*2)
+#define IEC_RXMODULE14_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00D8*2)
+#define IEC_RXMODULE14_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00D9*2)
+#define IEC_RXMODULE14_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00DA*2)
+#define IEC_RXMODULE14_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00DB*2)
+#define IEC_RXMODULE14_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00DC*2)
+
+#define IEC_RXMODULE15_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00E0*2)
+#define IEC_RXMODULE15_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00E1*2)
+#define IEC_RXMODULE15_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00E2*2)
+#define IEC_RXMODULE15_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00E3*2)
+#define IEC_RXMODULE15_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00E4*2)
+#define IEC_RXMODULE15_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00E8*2)
+#define IEC_RXMODULE15_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00E9*2)
+#define IEC_RXMODULE15_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00EA*2)
+#define IEC_RXMODULE15_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00EB*2)
+#define IEC_RXMODULE15_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00EC*2)
+
+#define IEC_RXMODULE16_CTRLREG       	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00F0*2)
+#define IEC_RXMODULE16_TIMEOUT_SETTING	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00F1*2)
+#define IEC_RXMODULE16_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00F2*2)
+#define IEC_RXMODULE16_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00F3*2)
+#define IEC_RXMODULE16_STATUSREG     	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00F4*2)
+#define IEC_RXMODULE16_ALL_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00F8*2)
+#define IEC_RXMODULE16_OK_CNT		    (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00F9*2)
+#define IEC_RXMODULE16_FAIL_CNT			(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00FA*2)
+#define IEC_RXMODULE16_TIMEOUT_CNT		(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00FB*2)
+#define IEC_RXMODULE16_FRAME_LOST_CNT	(volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x00FC*2)
+
+
+#define IEC_RX_VERSION_DATE             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0104*2)
+#define IEC_RX_VERSION_YEAR             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0105*2)
+#define IEC_RX_VERSION                  (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0106*2)
+#define IEC_DMA_SEND_CNT                (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0108*2)
+#define IEC_DMA_FIFO_ERR_CNT            (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x0109*2)
+#define IEC_RXMODULE1_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01E0*2)
+#define IEC_RXMODULE2_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01E2*2)
+#define IEC_RXMODULE3_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01E4*2)
+#define IEC_RXMODULE4_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01E6*2)
+#define IEC_RXMODULE5_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01E8*2)
+#define IEC_RXMODULE6_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01EA*2)
+#define IEC_RXMODULE7_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01EC*2)
+#define IEC_RXMODULE8_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01EE*2)
+#define IEC_RXMODULE9_DATA              (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01F0*2)
+#define IEC_RXMODULE10_DATA             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01F2*2)
+#define IEC_RXMODULE11_DATA             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01F4*2)
+#define IEC_RXMODULE12_DATA             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01F6*2)
+#define IEC_RXMODULE13_DATA             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01F8*2)
+#define IEC_RXMODULE14_DATA             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01FA*2)
+#define IEC_RXMODULE15_DATA             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01FC*2)
+#define IEC_RXMODULE16_DATA             (volatile Uint16 *)(FPGA_IEC_RXMOD_ADDR+0x01FE*2)
+
+
+#define IEC_TXMODULE1_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0000*2)
+#define IEC_TXMODULE1_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0001*2)
+#define IEC_TXMODULE1_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0002*2)
+#define IEC_TXMODULE1_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0004*2)
+#define IEC_TXMODULE1_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0008*2)
+#define IEC_TXMODULE1_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0009*2)
+#define IEC_TXMODULE1_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x000A*2)
+#define IEC_TXMODULE1_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x000B*2)
+#define IEC_TXMODULE1_CACHE_FULL_CNT    (volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x000C*2)
+#define IEC_TXMODULE1_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x000D*2)
+#define IEC_TXMODULE1_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x000E*2)
+
+#define IEC_TXMODULE2_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0010*2)
+#define IEC_TXMODULE2_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0011*2)
+#define IEC_TXMODULE2_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0012*2)
+#define IEC_TXMODULE2_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0014*2)
+#define IEC_TXMODULE2_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0018*2)
+#define IEC_TXMODULE2_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0019*2)
+#define IEC_TXMODULE2_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x001A*2)
+#define IEC_TXMODULE2_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x001B*2)
+#define IEC_TXMODULE2_CACHE_FULL_CNT    (volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x001C*2)
+#define IEC_TXMODULE2_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x001D*2)
+#define IEC_TXMODULE2_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x001E*2)
+
+#define IEC_TXMODULE3_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0020*2)
+#define IEC_TXMODULE3_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0021*2)
+#define IEC_TXMODULE3_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0022*2)
+#define IEC_TXMODULE3_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0024*2)
+#define IEC_TXMODULE3_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0028*2)
+#define IEC_TXMODULE3_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0029*2)
+#define IEC_TXMODULE3_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x002A*2)
+#define IEC_TXMODULE3_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x002B*2)
+#define IEC_TXMODULE3_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x002C*2)
+#define IEC_TXMODULE3_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x002D*2)
+#define IEC_TXMODULE3_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x002E*2)
+
+#define IEC_TXMODULE4_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0030*2)
+#define IEC_TXMODULE4_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0031*2)
+#define IEC_TXMODULE4_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0032*2)
+#define IEC_TXMODULE4_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0034*2)
+#define IEC_TXMODULE4_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0038*2)
+#define IEC_TXMODULE4_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0039*2)
+#define IEC_TXMODULE4_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x003A*2)
+#define IEC_TXMODULE4_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x003B*2)
+#define IEC_TXMODULE4_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x003C*2)
+#define IEC_TXMODULE4_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x003D*2)
+#define IEC_TXMODULE4_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x003E*2)
+                                                                                 
+#define IEC_TXMODULE5_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0040*2)
+#define IEC_TXMODULE5_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0041*2)
+#define IEC_TXMODULE5_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0042*2)
+#define IEC_TXMODULE5_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0044*2)
+#define IEC_TXMODULE5_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0048*2)
+#define IEC_TXMODULE5_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0049*2)
+#define IEC_TXMODULE5_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x004A*2)
+#define IEC_TXMODULE5_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x004B*2)
+#define IEC_TXMODULE5_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x004C*2)
+#define IEC_TXMODULE5_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x004D*2)
+#define IEC_TXMODULE5_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x004E*2)
+                                                                                  
+#define IEC_TXMODULE6_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0050*2)
+#define IEC_TXMODULE6_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0051*2)
+#define IEC_TXMODULE6_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0052*2)
+#define IEC_TXMODULE6_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0054*2)
+#define IEC_TXMODULE6_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0058*2)
+#define IEC_TXMODULE6_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0059*2)
+#define IEC_TXMODULE6_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x005A*2)
+#define IEC_TXMODULE6_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x005B*2)
+#define IEC_TXMODULE6_CACHE_FULL_CNT    (volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x005C*2)
+#define IEC_TXMODULE6_TX_ERR_CNT	    (volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x005D*2)
+#define IEC_TXMODULE6_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x005E*2)
+                                                                                  
+#define IEC_TXMODULE7_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0060*2)
+#define IEC_TXMODULE7_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0061*2)
+#define IEC_TXMODULE7_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0062*2)
+#define IEC_TXMODULE7_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0064*2)
+#define IEC_TXMODULE7_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0068*2)
+#define IEC_TXMODULE7_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0069*2)
+#define IEC_TXMODULE7_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x006A*2)
+#define IEC_TXMODULE7_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x006B*2)
+#define IEC_TXMODULE7_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x006C*2)
+#define IEC_TXMODULE7_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x006D*2)
+#define IEC_TXMODULE7_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x006E*2)
+                                                                                  
+#define IEC_TXMODULE8_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0070*2)
+#define IEC_TXMODULE8_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0071*2)
+#define IEC_TXMODULE8_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0072*2)
+#define IEC_TXMODULE8_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0074*2)
+#define IEC_TXMODULE8_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0078*2)
+#define IEC_TXMODULE8_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0079*2)
+#define IEC_TXMODULE8_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x007A*2)
+#define IEC_TXMODULE8_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x007B*2)
+#define IEC_TXMODULE8_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x007C*2)
+#define IEC_TXMODULE8_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x007D*2)
+#define IEC_TXMODULE8_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x007E*2)
+
+#define IEC_TXMODULE9_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0080*2)
+#define IEC_TXMODULE9_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0081*2)
+#define IEC_TXMODULE9_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0082*2)
+#define IEC_TXMODULE9_STATUSREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0084*2)
+#define IEC_TXMODULE9_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0088*2)
+#define IEC_TXMODULE9_TX_OK_CNT			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0089*2)
+#define IEC_TXMODULE9_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x008A*2)
+#define IEC_TXMODULE9_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x008B*2)
+#define IEC_TXMODULE9_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x008C*2)
+#define IEC_TXMODULE9_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x008D*2)
+#define IEC_TXMODULE9_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x008E*2)
+
+#define IEC_TXMODULE10_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0090*2)
+#define IEC_TXMODULE10_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0091*2)
+#define IEC_TXMODULE10_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0092*2)
+#define IEC_TXMODULE10_STATUSREG		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0094*2)
+#define IEC_TXMODULE10_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0098*2)
+#define IEC_TXMODULE10_TX_OK_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0099*2)
+#define IEC_TXMODULE10_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x009A*2)
+#define IEC_TXMODULE10_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x009B*2)
+#define IEC_TXMODULE10_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x009C*2)
+#define IEC_TXMODULE10_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x009D*2)
+#define IEC_TXMODULE10_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x009E*2)
+
+#define IEC_TXMODULE11_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00A0*2)
+#define IEC_TXMODULE11_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00A1*2)
+#define IEC_TXMODULE11_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00A2*2)
+#define IEC_TXMODULE11_STATUSREG		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00A4*2)
+#define IEC_TXMODULE11_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00A8*2)
+#define IEC_TXMODULE11_TX_OK_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00A9*2)
+#define IEC_TXMODULE11_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00AA*2)
+#define IEC_TXMODULE11_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00AB*2)
+#define IEC_TXMODULE11_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00AC*2)
+#define IEC_TXMODULE11_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00AD*2)
+#define IEC_TXMODULE11_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00AE*2)
+
+#define IEC_TXMODULE12_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00B0*2)
+#define IEC_TXMODULE12_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00B1*2)
+#define IEC_TXMODULE12_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00B2*2)
+#define IEC_TXMODULE12_STATUSREG		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00B4*2)
+#define IEC_TXMODULE12_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00B8*2)
+#define IEC_TXMODULE12_TX_OK_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00B9*2)
+#define IEC_TXMODULE12_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00BA*2)
+#define IEC_TXMODULE12_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00BB*2)
+#define IEC_TXMODULE12_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00BC*2)
+#define IEC_TXMODULE12_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00BD*2)
+#define IEC_TXMODULE12_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00BE*2)
+
+#define IEC_TXMODULE13_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00C0*2)
+#define IEC_TXMODULE13_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00C1*2)
+#define IEC_TXMODULE13_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00C2*2)
+#define IEC_TXMODULE13_STATUSREG		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00C4*2)
+#define IEC_TXMODULE13_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00C8*2)
+#define IEC_TXMODULE13_TX_OK_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00C9*2)
+#define IEC_TXMODULE13_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00CA*2)
+#define IEC_TXMODULE13_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00CB*2)
+#define IEC_TXMODULE13_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00CC*2)
+#define IEC_TXMODULE13_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00CD*2)
+#define IEC_TXMODULE13_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00CE*2)
+
+#define IEC_TXMODULE14_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00D0*2)
+#define IEC_TXMODULE14_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00D1*2)
+#define IEC_TXMODULE14_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00D2*2)
+#define IEC_TXMODULE14_STATUSREG		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00D4*2)
+#define IEC_TXMODULE14_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00D8*2)
+#define IEC_TXMODULE14_TX_OK_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00D9*2)
+#define IEC_TXMODULE14_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00DA*2)
+#define IEC_TXMODULE14_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00DB*2)
+#define IEC_TXMODULE14_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00DC*2)
+#define IEC_TXMODULE14_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00DD*2)
+#define IEC_TXMODULE14_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00DE*2)
+
+#define IEC_TXMODULE15_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00E0*2)
+#define IEC_TXMODULE15_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00E1*2)
+#define IEC_TXMODULE15_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00E2*2)
+#define IEC_TXMODULE15_STATUSREG		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00E4*2)
+#define IEC_TXMODULE15_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00E8*2)
+#define IEC_TXMODULE15_TX_OK_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00E9*2)
+#define IEC_TXMODULE15_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00EA*2)
+#define IEC_TXMODULE15_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00EB*2)
+#define IEC_TXMODULE15_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00EC*2)
+#define IEC_TXMODULE15_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00ED*2)
+#define IEC_TXMODULE15_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00EE*2)
+
+#define IEC_TXMODULE16_CTRLREG			(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00F0*2)
+#define IEC_TXMODULE16_BLOCK_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00F1*2)
+#define IEC_TXMODULE16_TOTAL_WORD_NUM	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00F2*2)
+#define IEC_TXMODULE16_STATUSREG		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00F4*2)
+#define IEC_TXMODULE16_DMA_RCV_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00F8*2)
+#define IEC_TXMODULE16_TX_OK_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00F9*2)
+#define IEC_TXMODULE16_CRC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00FA*2)
+#define IEC_TXMODULE16_STR_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00FB*2)
+#define IEC_TXMODULE16_CACHE_FULL_CNT	(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00FC*2)
+#define IEC_TXMODULE16_TX_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00FD*2)
+#define IEC_TXMODULE16_TIC_ERR_CNT		(volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x00FE*2)
+
+
+#define IEC_TX_VERSION_DATE             (volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0104*2)
+#define IEC_TX_VERSION_YEAR             (volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0105*2)
+#define IEC_TX_VERSION                  (volatile Uint16 *)(FPGA_IEC_TXMOD_ADDR+0x0106*2)
+
+
+#define IEC_TX1_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0000)<<2))
+#define IEC_TX2_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0100)<<2))
+#define IEC_TX3_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0200)<<2))
+#define IEC_TX4_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0300)<<2))
+#define IEC_TX5_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0400)<<2))
+#define IEC_TX6_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0500)<<2))
+#define IEC_TX7_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0600)<<2))
+#define IEC_TX8_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0700)<<2))
+#define IEC_TX9_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0800)<<2))
+#define IEC_TX10_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0900)<<2))
+#define IEC_TX11_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0A00)<<2))
+#define IEC_TX12_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0B00)<<2))
+#define IEC_TX13_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0C00)<<2))
+#define IEC_TX14_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0D00)<<2))
+#define IEC_TX15_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0E00)<<2))
+#define IEC_TX16_CACHE			        (volatile Uint32 *)(IEC_TX_START+((0x0F00)<<2))
+
+
+typedef struct
+{
+	volatile Uint16 clk_sel:2;
+	volatile Uint16 reserved_1:4;
+	volatile Uint16 opt_logic:1;
+	volatile Uint16 enable:1;
+    volatile Uint16 reserved_2:8;
+	volatile Uint16 timeout_setting;
+    volatile Uint16 block_word_num;
+    volatile Uint16 total_word_num;
+    volatile Uint16 resv[4];
+    volatile Uint16 rx_status;
+}IEC_60044_8_RX_CFG_REG;
+
+
+typedef struct
+{
+	volatile Uint16 clk_sel:2;
+	volatile Uint16 tx_mode:1;
+    volatile Uint16 chc_enable:1;
+    volatile Uint16 reserved_1:2;
+	volatile Uint16 opt_logic:1;
+	volatile Uint16 enable:1;
+	volatile Uint16 reserved_2:8;
+	volatile Uint16 block_word_num;
+    volatile Uint16 total_word_num;
+    volatile Uint16 tx_status;
+}IEC_60044_8_TX_CFG_REG;
+
+
+typedef union  
+{
+    Uint32 u32;
+    struct
+    {
+        Uint16 lo : 16;
+        Uint16 hi : 16;
+    } u16;
+}DATA_32BIT_TYPE;
+
+typedef union
+{
+    Uint32 u32[32];
+    Uint16 u16[64];
+} CHKSUM_UN_TYPE;
+
+
+#endif

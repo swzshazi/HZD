@@ -1,0 +1,2651 @@
+[
+    {
+        "targets": [
+            "B01.Lcd.trip_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.Lcd.rec_manual_trig_flag",
+                "options": [
+                    "50",
+                    "22",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.Wave.BI_trigger_DFR",
+                "options": [
+                    "50",
+                    "25",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.DataMerge1.sv_rec_flag",
+                "options": [
+                    "179",
+                    "201",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.DataMerge1.sv_rec_flag",
+                "options": [
+                    "179",
+                    "202",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelI0.amp_rec_flag",
+                "options": [
+                    "180",
+                    "1",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.TphaseDelIp.amp_rec_flag",
+                "options": [
+                    "180",
+                    "2",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.TphaseDelIm.amp_rec_flag",
+                "options": [
+                    "180",
+                    "3",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelIn.amp_rec_flag",
+                "options": [
+                    "180",
+                    "4",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelIbak.amp_rec_flag",
+                "options": [
+                    "180",
+                    "5",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.TphaseDelUp.amp_rec_flag",
+                "options": [
+                    "180",
+                    "6",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelU0.amp_rec_flag",
+                "options": [
+                    "180",
+                    "7",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelI0.amp_rec_flag",
+                "options": [
+                    "180",
+                    "8",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.TphaseDelIp.amp_rec_flag",
+                "options": [
+                    "180",
+                    "9",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelIn.amp_rec_flag",
+                "options": [
+                    "180",
+                    "10",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelIbak.amp_rec_flag",
+                "options": [
+                    "180",
+                    "11",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.TphaseDelUp.amp_rec_flag",
+                "options": [
+                    "180",
+                    "12",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.TphaseDelUm.amp_rec_flag",
+                "options": [
+                    "180",
+                    "13",
+                    "",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelU0.amp_rec_flag",
+                "options": [
+                    "180",
+                    "14",
+                    "",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.selfsuperv_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.master.board_config_error",
+                "options": [
+                    "58",
+                    "1"
+                ]
+            },
+            {
+                "id": "B01.Event.setting_out_of_range",
+                "options": [
+                    "58",
+                    "2"
+                ]
+            },
+            {
+                "id": "B01.master.setting_need_confirm",
+                "options": [
+                    "58",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.master.setting_error",
+                "options": [
+                    "58",
+                    "4"
+                ]
+            },
+            {
+                "id": "B01.master.version_error",
+                "options": [
+                    "58",
+                    "5"
+                ]
+            },
+            {
+                "id": "B01.TestBoard1.test_strap_bjj",
+                "options": [
+                    "58",
+                    "6"
+                ]
+            },
+            {
+                "id": "B01.Lcd.section_error",
+                "options": [
+                    "58",
+                    "7"
+                ]
+            },
+            {
+                "id": "B01.Lcd.goose_test_enter",
+                "options": [
+                    "58",
+                    "8"
+                ]
+            },
+            {
+                "id": "B01.Or24.f_func_out",
+                "options": [
+                    "58",
+                    "9"
+                ]
+            },
+            {
+                "id": "B01.goose.test_ns",
+                "options": [
+                    "58",
+                    "10"
+                ]
+            },
+            {
+                "id": "B01.AdcDma.ptr_err",
+                "options": [
+                    "58",
+                    "11"
+                ]
+            },
+            {
+                "id": "B01.AdcDma.stru_err",
+                "options": [
+                    "58",
+                    "12"
+                ]
+            },
+            {
+                "id": "B01.AdcDma.index_err",
+                "options": [
+                    "58",
+                    "13"
+                ]
+            },
+            {
+                "id": "B02.AdcDma.ptr_err",
+                "options": [
+                    "58",
+                    "14"
+                ]
+            },
+            {
+                "id": "B02.AdcDma.stru_err",
+                "options": [
+                    "58",
+                    "15"
+                ]
+            },
+            {
+                "id": "B02.AdcDma.index_err",
+                "options": [
+                    "58",
+                    "16"
+                ]
+            },
+            {
+                "id": "B01.TphaseDelIp.out_err",
+                "options": [
+                    "58",
+                    "17"
+                ]
+            },
+            {
+                "id": "B01.TphaseDelIm.out_err",
+                "options": [
+                    "58",
+                    "18"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelI0.out_err",
+                "options": [
+                    "58",
+                    "19"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelIn.out_err",
+                "options": [
+                    "58",
+                    "20"
+                ]
+            },
+            {
+                "id": "B01.TphaseDelUp.out_err",
+                "options": [
+                    "58",
+                    "21"
+                ]
+            },
+            {
+                "id": "B02.TphaseDelUm.out_err",
+                "options": [
+                    "58",
+                    "22"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelU0.out_err",
+                "options": [
+                    "58",
+                    "23"
+                ]
+            },
+            {
+                "id": "B02.TphaseDelIp.out_err",
+                "options": [
+                    "58",
+                    "24"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelI0.out_err",
+                "options": [
+                    "58",
+                    "25"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelIn.out_err",
+                "options": [
+                    "58",
+                    "26"
+                ]
+            },
+            {
+                "id": "B02.TphaseDelUp.out_err",
+                "options": [
+                    "58",
+                    "27"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelU0.out_err",
+                "options": [
+                    "58",
+                    "28"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelI0.data_err",
+                "options": [
+                    "58",
+                    "29"
+                ]
+            },
+            {
+                "id": "B01.TphaseDelIp.data_err",
+                "options": [
+                    "58",
+                    "30"
+                ]
+            },
+            {
+                "id": "B01.TphaseDelIm.data_err",
+                "options": [
+                    "58",
+                    "31"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelIn.data_err",
+                "options": [
+                    "58",
+                    "32"
+                ]
+            },
+            {
+                "id": "B01.AphaseDelIbak.data_err",
+                "options": [
+                    "58",
+                    "33"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelI0.data_err",
+                "options": [
+                    "58",
+                    "34"
+                ]
+            },
+            {
+                "id": "B02.TphaseDelIp.data_err",
+                "options": [
+                    "58",
+                    "35"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelIn.data_err",
+                "options": [
+                    "58",
+                    "36"
+                ]
+            },
+            {
+                "id": "B02.AphaseDelIbak.data_err",
+                "options": [
+                    "58",
+                    "37"
+                ]
+            },
+            {
+                "id": "B01.CompareIa.amp_err",
+                "options": [
+                    "58",
+                    "38"
+                ]
+            },
+            {
+                "id": "B01.CompareIb.amp_err",
+                "options": [
+                    "58",
+                    "39"
+                ]
+            },
+            {
+                "id": "B01.CompareIc.amp_err",
+                "options": [
+                    "58",
+                    "40"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.link_a_err_1",
+                "options": [
+                    "58",
+                    "41"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.link_a_err_2",
+                "options": [
+                    "58",
+                    "42"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.link_b_err_1",
+                "options": [
+                    "58",
+                    "43"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.link_b_err_2",
+                "options": [
+                    "58",
+                    "44"
+                ]
+            },
+            {
+                "id": "B02.TestBoard1.test_strap_bjj",
+                "options": [
+                    "58",
+                    "45"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.smv_wrong",
+                "options": [
+                    "58",
+                    "46"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.delay_err_1",
+                "options": [
+                    "58",
+                    "47"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.delay_err_2",
+                "options": [
+                    "58",
+                    "48"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.delay_out_1",
+                "options": [
+                    "58",
+                    "49"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.delay_out_2",
+                "options": [
+                    "58",
+                    "50"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.test_bit_1",
+                "options": [
+                    "58",
+                    "51"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.test_bit_2",
+                "options": [
+                    "58",
+                    "52"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.smp_set_repair_1",
+                "options": [
+                    "58",
+                    "53"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.smp_set_repair_2",
+                "options": [
+                    "58",
+                    "54"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.frame_set_repair_1",
+                "options": [
+                    "58",
+                    "55"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.frame_set_repair_2",
+                "options": [
+                    "58",
+                    "56"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.out_set_repair_1",
+                "options": [
+                    "58",
+                    "57"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.out_set_repair_2",
+                "options": [
+                    "58",
+                    "58"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.syn_set_repair_1",
+                "options": [
+                    "58",
+                    "59"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.syn_set_repair_2",
+                "options": [
+                    "58",
+                    "60"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.data_invalid_flag",
+                "options": [
+                    "58",
+                    "61"
+                ]
+            },
+            {
+                "id": "B02.SmvDeal1.data_invalid_flag",
+                "options": [
+                    "58",
+                    "62"
+                ]
+            },
+            {
+                "id": "B01.Or161.f_func_out",
+                "options": [
+                    "58",
+                    "65"
+                ]
+            },
+            {
+                "id": "B01.BS_BJ.bsj_sum",
+                "options": [
+                    "58",
+                    "73"
+                ]
+            },
+            {
+                "id": "B01.BS_BJ.bjj_sum",
+                "options": [
+                    "58",
+                    "74"
+                ]
+            },
+            {
+                "id": "B15.error_flag",
+                "options": [
+                    "58",
+                    "93"
+                ]
+            },
+            {
+                "id": "B15.HZ6301_Din.opt_err_flag",
+                "options": [
+                    "58",
+                    "94"
+                ]
+            },
+            {
+                "id": "B01.goose.bjj_sum",
+                "options": [
+                    "58",
+                    "101"
+                ]
+            },
+            {
+                "id": "B01.goose.netstorm_warning_1",
+                "options": [
+                    "58",
+                    "102"
+                ]
+            },
+            {
+                "id": "B01.goose.netstorm_warning_2",
+                "options": [
+                    "58",
+                    "103"
+                ]
+            },
+            {
+                "id": "B01.goose.strap_cfg_err",
+                "options": [
+                    "58",
+                    "104"
+                ]
+            },
+            {
+                "id": "B02.goose.bjj_sum",
+                "options": [
+                    "58",
+                    "105"
+                ]
+            },
+            {
+                "id": "B01.GLOB_VAR.RAM_ERR",
+                "options": [
+                    "58",
+                    "106"
+                ]
+            },
+            {
+                "id": "B02.GLOB_VAR.RAM_ERR",
+                "options": [
+                    "58",
+                    "107"
+                ]
+            },
+            {
+                "id": "B02.GLOB_VAR.TWO_SYS_CMP_ERR",
+                "options": [
+                    "58",
+                    "108"
+                ]
+            },
+            {
+                "id": "B01.SyncTime.pps_error",
+                "options": [
+                    "58",
+                    "109"
+                ]
+            },
+            {
+                "id": "B01.SynPps.syn_alarm",
+                "options": [
+                    "58",
+                    "110"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.SyncDone_out",
+                "options": [
+                    "58",
+                    "111"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.SyncBack_out",
+                "options": [
+                    "58",
+                    "112"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_0",
+                "options": [
+                    "58",
+                    "113"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_0",
+                "options": [
+                    "58",
+                    "114"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_0",
+                "options": [
+                    "58",
+                    "115"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_1",
+                "options": [
+                    "58",
+                    "116"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_1",
+                "options": [
+                    "58",
+                    "117"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_1",
+                "options": [
+                    "58",
+                    "118"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_2",
+                "options": [
+                    "58",
+                    "119"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_2",
+                "options": [
+                    "58",
+                    "120"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_2",
+                "options": [
+                    "58",
+                    "121"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_3",
+                "options": [
+                    "58",
+                    "122"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_3",
+                "options": [
+                    "58",
+                    "123"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_3",
+                "options": [
+                    "58",
+                    "124"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_4",
+                "options": [
+                    "58",
+                    "125"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_4",
+                "options": [
+                    "58",
+                    "126"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_4",
+                "options": [
+                    "58",
+                    "127"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_5",
+                "options": [
+                    "58",
+                    "128"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_5",
+                "options": [
+                    "58",
+                    "129"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_5",
+                "options": [
+                    "58",
+                    "130"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_6",
+                "options": [
+                    "58",
+                    "131"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_6",
+                "options": [
+                    "58",
+                    "132"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_6",
+                "options": [
+                    "58",
+                    "133"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_7",
+                "options": [
+                    "58",
+                    "134"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_7",
+                "options": [
+                    "58",
+                    "135"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_7",
+                "options": [
+                    "58",
+                    "136"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_8",
+                "options": [
+                    "58",
+                    "137"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_8",
+                "options": [
+                    "58",
+                    "138"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_8",
+                "options": [
+                    "58",
+                    "139"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_9",
+                "options": [
+                    "58",
+                    "140"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_9",
+                "options": [
+                    "58",
+                    "141"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_9",
+                "options": [
+                    "58",
+                    "142"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_10",
+                "options": [
+                    "58",
+                    "143"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_10",
+                "options": [
+                    "58",
+                    "144"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_10",
+                "options": [
+                    "58",
+                    "145"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_11",
+                "options": [
+                    "58",
+                    "146"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_11",
+                "options": [
+                    "58",
+                    "147"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_11",
+                "options": [
+                    "58",
+                    "148"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_12",
+                "options": [
+                    "58",
+                    "149"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_12",
+                "options": [
+                    "58",
+                    "150"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_12",
+                "options": [
+                    "58",
+                    "151"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_13",
+                "options": [
+                    "58",
+                    "152"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_13",
+                "options": [
+                    "58",
+                    "153"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_13",
+                "options": [
+                    "58",
+                    "154"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_a_14",
+                "options": [
+                    "58",
+                    "155"
+                ]
+            },
+            {
+                "id": "B01.goose.link_down_b_14",
+                "options": [
+                    "58",
+                    "156"
+                ]
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_14",
+                "options": [
+                    "58",
+                    "157"
+                ]
+            },
+            {
+                "id": "B01.master.memory_low_warning",
+                "options": [
+                    "58",
+                    "158"
+                ]
+            },
+            {
+                "id": "B01.AdcDma.adc_err",
+                "options": [
+                    "58",
+                    "159"
+                ]
+            },
+            {
+                "id": "B02.AdcDma.adc_err",
+                "options": [
+                    "58",
+                    "160"
+                ]
+            },
+            {
+                "id": "B01.DzPosSelect1.pos_bjj",
+                "options": [
+                    "58",
+                    "161"
+                ]
+            },
+            {
+                "id": "B01.DzPosSelect2.pos_bjj",
+                "options": [
+                    "58",
+                    "162"
+                ]
+            },
+            {
+                "id": "B01.VolMonitor.error_3p3_flag",
+                "options": [
+                    "58",
+                    "163"
+                ]
+            },
+            {
+                "id": "B01.VolMonitor.error_5p0_flag",
+                "options": [
+                    "58",
+                    "164"
+                ]
+            },
+            {
+                "id": "B01.VolMonitor.error_1p2_flag",
+                "options": [
+                    "58",
+                    "165"
+                ]
+            },
+            {
+                "id": "B01.AdcDma.cpu_para_err",
+                "options": [
+                    "58",
+                    "166"
+                ]
+            },
+            {
+                "id": "B01.AdcDma.ac_para_err",
+                "options": [
+                    "58",
+                    "167"
+                ]
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.binchg_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.goose.rx_ena_0",
+                "options": [
+                    "179",
+                    "121",
+                    "1"
+                ]
+            },
+            {
+                "id": "B01.goose.rx_ena_1",
+                "options": [
+                    "179",
+                    "122",
+                    "1"
+                ]
+            },
+            {
+                "id": "B01.goose.rx_ena_2",
+                "options": [
+                    "179",
+                    "123",
+                    "1"
+                ]
+            },
+            {
+                "id": "B01.goose.rx_ena_3",
+                "options": [
+                    "179",
+                    "124",
+                    "1"
+                ]
+            },
+            {
+                "id": "B01.goose.rx_ena_4",
+                "options": [
+                    "179",
+                    "125",
+                    "1"
+                ]
+            },
+            {
+                "id": "B02.smv_rx_9_2.rx_ena_0",
+                "options": [
+                    "179",
+                    "155",
+                    "1",
+                    "0"
+                ]
+            },
+            {
+                "id": "B02.smv_rx_9_2.rx_ena_1",
+                "options": [
+                    "179",
+                    "156",
+                    "1",
+                    "0"
+                ]
+            },
+            {
+                "id": "B01.TestBoard1.test_strap_out",
+                "options": [
+                    "179",
+                    "106"
+                ]
+            },
+            {
+                "id": "B15.HZ6301_Din.BI2_E",
+                "options": [
+                    "179",
+                    "107"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.use_bus_I",
+                "options": [
+                    "179",
+                    "108"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.use_bus_II",
+                "options": [
+                    "179",
+                    "109"
+                ]
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.run_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.master.child_process_exit",
+                "options": []
+            },
+            {
+                "id": "B01.master.setting_modified",
+                "options": []
+            },
+            {
+                "id": "B01.master.setting_group_changed",
+                "options": []
+            },
+            {
+                "id": "B01.Event.event_restarted",
+                "options": []
+            },
+            {
+                "id": "B01.Event.event_rpt_cleared",
+                "options": []
+            },
+            {
+                "id": "B01.Wave.wave_cleared",
+                "options": []
+            },
+            {
+                "id": "B01.signal_reset",
+                "options": []
+            },
+            {
+                "id": "B01.master.config_modified",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.MU_BI_Input_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.TestBoard1.test_strap_out",
+                "options": []
+            },
+            {
+                "id": "B01.DzPosSelect1.hwj_out",
+                "options": []
+            },
+            {
+                "id": "B01.DzPosSelect1.twj_out",
+                "options": []
+            },
+            {
+                "id": "B01.DzPosSelect1.pos_out",
+                "options": []
+            },
+            {
+                "id": "B01.DzPosSelect2.hwj_out",
+                "options": []
+            },
+            {
+                "id": "B01.DzPosSelect2.twj_out",
+                "options": []
+            },
+            {
+                "id": "B01.DzPosSelect2.pos_out",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.syn_state",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.syn",
+                "options": []
+            },
+            {
+                "id": "B15.HZ6301_Din.BI1",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.MU_Contact_Outputs_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.SmvDeal1.SyncDone_out",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.SyncBack_out",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.use_bus_I",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.use_bus_II",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.MU_Superv_State_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.goose.test_ns",
+                "options": []
+            },
+            {
+                "id": "B01.Lcd.goose_test_enter",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.sv_test_ns",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.ptr_err",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.stru_err",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.index_err",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.ptr_err",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.stru_err",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.index_err",
+                "options": []
+            },
+            {
+                "id": "B01.TphaseDelIp.out_err",
+                "options": []
+            },
+            {
+                "id": "B01.TphaseDelIm.out_err",
+                "options": []
+            },
+            {
+                "id": "B01.AphaseDelI0.out_err",
+                "options": []
+            },
+            {
+                "id": "B01.AphaseDelIn.out_err",
+                "options": []
+            },
+            {
+                "id": "B01.TphaseDelUp.out_err",
+                "options": []
+            },
+            {
+                "id": "B02.TphaseDelUm.out_err",
+                "options": []
+            },
+            {
+                "id": "B01.AphaseDelU0.out_err",
+                "options": []
+            },
+            {
+                "id": "B02.TphaseDelIp.out_err",
+                "options": []
+            },
+            {
+                "id": "B02.AphaseDelI0.out_err",
+                "options": []
+            },
+            {
+                "id": "B02.AphaseDelIn.out_err",
+                "options": []
+            },
+            {
+                "id": "B02.TphaseDelUp.out_err",
+                "options": []
+            },
+            {
+                "id": "B02.AphaseDelU0.out_err",
+                "options": []
+            },
+            {
+                "id": "B01.CompareIa.amp_err",
+                "options": []
+            },
+            {
+                "id": "B01.CompareIb.amp_err",
+                "options": []
+            },
+            {
+                "id": "B01.CompareIc.amp_err",
+                "options": []
+            },
+            {
+                "id": "B01.smv_rx_9_2.strap_cfg_err",
+                "options": []
+            },
+            {
+                "id": "B01.smv_rx_9_2.delay_time_cfg_err",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_0",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_0",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.link_a_err_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.link_a_err_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.link_b_err_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.link_b_err_2",
+                "options": []
+            },
+            {
+                "id": "B02.TestBoard1.test_strap_bjj",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.smv_wrong",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.delay_err_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.delay_err_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.delay_out_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.delay_out_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.test_bit_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.test_bit_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.smp_set_repair_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.smp_set_repair_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.frame_set_repair_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.frame_set_repair_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.out_set_repair_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.out_set_repair_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.syn_set_repair_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.syn_set_repair_2",
+                "options": []
+            },
+            {
+                "id": "B01.Or161.f_func_out",
+                "options": []
+            },
+            {
+                "id": "B01.SyncTime.pps_error",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.syn_alarm",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.adc_err",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.adc_err",
+                "options": []
+            },
+            {
+                "id": "B01.DzPosSelect1.pos_bjj",
+                "options": []
+            },
+            {
+                "id": "B01.DzPosSelect2.pos_bjj",
+                "options": []
+            },
+            {
+                "id": "B01.BS_BJ.bsj_sum",
+                "options": []
+            },
+            {
+                "id": "B01.BS_BJ.bjj_sum",
+                "options": []
+            },
+            {
+                "id": "B15.HZ6301_Din.opt_err_flag",
+                "options": []
+            },
+            {
+                "id": "B15.error_flag",
+                "options": []
+            },
+            {
+                "id": "B15.dz_err_flag",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.MU_Measure_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.DataMerge1.Ipa_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.Ipb_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.Ipc_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Ima_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Imb_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Imc_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.Upa_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.Upb_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.Upc_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Uma_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Umb_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Umc_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.Ux_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.I0_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.In_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.U0_amp",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.delay_time_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.delay_time_2",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.delay_time",
+                "options": []
+            },
+            {
+                "id": "B15.HZ6301_Din.Temperature_c",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.MU_Statistics_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.AdcDma.ptr_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.stru_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.index_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.tic_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.ptr_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.stru_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.index_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.tic_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.TphaseDelIp.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B01.AphaseDelI0.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B01.AphaseDelIn.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B01.TphaseDelUp.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B02.TphaseDelUm.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B01.AphaseDelU0.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B02.TphaseDelIp.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B02.AphaseDelI0.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B01.CompareIa.err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.CompareIb.err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.CompareIc.err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.TphaseDelUp.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B02.AphaseDelU0.out_wCal",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.frame_lost_cnt_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.frame_lost_cnt_2",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.smp_wcnt_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.smp_wcnt_2",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.syn_wcnt_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.syn_wcnt_2",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.out_wcnt_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.out_wcnt_2",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.jitter_cnt_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.jitter_cnt_2",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.jitter1_cnt_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.jitter1_cnt_2",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.min_time_val_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.max_time_val_1",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.min_time_val_2",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.max_time_val_2",
+                "options": []
+            },
+            {
+                "id": "B02.SmvDeal1.data_invalid_cnt",
+                "options": []
+            },
+            {
+                "id": "B15.error_code",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.FIBER_M_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.SFPU.sfp_link_state",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.VCC500",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.dev_temp",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx1_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx1_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp1",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx2_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx2_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp2",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx3_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx3_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp3",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx4_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx4_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp4",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx5_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx5_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp5",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx6_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx6_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp6",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx7_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx7_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp7",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx8_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx8_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp8",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx9_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx9_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp9",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx10_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx10_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp10",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx11_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx11_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp11",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx12_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx12_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp12",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx13_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx13_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp13",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.tx14_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.rx14_pwr",
+                "options": []
+            },
+            {
+                "id": "B01.SFPU.temp14",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.debug_data_refer_table"
+        ],
+        "varList": [],
+        "signalList": []
+    },
+    {
+        "targets": [
+            "B01.Lcd.Internal_Signal_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B02.SmvDeal1.cal_time_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.cal_time_err_cnt",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.auto_yk_refer_table"
+        ],
+        "varList": [],
+        "signalList": []
+    },
+    {
+        "targets": [
+            "B01.Lcd.main_disp_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B02.DataMerge1.Ima_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Imb_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Imc_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Uma_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Umb_amp",
+                "options": []
+            },
+            {
+                "id": "B02.DataMerge1.Umc_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.Ux_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.I0_amp",
+                "options": []
+            },
+            {
+                "id": "B01.DataMerge1.In_amp",
+                "options": []
+            },
+            {
+                "id": "B02.CalFreq1.F",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.GOOSE_Comm_Counter_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.goose.bjj_sum",
+                "options": []
+            },
+            {
+                "id": "B02.goose.bjj_sum",
+                "options": []
+            },
+            {
+                "id": "B01.goose.strap_cfg_err",
+                "options": []
+            },
+            {
+                "id": "B01.goose.netstorm_warning_1",
+                "options": []
+            },
+            {
+                "id": "B01.goose.netstorm_warning_2",
+                "options": []
+            },
+            {
+                "id": "B01.goose.netstorm_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.goose.tx_encode_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_decode_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_0",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_1",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_2",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_3",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_4",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_5",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_6",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_7",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_8",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_9",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_10",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_11",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_12",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_13",
+                "options": []
+            },
+            {
+                "id": "B01.goose.rx_cnt_14",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_0",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_0",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_0",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_1",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_1",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_1",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_2",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_2",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_2",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_3",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_3",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_3",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_4",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_4",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_4",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_5",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_5",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_5",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_6",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_6",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_6",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_7",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_7",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_7",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_8",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_8",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_8",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_9",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_9",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_9",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_10",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_10",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_10",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_11",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_11",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_11",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_12",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_12",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_12",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_13",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_13",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_13",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_a_14",
+                "options": []
+            },
+            {
+                "id": "B01.goose.link_down_b_14",
+                "options": []
+            },
+            {
+                "id": "B01.goose.goose_cfg_err_14",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.SV_Comm_Counter_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.smv_tx_9_2.tx_cnt_0",
+                "options": []
+            },
+            {
+                "id": "B01.smv_tx_9_2.tx_fail_cnt_0",
+                "options": []
+            },
+            {
+                "id": "B01.smv_tx_9_2.cfg_err",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.delay_time_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.delay_time_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.frame_lost_cnt_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.frame_lost_cnt_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.smp_wcnt_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.smp_wcnt_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.out_wcnt_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.out_wcnt_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.time_val_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.min_time_val_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.max_time_val_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.time_val_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.min_time_val_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.max_time_val_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.jitter_cnt_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.jitter_cnt_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.jitter1_cnt_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.jitter1_cnt_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.data_invalid_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.link_a_err_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.link_a_err_2",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.link_b_err_1",
+                "options": []
+            },
+            {
+                "id": "B01.SmvDeal1.link_b_err_2",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.Time_Syn_Counter_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.SynPps.syn_state",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.sample_no",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.pps_error_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.pack_cnt_all",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.min_pps_tics",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.max_pps_tics",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.xo_pps_interval_avg",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.ocxo_pps_interval_avg",
+                "options": []
+            },
+            {
+                "id": "B01.SynPps.ocxo_quality",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.export_refer_table"
+        ],
+        "varList": [],
+        "signalList": []
+    },
+    {
+        "targets": [
+            "B01.Lcd.ADC_Counter_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.AdcDma.ptr_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.stru_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.index_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B01.AdcDma.tic_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.ptr_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.stru_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.index_err_cnt",
+                "options": []
+            },
+            {
+                "id": "B02.AdcDma.tic_err_cnt",
+                "options": []
+            }
+        ]
+    },
+    {
+        "targets": [
+            "B01.Lcd.led_refer_table"
+        ],
+        "varList": [],
+        "signalList": [
+            {
+                "id": "B01.TestBoard1.test_strap_out",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.SynPps.syn_alarm",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.Or23.f_func_out",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.Or21.f_func_out",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.Or25.f_func_out",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.Or22.f_func_out",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.DzPosSelect1.hwj_out",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.DzPosSelect2.hwj_out",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.use_bus_I",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            },
+            {
+                "id": "B01.SmvDeal1.use_bus_II",
+                "options": [
+                    "0",
+                    "3"
+                ]
+            }
+        ]
+    }
+]

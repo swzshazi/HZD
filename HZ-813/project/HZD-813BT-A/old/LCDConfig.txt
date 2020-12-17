@@ -1,0 +1,82 @@
+[title=0 key=PPC主菜单]
+模 拟 量,   Measurements,   0,
+状 态 量,   Status,         0,
+报告显示,   Records,        0,
+定值设置,   Settings,       0,
+本地命令,   Local_Cmd,      0,
+装置信息,   Information,    0,
+调    试,   Test,           0,
+时钟设置,   Clock,          setTimerCallback,
+语    言,   Language,       selLanguageCallback,
+
+[title=模 拟 量 key=0]
+装置测量信息,         ST_Measure,      curStatusShowCallback,
+断路器测量信息,       Break_Measure,   curStatusShowCallback,
+刀闸测量信息,         Swtich_Measure,  curStatusShowCallback,
+光口监测信息,         FIBER_M,         curStatusShowCallback,
+
+[title=状 态 量 key=0]
+装置遥信量,         ST_BI_Input,          curStatusShowCallback,
+位置信息,           Pos_Input,            curStatusShowCallback,
+模拟盘信息,         Sim_BI_Input,         curStatusShowCallback,
+刀闸控制命令,       Swtich_CMD_Input,     curStatusShowCallback,
+A主控遥信量,        A_Main_Input,         curStatusShowCallback,
+B主控遥信量,        B_Main_Input,         curStatusShowCallback,
+断路器遥信量,       Break_BI_Input,       curStatusShowCallback,   
+刀闸遥信量,         Swtich_BI_Input,      curStatusShowCallback,  
+电气联锁状态,       ElecLockState,        0,
+装置合成信号        ST_MergeSignal,       curStatusShowCallback,     
+自检状态信号,       Mod_Superv_State,     curStatusShowCallback,
+
+[title=电气联锁状态 key=0]
+刀闸1联锁状态,      Sw1_ElecLock_Input,   curStatusShowCallback,
+刀闸2联锁状态,      Sw2_ElecLock_Input,   curStatusShowCallback,
+刀闸3联锁状态,      Sw3_ElecLock_Input,   curStatusShowCallback,
+刀闸4联锁状态,      Sw4_ElecLock_Input,   curStatusShowCallback,
+刀闸5联锁状态,      Sw5_ElecLock_Input,   curStatusShowCallback,
+刀闸6联锁状态,      Sw6_ElecLock_Input,   curStatusShowCallback,
+刀闸7联锁状态,      Sw7_ElecLock_Input,   curStatusShowCallback,
+刀闸8联锁状态,      Sw8_ElecLock_Input,   curStatusShowCallback,
+
+[title=报告显示 key=0]
+动作报告,   Disturb_Records,   showTripRptCallback,
+自检报告,   Superv_Events,     showSelfRptCallback,
+变位报告,   IO_Events,         showBinChgRptCallback,
+装置日志,   Device_Logs,       showRunRptCallback,
+清除报告,   Clear_Records,     clearReportCallback,
+
+[title=定值设置 key=0]
+装置参数,           Device_Settings,     viewSettingCallback,   1,
+电气联锁参数,       ElecLock_Settings,   0,
+
+[title=电气联锁参数 key=0]
+刀闸1联锁参数,      ElecLock1_Settings,  viewSettingCallback,   1,
+刀闸2联锁参数,      ElecLock2_Settings,  viewSettingCallback,   1,
+刀闸3联锁参数,      ElecLock3_Settings,  viewSettingCallback,   1,
+刀闸4联锁参数,      ElecLock4_Settings,  viewSettingCallback,   1,
+刀闸5联锁参数,      ElecLock5_Settings,  viewSettingCallback,   1,
+刀闸6联锁参数,      ElecLock6_Settings,  viewSettingCallback,   1,
+刀闸7联锁参数,      ElecLock7_Settings,  viewSettingCallback,   1,
+刀闸8联锁参数,      ElecLock8_Settings,  viewSettingCallback,   1,
+
+[title=本地命令 key=0]
+信号复归,   Reset_Target,        signalResetCallback,
+手动录波,   Trig_Oscillograph,   recManualCallback,
+下载允许,   Download,            downloadCallback,
+清除统计,   Clear_Counter,       externCmd1Callback,
+
+[title=装置信息 key=0]
+版本信息,   Version_Info,   programVerCallback,
+板卡信息,   Board_Info,     boardInfoCallback,
+
+[title=调    试 key=0]
+GOOSE通信状态统计,   GOOSE_Comm_Counter,   curStatusShowCallback,
+装置测试,            Device_Test,          0,
+内部信号,            Internal_Signal,      curStatusShowCallback,
+
+[title=装置测试 key=0]
+GOOSE传动,   GOOSE_Outputs,   gooseTestCallback,
+
+[title=xxxx key=0]
+
+[END]

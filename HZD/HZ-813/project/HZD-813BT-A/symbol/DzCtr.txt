@@ -1,0 +1,215 @@
+[STRUCT]=DzCtr
+
+[ALIAS]=DzCtr
+
+[WIDTH] = 120
+
+[USER VISIBLE]=0
+
+[HELP]
+刀闸遥控命令SOE、刀闸遥控命令反馈、遥控结果输出等
+
+
+[BASIC]
+cn=刀闸遥控命令处理元件 en=DzCtr cbopt= ver=R1.00 uscp= 
+
+[IN]
+//analog
+
+//binary
+pElecTest   "pElecTest cdesc=带电检修状态  edesc=pElecTest jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pTest   "pTest cdesc=装置检修状态  edesc=pTest jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pDZYF_ELSE   "pDZYF_ELSE cdesc=另一套刀闸遥分动作  edesc=pDZYF_ELSE jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pDZYH_ELSE   "pDZYH_ELSE cdesc=另一套刀闸遥合动作  edesc=pDZYH_ELSE jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pDZBLK_ELSE   "pDZBLK_ELSE cdesc=另一套刀闸解闭锁动作  edesc=pDZBLK_ELSE jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+
+[OUT]
+//analog
+DZ1YF1_E  "DZ1YF1_E cdesc=刀闸1遥分1_SOE  edesc=DZ1YF1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YF1_E  "DZ2YF1_E cdesc=刀闸2遥分1_SOE  edesc=DZ2YF1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YF1_E  "DZ3YF1_E cdesc=刀闸3遥分1_SOE  edesc=DZ3YF1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YF1_E  "DZ4YF1_E cdesc=刀闸4遥分1_SOE  edesc=DZ4YF1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YF1_E  "DZ5YF1_E cdesc=刀闸5遥分1_SOE  edesc=DZ5YF1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YF1_E  "DZ6YF1_E cdesc=刀闸6遥分1_SOE  edesc=DZ6YF1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YF1_E  "DZ7YF1_E cdesc=刀闸7遥分1_SOE  edesc=DZ7YF1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YF1_E  "DZ8YF1_E cdesc=刀闸8遥分1_SOE  edesc=DZ8YF1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1YH1_E  "DZ1YH1_E cdesc=刀闸1遥合1_SOE  edesc=DZ1YH1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YH1_E  "DZ2YH1_E cdesc=刀闸2遥合1_SOE  edesc=DZ2YH1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YH1_E  "DZ3YH1_E cdesc=刀闸3遥合1_SOE  edesc=DZ3YH1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YH1_E  "DZ4YH1_E cdesc=刀闸4遥合1_SOE  edesc=DZ4YH1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YH1_E  "DZ5YH1_E cdesc=刀闸5遥合1_SOE  edesc=DZ5YH1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YH1_E  "DZ6YH1_E cdesc=刀闸6遥合1_SOE  edesc=DZ6YH1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YH1_E  "DZ7YH1_E cdesc=刀闸7遥合1_SOE  edesc=DZ7YH1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YH1_E  "DZ8YH1_E cdesc=刀闸8遥合1_SOE  edesc=DZ8YH1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1BLK1_E  "DZ1BLK1_E cdesc=刀闸1解闭锁1_SOE  edesc=DZ1BLK1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2BLK1_E  "DZ2BLK1_E cdesc=刀闸2解闭锁1_SOE  edesc=DZ2BLK1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3BLK1_E  "DZ3BLK1_E cdesc=刀闸3解闭锁1_SOE  edesc=DZ3BLK1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4BLK1_E  "DZ4BLK1_E cdesc=刀闸4解闭锁1_SOE  edesc=DZ4BLK1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5BLK1_E  "DZ5BLK1_E cdesc=刀闸5解闭锁1_SOE  edesc=DZ5BLK1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6BLK1_E  "DZ6BLK1_E cdesc=刀闸6解闭锁1_SOE  edesc=DZ6BLK1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7BLK1_E  "DZ7BLK1_E cdesc=刀闸7解闭锁1_SOE  edesc=DZ7BLK1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8BLK1_E  "DZ8BLK1_E cdesc=刀闸8解闭锁1_SOE  edesc=DZ8BLK1_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1YF2_E  "DZ1YF2_E cdesc=刀闸1遥分2_SOE  edesc=DZ1YF2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YF2_E  "DZ2YF2_E cdesc=刀闸2遥分2_SOE  edesc=DZ2YF2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YF2_E  "DZ3YF2_E cdesc=刀闸3遥分2_SOE  edesc=DZ3YF2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YF2_E  "DZ4YF2_E cdesc=刀闸4遥分2_SOE  edesc=DZ4YF2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YF2_E  "DZ5YF2_E cdesc=刀闸5遥分2_SOE  edesc=DZ5YF2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YF2_E  "DZ6YF2_E cdesc=刀闸6遥分2_SOE  edesc=DZ6YF2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YF2_E  "DZ7YF2_E cdesc=刀闸7遥分2_SOE  edesc=DZ7YF2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YF2_E  "DZ8YF2_E cdesc=刀闸8遥分2_SOE  edesc=DZ8YF2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1YH2_E  "DZ1YH2_E cdesc=刀闸1遥合2_SOE  edesc=DZ1YH2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YH2_E  "DZ2YH2_E cdesc=刀闸2遥合2_SOE  edesc=DZ2YH2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YH2_E  "DZ3YH2_E cdesc=刀闸3遥合2_SOE  edesc=DZ3YH2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YH2_E  "DZ4YH2_E cdesc=刀闸4遥合2_SOE  edesc=DZ4YH2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YH2_E  "DZ5YH2_E cdesc=刀闸5遥合2_SOE  edesc=DZ5YH2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YH2_E  "DZ6YH2_E cdesc=刀闸6遥合2_SOE  edesc=DZ6YH2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YH2_E  "DZ7YH2_E cdesc=刀闸7遥合2_SOE  edesc=DZ7YH2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YH2_E  "DZ8YH2_E cdesc=刀闸8遥合2_SOE  edesc=DZ8YH2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1BLK2_E  "DZ1BLK2_E cdesc=刀闸1解闭锁2_SOE  edesc=DZ1BLK2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2BLK2_E  "DZ2BLK2_E cdesc=刀闸2解闭锁2_SOE  edesc=DZ2BLK2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3BLK2_E  "DZ3BLK2_E cdesc=刀闸3解闭锁2_SOE  edesc=DZ3BLK2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4BLK2_E  "DZ4BLK2_E cdesc=刀闸4解闭锁2_SOE  edesc=DZ4BLK2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5BLK2_E  "DZ5BLK2_E cdesc=刀闸5解闭锁2_SOE  edesc=DZ5BLK2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6BLK2_E  "DZ6BLK2_E cdesc=刀闸6解闭锁2_SOE  edesc=DZ6BLK2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7BLK2_E  "DZ7BLK2_E cdesc=刀闸7解闭锁2_SOE  edesc=DZ7BLK2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8BLK2_E  "DZ8BLK2_E cdesc=刀闸8解闭锁2_SOE  edesc=DZ8BLK2_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ1YF_E  "TestDZ1YF_E cdesc=测试仪刀闸1遥分_SOE  edesc=TestDZ1YF_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ2YF_E  "TestDZ2YF_E cdesc=测试仪刀闸2遥分_SOE  edesc=TestDZ2YF_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ3YF_E  "TestDZ3YF_E cdesc=测试仪刀闸3遥分_SOE  edesc=TestDZ3YF_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ4YF_E  "TestDZ4YF_E cdesc=测试仪刀闸4遥分_SOE  edesc=TestDZ4YF_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ5YF_E  "TestDZ5YF_E cdesc=测试仪刀闸5遥分_SOE  edesc=TestDZ5YF_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ6YF_E  "TestDZ6YF_E cdesc=测试仪刀闸6遥分_SOE  edesc=TestDZ6YF_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ7YF_E  "TestDZ7YF_E cdesc=测试仪刀闸7遥分_SOE  edesc=TestDZ7YF_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ8YF_E  "TestDZ8YF_E cdesc=测试仪刀闸8遥分_SOE  edesc=TestDZ8YF_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ1YH_E  "TestDZ1YH_E cdesc=测试仪刀闸1遥合_SOE  edesc=TestDZ1YH_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ2YH_E  "TestDZ2YH_E cdesc=测试仪刀闸2遥合_SOE  edesc=TestDZ2YH_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ3YH_E  "TestDZ3YH_E cdesc=测试仪刀闸3遥合_SOE  edesc=TestDZ3YH_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ4YH_E  "TestDZ4YH_E cdesc=测试仪刀闸4遥合_SOE  edesc=TestDZ4YH_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ5YH_E  "TestDZ5YH_E cdesc=测试仪刀闸5遥合_SOE  edesc=TestDZ5YH_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ6YH_E  "TestDZ6YH_E cdesc=测试仪刀闸6遥合_SOE  edesc=TestDZ6YH_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ7YH_E  "TestDZ7YH_E cdesc=测试仪刀闸7遥合_SOE  edesc=TestDZ7YH_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ8YH_E  "TestDZ8YH_E cdesc=测试仪刀闸8遥合_SOE  edesc=TestDZ8YH_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ1BLK_E  "TestDZ1BLK_E cdesc=测试仪刀闸1解闭锁_SOE  edesc=TestDZ1BLK_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ2BLK_E  "TestDZ2BLK_E cdesc=测试仪刀闸2解闭锁_SOE  edesc=TestDZ2BLK_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ3BLK_E  "TestDZ3BLK_E cdesc=测试仪刀闸3解闭锁_SOE  edesc=TestDZ3BLK_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ4BLK_E  "TestDZ4BLK_E cdesc=测试仪刀闸4解闭锁_SOE  edesc=TestDZ4BLK_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ5BLK_E  "TestDZ5BLK_E cdesc=测试仪刀闸5解闭锁_SOE  edesc=TestDZ5BLK_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ6BLK_E  "TestDZ6BLK_E cdesc=测试仪刀闸6解闭锁_SOE  edesc=TestDZ6BLK_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ7BLK_E  "TestDZ7BLK_E cdesc=测试仪刀闸7解闭锁_SOE  edesc=TestDZ7BLK_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ8BLK_E  "TestDZ8BLK_E cdesc=测试仪刀闸8解闭锁_SOE  edesc=TestDZ8BLK_E    jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+
+//binary
+DZ1YF1  "DZ1YF1 cdesc=刀闸1遥分1结果  edesc=DZ1YF1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YF1  "DZ2YF1 cdesc=刀闸2遥分1结果  edesc=DZ2YF1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YF1  "DZ3YF1 cdesc=刀闸3遥分1结果  edesc=DZ3YF1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YF1  "DZ4YF1 cdesc=刀闸4遥分1结果  edesc=DZ4YF1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YF1  "DZ5YF1 cdesc=刀闸5遥分1结果  edesc=DZ5YF1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YF1  "DZ6YF1 cdesc=刀闸6遥分1结果  edesc=DZ6YF1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YF1  "DZ7YF1 cdesc=刀闸7遥分1结果  edesc=DZ7YF1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YF1  "DZ8YF1 cdesc=刀闸8遥分1结果  edesc=DZ8YF1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1YH1  "DZ1YH1 cdesc=刀闸1遥合1结果  edesc=DZ1YH1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YH1  "DZ2YH1 cdesc=刀闸2遥分1结果  edesc=DZ2YH1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YH1  "DZ3YH1 cdesc=刀闸3遥分1结果  edesc=DZ3YH1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YH1  "DZ4YH1 cdesc=刀闸4遥分1结果  edesc=DZ4YH1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YH1  "DZ5YH1 cdesc=刀闸5遥分1结果  edesc=DZ5YH1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YH1  "DZ6YH1 cdesc=刀闸6遥分1结果  edesc=DZ6YH1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YH1  "DZ7YH1 cdesc=刀闸7遥分1结果  edesc=DZ7YH1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YH1  "DZ8YH1 cdesc=刀闸8遥分1结果  edesc=DZ8YH1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1BLK1  "DZ1BLK1 cdesc=刀闸1解闭锁1结果  edesc=DZ1BLK1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2BLK1  "DZ2BLK1 cdesc=刀闸2解闭锁1结果  edesc=DZ2BLK1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3BLK1  "DZ3BLK1 cdesc=刀闸3解闭锁1结果  edesc=DZ3BLK1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4BLK1  "DZ4BLK1 cdesc=刀闸4解闭锁1结果  edesc=DZ4BLK1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5BLK1  "DZ5BLK1 cdesc=刀闸5解闭锁1结果  edesc=DZ5BLK1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6BLK1  "DZ6BLK1 cdesc=刀闸6解闭锁1结果  edesc=DZ6BLK1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7BLK1  "DZ7BLK1 cdesc=刀闸7解闭锁1结果  edesc=DZ7BLK1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8BLK1  "DZ8BLK1 cdesc=刀闸8解闭锁1结果  edesc=DZ8BLK1    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1YF_Out  "DZ1YF_Out cdesc=刀闸1遥分输出  edesc=DZ1YF_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YF_Out  "DZ2YF_Out cdesc=刀闸2遥分输出  edesc=DZ2YF_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YF_Out  "DZ3YF_Out cdesc=刀闸3遥分输出  edesc=DZ3YF_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YF_Out  "DZ4YF_Out cdesc=刀闸4遥分输出  edesc=DZ4YF_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YF_Out  "DZ5YF_Out cdesc=刀闸5遥分输出  edesc=DZ5YF_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YF_Out  "DZ6YF_Out cdesc=刀闸6遥分输出  edesc=DZ6YF_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YF_Out  "DZ7YF_Out cdesc=刀闸7遥分输出  edesc=DZ7YF_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YF_Out  "DZ8YF_Out cdesc=刀闸8遥分输出  edesc=DZ8YF_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1YH_Out  "DZ1YH_Out cdesc=刀闸1遥合输出  edesc=DZ1YH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YH_Out  "DZ2YH_Out cdesc=刀闸2遥合输出  edesc=DZ2YH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YH_Out  "DZ3YH_Out cdesc=刀闸3遥合输出  edesc=DZ3YH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YH_Out  "DZ4YH_Out cdesc=刀闸4遥合输出  edesc=DZ4YH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YH_Out  "DZ5YH_Out cdesc=刀闸5遥合输出  edesc=DZ5YH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YH_Out  "DZ6YH_Out cdesc=刀闸6遥合输出  edesc=DZ6YH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YH_Out  "DZ7YH_Out cdesc=刀闸7遥合输出  edesc=DZ7YH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YH_Out  "DZ8YH_Out cdesc=刀闸8遥合输出  edesc=DZ8YH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1BLK_Out  "DZ1BLK_Out cdesc=刀闸1解闭锁输出  edesc=DZ1BLK_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2BLK_Out  "DZ2BLK_Out cdesc=刀闸2解闭锁输出  edesc=DZ2BLK_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3BLK_Out  "DZ3BLK_Out cdesc=刀闸3解闭锁输出  edesc=DZ3BLK_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4BLK_Out  "DZ4BLK_Out cdesc=刀闸4解闭锁输出  edesc=DZ4BLK_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5BLK_Out  "DZ5BLK_Out cdesc=刀闸5解闭锁输出  edesc=DZ5BLK_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6BLK_Out  "DZ6BLK_Out cdesc=刀闸6解闭锁输出  edesc=DZ6BLK_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7BLK_Out  "DZ7BLK_Out cdesc=刀闸7解闭锁输出  edesc=DZ7BLK_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8BLK_Out  "DZ8BLK_Out cdesc=刀闸8解闭锁输出  edesc=DZ8BLK_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZYF_ALL  "DZYF_ALL cdesc=刀闸遥分总  edesc=DZYF_ALL    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZYH_ALL  "DZYH_ALL cdesc=刀闸遥合总  edesc=DZYH_ALL    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZBLK_ALL  "DZBLK_ALL cdesc=刀闸解闭锁总  edesc=DZBLK_ALL    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZYK_LONGTIME  "DZYK_LONGTIME cdesc=刀闸遥控长时间动作  edesc=DZYK_LONGTIME    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CMP_ERR  "CMP_ERR cdesc=双套比较出错  edesc=CMP_ERR    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+check_err  "check_err cdesc=指针比较出错  edesc=check_err    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1YF2  "DZ1YF2 cdesc=刀闸1遥分2结果  edesc=DZ1YF2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YF2  "DZ2YF2 cdesc=刀闸2遥分2结果  edesc=DZ2YF2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YF2  "DZ3YF2 cdesc=刀闸3遥分2结果  edesc=DZ3YF2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YF2  "DZ4YF2 cdesc=刀闸4遥分2结果  edesc=DZ4YF2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YF2  "DZ5YF2 cdesc=刀闸5遥分2结果  edesc=DZ5YF2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YF2  "DZ6YF2 cdesc=刀闸6遥分2结果  edesc=DZ6YF2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YF2  "DZ7YF2 cdesc=刀闸7遥分2结果  edesc=DZ7YF2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YF2  "DZ8YF2 cdesc=刀闸8遥分2结果  edesc=DZ8YF2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1YH2  "DZ1YH2 cdesc=刀闸1遥合2结果  edesc=DZ1YH2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2YH2  "DZ2YH2 cdesc=刀闸2遥分2结果  edesc=DZ2YH2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3YH2  "DZ3YH2 cdesc=刀闸3遥分2结果  edesc=DZ3YH2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4YH2  "DZ4YH2 cdesc=刀闸4遥分2结果  edesc=DZ4YH2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5YH2  "DZ5YH2 cdesc=刀闸5遥分2结果  edesc=DZ5YH2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6YH2  "DZ6YH2 cdesc=刀闸6遥分2结果  edesc=DZ6YH2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7YH2  "DZ7YH2 cdesc=刀闸7遥分2结果  edesc=DZ7YH2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8YH2  "DZ8YH2 cdesc=刀闸8遥分2结果  edesc=DZ8YH2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ1BLK2  "DZ1BLK2 cdesc=刀闸1解闭锁2结果  edesc=DZ1BLK2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ2BLK2  "DZ2BLK2 cdesc=刀闸2解闭锁2结果  edesc=DZ2BLK2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ3BLK2  "DZ3BLK2 cdesc=刀闸3解闭锁2结果  edesc=DZ3BLK2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ4BLK2  "DZ4BLK2 cdesc=刀闸4解闭锁2结果  edesc=DZ4BLK2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ5BLK2  "DZ5BLK2 cdesc=刀闸5解闭锁2结果  edesc=DZ5BLK2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ6BLK2  "DZ6BLK2 cdesc=刀闸6解闭锁2结果  edesc=DZ6BLK2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ7BLK2  "DZ7BLK2 cdesc=刀闸7解闭锁2结果  edesc=DZ7BLK2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+DZ8BLK2  "DZ8BLK2 cdesc=刀闸8解闭锁2结果  edesc=DZ8BLK2    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ1YF  "TestDZ1YF cdesc=测试仪刀闸1遥分结果  edesc=TestDZ1YF    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ2YF  "TestDZ2YF cdesc=测试仪刀闸2遥分结果  edesc=TestDZ2YF    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ3YF  "TestDZ3YF cdesc=测试仪刀闸3遥分结果  edesc=TestDZ3YF    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ4YF  "TestDZ4YF cdesc=测试仪刀闸4遥分结果  edesc=TestDZ4YF    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ5YF  "TestDZ5YF cdesc=测试仪刀闸5遥分结果  edesc=TestDZ5YF    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ6YF  "TestDZ6YF cdesc=测试仪刀闸6遥分结果  edesc=TestDZ6YF    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ7YF  "TestDZ7YF cdesc=测试仪刀闸7遥分结果  edesc=TestDZ7YF    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ8YF  "TestDZ8YF cdesc=测试仪刀闸8遥分结果  edesc=TestDZ8YF    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ1YH  "TestDZ1YH cdesc=测试仪刀闸1遥合结果  edesc=TestDZ1YH    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ2YH  "TestDZ2YH cdesc=测试仪刀闸2遥合结果  edesc=TestDZ2YH    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ3YH  "TestDZ3YH cdesc=测试仪刀闸3遥合结果  edesc=TestDZ3YH    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ4YH  "TestDZ4YH cdesc=测试仪刀闸4遥合结果  edesc=TestDZ4YH    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ5YH  "TestDZ5YH cdesc=测试仪刀闸5遥合结果  edesc=TestDZ5YH    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ6YH  "TestDZ6YH cdesc=测试仪刀闸6遥合结果  edesc=TestDZ6YH    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ7YH  "TestDZ7YH cdesc=测试仪刀闸7遥合结果  edesc=TestDZ7YH    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ8YH  "TestDZ8YH cdesc=测试仪刀闸8遥合结果  edesc=TestDZ8YH    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ1BLK  "TestDZ1BLK cdesc=测试仪刀闸1解闭锁结果  edesc=TestDZ1BLK    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ2BLK  "TestDZ2BLK cdesc=测试仪刀闸2解闭锁结果  edesc=TestDZ2BLK    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ3BLK  "TestDZ3BLK cdesc=测试仪刀闸3解闭锁结果  edesc=TestDZ3BLK    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ4BLK  "TestDZ4BLK cdesc=测试仪刀闸4解闭锁结果  edesc=TestDZ4BLK    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ5BLK  "TestDZ5BLK cdesc=测试仪刀闸5解闭锁结果  edesc=TestDZ5BLK    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ6BLK  "TestDZ6BLK cdesc=测试仪刀闸6解闭锁结果  edesc=TestDZ6BLK    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ7BLK  "TestDZ7BLK cdesc=测试仪刀闸7解闭锁结果  edesc=TestDZ7BLK    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestDZ8BLK  "TestDZ8BLK cdesc=测试仪刀闸8解闭锁结果  edesc=TestDZ8BLK    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+      
+[PARA]
+//no list
+
+[LN]
+
+
+[DA]
+
+[RULE]
+
+[GRAPH]

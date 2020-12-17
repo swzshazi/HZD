@@ -1,0 +1,64 @@
+[title=0 key=PPC主菜单]
+模 拟 量,   Measurements,   0,
+状 态 量,   Status,         0,
+报告显示,   Records,        0,
+定值设置,   Settings,       0,
+本地命令,   Local_Cmd,      0,
+装置信息,   Information,    0,
+调    试,   Test,           0,
+时钟设置,   Clock,          setTimerCallback,
+语    言,   Language,       selLanguageCallback,
+
+[title=模 拟 量 key=0]
+智能终端统计,         ST_Statistics,   curStatusShowCallback,
+智能终端测量,         ST_Measure,      curStatusShowCallback,
+合并单元模拟量测量,   MU_Measure,      curStatusShowCallback,
+合并单元统计量,       MU_Statistics,   curStatusShowCallback,
+
+[title=状 态 量 key=0]
+智能终端遥信开入,    ST_BI_Input,          curStatusShowCallback,
+智能终端GOOSE开入,   ST_GSE_BI,            curStatusShowCallback,
+智能终端合成信号,    ST_MergeSignal,       curStatusShowCallback,
+智能终端自检信号,    ST_Superv_state,      curStatusShowCallback,
+合并单元输入量,      MU_BI_Input,          curStatusShowCallback,
+合并单元输出量,      MU_Contact_Outputs,   curStatusShowCallback,
+合并单元自检状态,    MU_Superv_State,      curStatusShowCallback,
+
+[title=报告显示 key=0]
+动作报告,   Disturb_Records,   showTripRptCallback,
+自检报告,   Superv_Events,     showSelfRptCallback,
+变位报告,   IO_Events,         showBinChgRptCallback,
+装置日志,   Device_Logs,       showRunRptCallback,
+清除报告,   Clear_Records,     clearReportCallback,
+
+[title=定值设置 key=0]
+装置参数,           Device_Settings,     viewSettingCallback,   1,
+智能终端功能定值,   ST_Fun_Settings,     viewSettingCallback,   2,
+合并单元功能定值,   MU_Fun_Settings,     viewSettingCallback,   3,
+采样精度调整定值,   MU_Calbr_Settings,   viewSettingCallback,   4,
+
+[title=本地命令 key=0]
+信号复归,       Reset_Target,        signalResetCallback,
+手动录波,       Trig_Oscillograph,   recManualCallback,
+下载允许,       Download,            downloadCallback,
+清除统计,       Clear_Counter,       externCmd1Callback,
+出口回路自检,   CtrBreakChek,        externCmd2Callback,
+
+[title=装置信息 key=0]
+版本信息,   Version_Info,   programVerCallback,
+板卡信息,   Board_Info,     boardInfoCallback,
+
+[title=调    试 key=0]
+GOOSE通信状态统计,   GOOSE_Comm_Counter,   curStatusShowCallback,
+SV通信状态统计,      SV_Comm_Counter,      curStatusShowCallback,
+就地采集状态统计,    ADC_Counter,          curStatusShowCallback,
+时钟同步状态统计,    Time_Syn_Counter,     curStatusShowCallback,
+装置测试,            Device_Test,          0,
+内部信号,            Internal_Signal,      curStatusShowCallback,
+
+[title=装置测试 key=0]
+GOOSE传动,   GOOSE_Outputs,   gooseTestCallback,
+
+[title=xxxx key=0]
+
+[END]

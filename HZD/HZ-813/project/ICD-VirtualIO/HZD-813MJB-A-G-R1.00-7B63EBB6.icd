@@ -1,0 +1,2595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd" xmlns:ext="http://www.hz-ieds.com">
+  <Header id="HZD-813MJB-A-G_00000001" toolID="HZConfig" nameStructure="IEDName"/>
+  <Communication>
+    <SubNetwork name="Subnet_GOOSE" type="IECGOOSE">
+      <BitRate unit="b/s" multiplier="M">10</BitRate>
+      <ConnectedAP iedName="TEMPLATE" apName="G1">
+        <GSE ldInst="MUGO" cbName="gocb0">
+          <Address>
+            <P type="MAC-Address">01-0C-CD-01-00-00</P>
+            <P type="VLAN-ID">000</P>
+            <P type="VLAN-PRIORITY">4</P>
+            <P type="APPID">3000</P>
+          </Address>
+          <MinTime unit="s" multiplier="m">2</MinTime>
+          <MaxTime unit="s" multiplier="m">5000</MaxTime>
+        </GSE>
+        <GSE ldInst="MUGO" cbName="gocb1">
+          <Address>
+            <P type="MAC-Address">01-0C-CD-01-00-01</P>
+            <P type="VLAN-ID">000</P>
+            <P type="VLAN-PRIORITY">4</P>
+            <P type="APPID">3001</P>
+          </Address>
+          <MinTime unit="s" multiplier="m">2</MinTime>
+          <MaxTime unit="s" multiplier="m">5000</MaxTime>
+        </GSE>
+        <PhysConn type="Connection">
+          <P type="Port">1-A</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">1</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-B</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">2</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-C</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">3</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-D</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">4</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-E</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">5</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-F</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">6</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-G</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">7</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-H</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">8</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-K</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">11</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-L</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">12</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-I</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">9</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-J</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">10</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-M</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">13</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-N</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">14</P>
+        </PhysConn>
+      </ConnectedAP>
+    </SubNetwork>
+    <SubNetwork name="Subnet_SMV" type="IECSMV">
+      <BitRate unit="b/s" multiplier="M">10</BitRate>
+      <ConnectedAP iedName="TEMPLATE" apName="M1">
+        <SMV ldInst="MUSV" cbName="smvcb0">
+          <Address>
+            <P type="MAC-Address">01-0C-CD-04-00-00</P>
+            <P type="VLAN-ID">000</P>
+            <P type="VLAN-PRIORITY">4</P>
+            <P type="APPID">4000</P>
+          </Address>
+        </SMV>
+        <PhysConn type="Connection">
+          <P type="Port">1-A</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">1</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-B</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">2</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-C</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">3</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-D</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">4</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-E</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">5</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-F</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">6</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-G</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">7</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-H</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">8</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-L</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">12</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-I</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">9</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-J</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">10</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-K</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">11</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-M</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">13</P>
+        </PhysConn>
+        <PhysConn type="RedConn">
+          <P type="Port">1-N</P>
+          <P type="Plug">LC</P>
+          <P type="Type">FOC</P>
+          <P type="Cable">14</P>
+        </PhysConn>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED name="TEMPLATE" desc="标准装置" type="HZD-813MJB-A-G_00000001" manufacturer="HZ" configVersion="R1.00">
+    <Private type="Board">Type:HZ6101,Slot:B01,Fiber:2</Private>
+    <Private type="Board">Type:HZ6101,Slot:B02,Fiber:7</Private>
+    <Private type="MainCpu">Type:HZ6101,Slot:B01</Private>
+    <Private type="TPLInfo">version:1.00,revision:1.00,tool:PCS-Explorer_1.1.2,cidRuleVersion:1.1.2</Private>
+    <Services>
+      <DynAssociation/>
+      <SettingGroups>
+        <SGEdit/>
+        <ConfSG/>
+      </SettingGroups>
+      <GetDirectory/>
+      <GetDataObjectDefinition/>
+      <DataObjectDirectory/>
+      <GetDataSetValue/>
+      <SetDataSetValue/>
+      <DataSetDirectory/>
+      <ConfDataSet max="160" maxAttributes="512"/>
+      <ReadWrite/>
+      <ConfReportControl max="160"/>
+      <GetCBValues/>
+      <ReportSettings cbName="Conf" datSet="Conf" rptID="Dyn" optFields="Dyn" bufTime="Dyn" trgOps="Dyn" intgPd="Dyn"/>
+      <GOOSE max="64"/>
+      <FileHandling/>
+      <ConfLNs fixPrefix="true" fixLnInst="true"/>
+    </Services>
+    <AccessPoint name="G1" router="false" clock="false">
+      <Server timeout="30">
+        <Authentication none="true"/>
+        <LDevice inst="MUGO" desc="过程层GOOSE LD">
+          <LN0 desc="逻辑节点0" lnType="HZ_LLN0_V1.00__81X__V1.00" lnClass="LLN0" inst="">
+            <DataSet name="dsGOOSE1" desc="GOOSE数据集1">
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind1" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind2" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind3" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind4" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind5" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind6" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind7" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind8" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind9" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind10" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind11" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind12" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind15" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind16" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind17" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind18" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind19" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind20" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind21" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="1" doName="Ind22" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind1" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind2" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind3" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind4" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind5" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind6" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind7" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind8" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind9" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind10" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind11" daName="stVal" fc="ST"/>
+              <FCDA ldInst="MUGO" prefix="DEVAlm" lnClass="GGIO" lnInst="2" doName="Ind12" daName="stVal" fc="ST"/>
+            </DataSet>
+            <DataSet name="dsGOOSE2" desc="GOOSE数据集2">
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="1" doName="AnIn1" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="1" doName="AnIn2" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="1" doName="AnIn3" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="1" doName="AnIn4" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="1" doName="AnIn5" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="1" doName="AnIn6" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="1" doName="AnIn7" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="1" doName="AnIn8" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="2" doName="AnIn1" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="2" doName="AnIn2" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="2" doName="AnIn3" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="2" doName="AnIn4" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="2" doName="AnIn5" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="2" doName="AnIn6" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="2" doName="AnIn7" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="3" doName="AnIn1" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="3" doName="AnIn2" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="3" doName="AnIn3" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="3" doName="AnIn4" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="3" doName="AnIn5" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="3" doName="AnIn6" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="3" doName="AnIn7" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="3" doName="AnIn8" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="4" doName="AnIn1" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="4" doName="AnIn2" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="4" doName="AnIn3" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="4" doName="AnIn4" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="4" doName="AnIn5" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="4" doName="AnIn6" daName="mag.f" fc="MX"/>
+              <FCDA ldInst="MUGO" prefix="ConMea" lnClass="GGIO" lnInst="4" doName="AnIn7" daName="mag.f" fc="MX"/>
+            </DataSet>
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="NamPlt" desc="Name Plate">
+              <DAI name="dU">
+                <Val>Name Plate</Val>
+              </DAI>
+              <DAI name="ldNs">
+                <Val>IEC 61850-7-4:2003</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DelayTRtg" desc="SV Delay time">
+              <DAI name="dU">
+                <Val>SV Delay time</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+            <GSEControl name="gocb0" datSet="dsGOOSE1" confRev="1" type="GOOSE" appID="MUGO/LLN0.gocb0"/>
+            <GSEControl name="gocb1" datSet="dsGOOSE2" confRev="1" type="GOOSE" appID="MUGO/LLN0.gocb1"/>
+          </LN0>
+          <LN desc="装置告警信号3" lnType="ZJRPIT_GGIO_Ind32_V1.00" lnClass="GGIO" inst="1" prefix="DEVAlm">
+            <DOI name="Mod" desc="装置告警信号3">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind1" desc="同时返回">
+              <DAI name="stVal" sAddr="YX:B01.SmvDeal1.SyncBack_out"/>
+              <DAI name="dU">
+                <Val>同时返回</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind2" desc="同时动作">
+              <DAI name="stVal" sAddr="YX:B01.SmvDeal1.SyncDone_out"/>
+              <DAI name="dU">
+                <Val>同时动作</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind3" desc="I母位置异常">
+              <DAI name="stVal" sAddr="YX:B01.DzPosSelect1.pos_bjj"/>
+              <DAI name="dU">
+                <Val>I母位置异常</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind4" desc="II母位置异常">
+              <DAI name="stVal" sAddr="YX:B01.DzPosSelect2.pos_bjj"/>
+              <DAI name="dU">
+                <Val>II母位置异常</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind5" desc="第一路采样出错">
+              <DAI name="stVal" sAddr="YX:B01.AdcDma.ptr_err"/>
+              <DAI name="dU">
+                <Val>第一路采样出错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind6" desc="第一路采样校验错">
+              <DAI name="stVal" sAddr="YX:B01.AdcDma.stru_err"/>
+              <DAI name="dU">
+                <Val>第一路采样校验错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind7" desc="第一路采样溢出错">
+              <DAI name="stVal" sAddr="YX:B01.AdcDma.index_err"/>
+              <DAI name="dU">
+                <Val>第一路采样溢出错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind8" desc="第二路采样出错">
+              <DAI name="stVal" sAddr="YX:B02.AdcDma.ptr_err"/>
+              <DAI name="dU">
+                <Val>第二路采样出错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind9" desc="第二路采样校验错">
+              <DAI name="stVal" sAddr="YX:B02.AdcDma.stru_err"/>
+              <DAI name="dU">
+                <Val>第二路采样校验错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind10" desc="第二路采样溢出错">
+              <DAI name="stVal" sAddr="YX:B02.AdcDma.index_err"/>
+              <DAI name="dU">
+                <Val>第二路采样溢出错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind11" desc="光耦电源异常">
+              <DAI name="stVal" sAddr="YX:B01.TestBoard1.opt_err"/>
+              <DAI name="dU">
+                <Val>光耦电源异常</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind12" desc="采样同步异常">
+              <DAI name="stVal" sAddr="YX:B01.SynPps.syn_alarm"/>
+              <DAI name="dU">
+                <Val>采样同步异常</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind15" desc="A相保护电流双AD比较出错">
+              <DAI name="stVal" sAddr="YX:B01.CompareIa.amp_err"/>
+              <DAI name="dU">
+                <Val>A相保护电流双AD比较出错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind16" desc="B相保护电流双AD比较出错">
+              <DAI name="stVal" sAddr="YX:B01.CompareIb.amp_err"/>
+              <DAI name="dU">
+                <Val>B相保护电流双AD比较出错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind17" desc="C相保护电流双AD比较出错">
+              <DAI name="stVal" sAddr="YX:B01.CompareIc.amp_err"/>
+              <DAI name="dU">
+                <Val>C相保护电流双AD比较出错</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind18" desc="SV级联告警">
+              <DAI name="stVal" sAddr="YX:B01.SmvDeal1.smv_wrong"/>
+              <DAI name="dU">
+                <Val>SV级联告警</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind19" desc="级联1额定延迟异常">
+              <DAI name="stVal" sAddr="YX:B01.SmvDeal1.delay_err_1"/>
+              <DAI name="dU">
+                <Val>级联1额定延迟异常</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind20" desc="间隔1延迟超限">
+              <DAI name="stVal" sAddr="YX:B02.SmvDeal1.delay_out_1"/>
+              <DAI name="dU">
+                <Val>间隔1延迟超限</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind21" desc="压切取I母">
+              <DAI name="stVal" sAddr="YX:B01.SmvDeal1.use_bus_I"/>
+              <DAI name="dU">
+                <Val>压切取I母</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind22" desc="压切取II母">
+              <DAI name="stVal" sAddr="YX:B01.SmvDeal1.use_bus_II"/>
+              <DAI name="dU">
+                <Val>压切取II母</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="GOOSE告警信号" lnType="ZJRPIT_GGIO_Ind32_V1.00" lnClass="GGIO" inst="2" prefix="DEVAlm">
+            <DOI name="Mod" desc="GOOSE告警信号">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind1" desc="GOOSE1接收A网断链">
+              <DAI name="stVal" sAddr="YX:B01.goose.link_down_a_0"/>
+              <DAI name="dU">
+                <Val>GOOSE1接收A网断链</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind2" desc="GOOSE1接收B网断链">
+              <DAI name="stVal" sAddr="YX:B01.goose.link_down_b_0"/>
+              <DAI name="dU">
+                <Val>GOOSE1接收B网断链</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind3" desc="GOOSE2接收A网断链">
+              <DAI name="stVal" sAddr="YX:B01.goose.link_down_a_1"/>
+              <DAI name="dU">
+                <Val>GOOSE2接收A网断链</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind4" desc="GOOSE2接收B网断链">
+              <DAI name="stVal" sAddr="YX:B01.goose.link_down_b_1"/>
+              <DAI name="dU">
+                <Val>GOOSE2接收B网断链</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind5" desc="GOOSE总告警">
+              <DAI name="stVal" sAddr="YX:B01.goose.bjj_sum"/>
+              <DAI name="dU">
+                <Val>GOOSE总告警</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind6" desc="SV总告警">
+              <DAI name="stVal" sAddr="YX:B01.Or161.f_func_out"/>
+              <DAI name="dU">
+                <Val>SV总告警</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind7" desc="GOOSE检修不一致">
+              <DAI name="stVal" sAddr="YX:B01.goose.test_ns"/>
+              <DAI name="dU">
+                <Val>GOOSE检修不一致</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind8" desc="对时异常">
+              <DAI name="stVal" sAddr="YX:B01.SyncTime.pps_error"/>
+              <DAI name="dU">
+                <Val>对时异常</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind9" desc="运行异常">
+              <DAI name="stVal" sAddr="YX:B01.BS_BJ.bjj_sum"/>
+              <DAI name="dU">
+                <Val>运行异常</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind10" desc="装置故障">
+              <DAI name="stVal" sAddr="YX:B01.BS_BJ.bsj_sum"/>
+              <DAI name="dU">
+                <Val>装置故障</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind11" desc="检修压板投入">
+              <DAI name="stVal" sAddr="YX:B01.TestBoard1.test_strap_out"/>
+              <DAI name="dU">
+                <Val>检修压板投入</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Ind12" desc="SV检修不一致">
+              <DAI name="stVal" sAddr="YX:B01.Or24.f_func_out"/>
+              <DAI name="dU">
+                <Val>SV检修不一致</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="物理铭牌" lnType="HZ_LPHD_V1.00__81X__V1.00" lnClass="LPHD" inst="1"/>
+          <LN desc="温湿度测量" lnType="ZJRPIT_GGIO_AnIn8_V1.00" lnClass="GGIO" inst="1" prefix="ConMea">
+            <DOI name="Mod" desc="温湿度测量">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn1" desc="光口1发送功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx1_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx1_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx1_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口1发送功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn2" desc="光口2发送功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx2_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx2_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx2_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口2发送功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn3" desc="光口3发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx3_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx3_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx3_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口3发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn4" desc="光口4发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx4_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx4_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx4_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口4发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn5" desc="光口5发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx5_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx5_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx5_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口5发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn6" desc="光口6发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx6_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx6_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx6_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口6发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn7" desc="光口7发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx7_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx7_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx7_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口7发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn8" desc="光口8发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx8_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx8_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx8_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口8发送1功率</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="温湿度测量" lnType="ZJRPIT_GGIO_AnIn8_V1.00" lnClass="GGIO" inst="2" prefix="ConMea">
+            <DOI name="Mod" desc="温湿度测量">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn1" desc="光口9发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx9_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx9_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx9_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口9发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn2" desc="光口10发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx10_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx10_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx10_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口10发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn3" desc="光口11发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx11_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx11_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx11_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口11发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn4" desc="光口12发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx12_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx12_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx12_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口12发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn5" desc="光口13发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx13_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx13_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx13_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口13发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn6" desc="光口14发送1功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.tx14_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.tx14_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.tx14_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口14发送1功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn7" desc="装置内部工作电压">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.VCC500:0.2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.VCC500:0.2"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.VCC500:0.2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>装置内部工作电压</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="温湿度测量" lnType="ZJRPIT_GGIO_AnIn8_V1.00" lnClass="GGIO" inst="3" prefix="ConMea">
+            <DOI name="Mod" desc="温湿度测量">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn1" desc="光口1接收功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx1_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx1_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx1_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口1接收功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn2" desc="光口2接收功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx2_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx2_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx2_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口2接收功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn3" desc="光口3发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx3_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx3_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx3_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口3发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn4" desc="光口4发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx4_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx4_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx4_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口4发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn5" desc="光口5发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx5_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx5_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx5_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口5发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn6" desc="光口6发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx6_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx6_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx6_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口6发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn7" desc="光口7发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx7_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx7_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx7_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口7发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn8" desc="光口8发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx8_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx8_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx8_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口8发送2功率</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="温湿度测量" lnType="ZJRPIT_GGIO_AnIn8_V1.00" lnClass="GGIO" inst="4" prefix="ConMea">
+            <DOI name="Mod" desc="温湿度测量">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn1" desc="光口9发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx9_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx9_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx9_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口9发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn2" desc="光口10发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx10_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx10_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx10_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口10发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn3" desc="光口11发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx11_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx11_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx11_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口11发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn4" desc="光口12发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx12_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx12_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx12_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口12发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn5" desc="光口13发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx13_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx13_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx13_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口13发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn6" desc="光口14发送2功率">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.rx14_pwr:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.rx14_pwr:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.rx14_pwr:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>光口14发送2功率</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AnIn7" desc="装置内部温度">
+              <SDI name="mag">
+                <DAI name="f" sAddr="YC:B01.SFPU.dev_temp:0.5"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="YC:B01.SFPU.dev_temp:0.5"/>
+                <DAI name="multiplier" sAddr="YC:B01.SFPU.dev_temp:0.5"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>装置内部温度</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="GGIO" lnType="HZ_GGIO_DPC_V1.00__HZ__V1.00" lnClass="GGIO" inst="1" prefix="GOIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DPCSO1" desc="I母隔刀位置">
+              <DAI name="stVal" sAddr="Bstring2:B01.DzPosSelect1.twj__AB,B01.DzPosSelect1.hwj__AB"/>
+              <DAI name="ctlModel">
+                <Val>sbo-with-enhanced-security</Val>
+              </DAI>
+              <DAI name="sboTimeout">
+                <Val>30000</Val>
+              </DAI>
+              <DAI name="dU">
+                <Val>I母隔刀位置</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DPCSO2" desc="II母隔刀位置">
+              <DAI name="stVal" sAddr="Bstring2:B01.DzPosSelect2.twj__AB,B01.DzPosSelect2.hwj__AB"/>
+              <DAI name="ctlModel">
+                <Val>sbo-with-enhanced-security</Val>
+              </DAI>
+              <DAI name="sboTimeout">
+                <Val>30000</Val>
+              </DAI>
+              <DAI name="dU">
+                <Val>II母隔刀位置</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DPCSO3" desc="General indication">
+              <DAI name="ctlModel">
+                <Val>sbo-with-enhanced-security</Val>
+              </DAI>
+              <DAI name="sboTimeout">
+                <Val>30000</Val>
+              </DAI>
+              <DAI name="dU">
+                <Val>General indication</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DPCSO4" desc="General indication">
+              <DAI name="ctlModel">
+                <Val>sbo-with-enhanced-security</Val>
+              </DAI>
+              <DAI name="sboTimeout">
+                <Val>30000</Val>
+              </DAI>
+              <DAI name="dU">
+                <Val>General indication</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DPCSO5" desc="General indication">
+              <DAI name="ctlModel">
+                <Val>sbo-with-enhanced-security</Val>
+              </DAI>
+              <DAI name="sboTimeout">
+                <Val>30000</Val>
+              </DAI>
+              <DAI name="dU">
+                <Val>General indication</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DPCSO6" desc="General indication">
+              <DAI name="ctlModel">
+                <Val>sbo-with-enhanced-security</Val>
+              </DAI>
+              <DAI name="sboTimeout">
+                <Val>30000</Val>
+              </DAI>
+              <DAI name="dU">
+                <Val>General indication</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DPCSO7" desc="General indication">
+              <DAI name="ctlModel">
+                <Val>sbo-with-enhanced-security</Val>
+              </DAI>
+              <DAI name="sboTimeout">
+                <Val>30000</Val>
+              </DAI>
+              <DAI name="dU">
+                <Val>General indication</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DPCSO8" desc="General indication">
+              <DAI name="ctlModel">
+                <Val>sbo-with-enhanced-security</Val>
+              </DAI>
+              <DAI name="sboTimeout">
+                <Val>30000</Val>
+              </DAI>
+              <DAI name="dU">
+                <Val>General indication</Val>
+              </DAI>
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+    <AccessPoint name="M1" router="false" clock="false">
+      <Server timeout="30">
+        <Authentication none="true"/>
+        <LDevice inst="MUSV" desc="过程层SV LD">
+          <LN0 desc="逻辑节点0" lnType="HZ_LLN0_V1.00__81X__V1.00" lnClass="LLN0" inst="">
+            <DataSet name="dsSV1" desc="SMV数据集1">
+              <FCDA ldInst="MUSV" lnClass="LLN0" doName="DelayTRtg" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="1" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="1" doName="AmpChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="2" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="2" doName="AmpChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="3" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="3" doName="AmpChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="4" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="5" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="6" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="7" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="7" doName="AmpChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="8" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="8" doName="AmpChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="9" doName="Amp" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TCTR" lnInst="9" doName="AmpChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="1" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="1" doName="VolChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="2" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="2" doName="VolChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="3" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="3" doName="VolChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="4" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="4" doName="VolChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="5" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="6" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="7" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="8" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="8" doName="VolChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="9" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="9" doName="VolChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="10" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="10" doName="VolChB" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="11" doName="Vol" fc="MX"/>
+              <FCDA ldInst="MUSV" lnClass="TVTR" lnInst="11" doName="VolChB" fc="MX"/>
+            </DataSet>
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="NamPlt" desc="Name Plate">
+              <DAI name="dU">
+                <Val>Name Plate</Val>
+              </DAI>
+              <DAI name="ldNs">
+                <Val>IEC 61850-7-4:2003</Val>
+              </DAI>
+            </DOI>
+            <DOI name="DelayTRtg" desc="延迟时间">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.delay_time"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.delay_time"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.delay_time"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>延迟时间</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+            <SampledValueControl name="smvcb0" datSet="dsSV1" confRev="1" smvID="MUSV/LLN0.smvcb0" multicast="true" smpRate="4000" nofASDU="1">
+              <SmvOpts refreshTime="false" sampleSynchronized="true" sampleRate="false" security="false" dataRef="false"/>
+            </SampledValueControl>
+          </LN0>
+          <LN desc="物理铭牌" lnType="HZ_LPHD_V1.00__81X__V1.00" lnClass="LPHD" inst="1"/>
+          <LN desc="A相保护电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="1">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="A相保护电流1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Ipa_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Ipa_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Ipa_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>A相保护电流1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="A相保护电流2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Ipa_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Ipa_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Ipa_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>A相保护电流2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="B相保护电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="2">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="B相保护电流1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Ipb_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Ipb_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Ipb_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>B相保护电流1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="B相保护电流2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Ipb_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Ipb_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Ipb_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>B相保护电流2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="C相保护电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="3">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="C相保护电流1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Ipc_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Ipc_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Ipc_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>C相保护电流1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="C相保护电流2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Ipc_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Ipc_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Ipc_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>C相保护电流2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="A相测量电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="4">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="A相测量电流(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Ima_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Ima_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Ima_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>A相测量电流(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="Current (Sampled value from another channel)">
+              <DAI name="dU">
+                <Val>Current (Sampled value from another channel)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="B相测量电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="5">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="B相测量电流(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Imb_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Imb_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Imb_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>B相测量电流(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="Current (Sampled value from another channel)">
+              <DAI name="dU">
+                <Val>Current (Sampled value from another channel)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="C相测量电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="6">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="C相测量电流(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Imc_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Imc_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Imc_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>C相测量电流(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="Current (Sampled value from another channel)">
+              <DAI name="dU">
+                <Val>Current (Sampled value from another channel)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="零序电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="7">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="零序电流1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.I0_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.I0_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.I0_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>零序电流1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="零序电流2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.I0_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.I0_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.I0_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>零序电流2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="间隙电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="8">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="间隙电流1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.In_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.In_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.In_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>间隙电流1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="间隙电流2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.In_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.In_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.In_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>间隙电流2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="间隙电流" lnType="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR" inst="9">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Amp" desc="备用通道电流1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Ibak_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Ibak_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Ibak_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>备用通道电流1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="AmpChB" desc="备用通道电流2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Ibak_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Ibak_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Ibak_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>备用通道电流2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="A相电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="1">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="A相保护电压1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Upa_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Upa_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Upa_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>A相保护电压1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="A相保护电压2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Upa_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Upa_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Upa_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>A相保护电压2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="B相电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="2">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="B相保护电压1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Upb_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Upb_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Upb_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>B相保护电压1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="B相保护电压2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Upb_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Upb_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Upb_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>B相保护电压2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="C相电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="3">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="C相保护电压1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Upc_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Upc_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Upc_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>C相保护电压1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="C相保护电压2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Upc_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Upc_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Upc_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>C相保护电压2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="零序电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="4">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="零序电压1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.U0_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.U0_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.U0_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>零序电压1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="零序电压2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.U0_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.U0_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.U0_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>零序电压2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="A相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="5">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="A相测量电压(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Uma_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Uma_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Uma_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>A相测量电压(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="B相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="6">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="B相测量电压(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Umb_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Umb_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Umb_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>B相测量电压(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="C相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="7">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="C相测量电压(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Umc_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Umc_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Umc_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>C相测量电压(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="同期电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="8">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="同期电压1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Ux_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Ux_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Ux_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>同期电压1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="同期电压2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Ux_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Ux_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Ux_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>同期电压2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="A相同期电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="9">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="A相同期电压1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Uxa_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Uxa_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Uxa_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>A相同期电压1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="A相同期电压2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Uxa_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Uxa_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Uxa_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>A相同期电压2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="B相同期电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="10">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="B相同期电压1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Uxb_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Uxb_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Uxb_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>B相同期电压1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="B相同期电压2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Uxb_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Uxb_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Uxb_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>B相同期电压2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="C相同期电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="11">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="C相同期电压1(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.DataMerge1.Uxc_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.DataMerge1.Uxc_9_2"/>
+                <DAI name="multiplier" sAddr="P:B01.DataMerge1.Uxc_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>C相同期电压1(9-2)</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="C相同期电压2(9-2)">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.DataMerge1.Uxc_9_2"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.DataMerge1.Uxc_9_2"/>
+                <DAI name="multiplier" sAddr="P:B02.DataMerge1.Uxc_9_2"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>C相同期电压2(9-2)</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="额定延迟9-2" lnType="HZ_GGIO_SAV_V1.00__81X__V1.00" lnClass="GGIO" inst="1" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="SAVSO1" desc="额定延迟">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="C:DELAY_TIME"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="C:DELAY_TIME"/>
+                <DAI name="multiplier" sAddr="C:DELAY_TIME"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>额定延迟</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+            <DOI name="SAVSO2" desc="General indication">
+              <DAI name="dU">
+                <Val>General indication</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="1母A相保护电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="1" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="1母A相保护电压1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.SmvDeal1.Ubus1Ap"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.SmvDeal1.Ubus1Ap"/>
+                <DAI name="multiplier" sAddr="P:B01.SmvDeal1.Ubus1Ap"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母A相保护电压1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="1母A相保护电压2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus1Ap"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus1Ap"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus1Ap"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母A相保护电压2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="1母A相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="2" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="1母A相测量电压">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus1Am"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus1Am"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus1Am"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母A相测量电压</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="1母B相保护电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="3" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="1母B相保护电压1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.SmvDeal1.Ubus1Bp"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.SmvDeal1.Ubus1Bp"/>
+                <DAI name="multiplier" sAddr="P:B01.SmvDeal1.Ubus1Bp"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母B相保护电压1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="1母B相保护电压2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus1Bp"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus1Bp"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus1Bp"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母B相保护电压2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="1母B相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="4" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="1母B相测量电压">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus1Bm"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus1Bm"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus1Bm"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母B相测量电压</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="1母C相保护电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="5" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="1母C相保护电压1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.SmvDeal1.Ubus1Cp"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.SmvDeal1.Ubus1Cp"/>
+                <DAI name="multiplier" sAddr="P:B01.SmvDeal1.Ubus1Cp"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母C相保护电压1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="1母C相保护电压2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus1Cp"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus1Cp"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus1Cp"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母C相保护电压2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="1母C相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="6" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="1母C相测量电压">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus1Cm"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus1Cm"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus1Cm"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母C相测量电压</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="1母零序电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="7" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="1母零序电压1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.SmvDeal1.Ubus1N"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.SmvDeal1.Ubus1N"/>
+                <DAI name="multiplier" sAddr="P:B01.SmvDeal1.Ubus1N"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母零序电压1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="1母零序电压2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus1N"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus1N"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus1N"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>1母零序电压2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="2母A相保护电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="8" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="2母A相保护电压1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.SmvDeal1.Ubus2Ap"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.SmvDeal1.Ubus2Ap"/>
+                <DAI name="multiplier" sAddr="P:B01.SmvDeal1.Ubus2Ap"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母A相保护电压1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="2母A相保护电压2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus2Ap"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus2Ap"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus2Ap"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母A相保护电压2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="2母A相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="9" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="2母A相测量电压">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus2Am"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus2Am"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus2Am"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母A相测量电压</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="2母B相保护电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="10" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="2母B相保护电压1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.SmvDeal1.Ubus2Bp"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.SmvDeal1.Ubus2Bp"/>
+                <DAI name="multiplier" sAddr="P:B01.SmvDeal1.Ubus2Bp"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母B相保护电压1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="2母B相保护电压2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus2Bp"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus2Bp"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus2Bp"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母B相保护电压2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="2母B相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="11" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="2母B相测量电压">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus2Bm"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus2Bm"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus2Bm"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母B相测量电压</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="2母C相保护电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="12" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="2母C相保护电压1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.SmvDeal1.Ubus2Cp"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.SmvDeal1.Ubus2Cp"/>
+                <DAI name="multiplier" sAddr="P:B01.SmvDeal1.Ubus2Cp"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母C相保护电压1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="2母C相保护电压2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus2Cp"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus2Cp"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus2Cp"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母C相保护电压2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="2母C相测量电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="13" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="2母C相测量电压">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus2Cm"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus2Cm"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus2Cm"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母C相测量电压</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="Voltage (sampled value from another channel) ">
+              <DAI name="dU">
+                <Val>Voltage (sampled value from another channel) </Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN desc="2母零序电压" lnType="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR" inst="14" prefix="SVIN">
+            <DOI name="Mod" desc="Mode">
+              <DAI name="ctlModel">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Vol" desc="2母零序电压1">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B01.SmvDeal1.Ubus2N"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B01.SmvDeal1.Ubus2N"/>
+                <DAI name="multiplier" sAddr="P:B01.SmvDeal1.Ubus2N"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母零序电压1</Val>
+              </DAI>
+            </DOI>
+            <DOI name="VolChB" desc="2母零序电压2">
+              <SDI name="instMag">
+                <DAI name="i" sAddr="P:B02.SmvDeal1.Ubus2N"/>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" sAddr="P:B02.SmvDeal1.Ubus2N"/>
+                <DAI name="multiplier" sAddr="P:B02.SmvDeal1.Ubus2N"/>
+              </SDI>
+              <DAI name="dU">
+                <Val>2母零序电压2</Val>
+              </DAI>
+              <DAI name="dataNs">
+                <Val>SGCC MODEL:2012</Val>
+              </DAI>
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="HZ_LLN0_V1.00__81X__V1.00" desc="LLN0" lnClass="LLN0">
+      <DO name="Mod" type="CN_INC_Mod" desc="Mode"/>
+      <DO name="Beh" type="CN_INS_Beh" desc="Behaviour"/>
+      <DO name="Health" type="CN_INS_Health" desc="Health"/>
+      <DO name="NamPlt" type="CN_LPL_LN0" desc="Name Plate"/>
+      <DO name="DelayTRtg" type="CN_SAV_EX" desc="SV Delay time"/>
+    </LNodeType>
+    <LNodeType id="HZ_LPHD_V1.00__81X__V1.00" desc="LPHD" lnClass="LPHD">
+      <DO name="PhyNam" type="CN_DPL" desc="Physical device name plate"/>
+      <DO name="PhyHealth" type="CN_INS_Health" desc="Physical device health"/>
+      <DO name="Proxy" type="CN_SPS" desc="Indicates if this LN is a proxy"/>
+    </LNodeType>
+    <LNodeType id="HZ_GGIO_DPC_V1.00__HZ__V1.00" lnClass="GGIO">
+      <DO name="Mod" type="CN_INC_Mod" desc="Mode"/>
+      <DO name="Beh" type="CN_INS_Beh" desc="Behaviour"/>
+      <DO name="Health" type="CN_INS_Health" desc="Health"/>
+      <DO name="NamPlt" type="CN_LPL" desc="Name Plate"/>
+      <DO name="DPCSO1" type="CN_DPC" desc="General indication"/>
+      <DO name="DPCSO2" type="CN_DPC" desc="General indication"/>
+      <DO name="DPCSO3" type="CN_DPC" desc="General indication"/>
+      <DO name="DPCSO4" type="CN_DPC" desc="General indication"/>
+      <DO name="DPCSO5" type="CN_DPC" desc="General indication"/>
+      <DO name="DPCSO6" type="CN_DPC" desc="General indication"/>
+      <DO name="DPCSO7" type="CN_DPC" desc="General indication"/>
+      <DO name="DPCSO8" type="CN_DPC" desc="General indication"/>
+    </LNodeType>
+    <LNodeType id="HZ_GGIO_SAV_V1.00__81X__V1.00" lnClass="GGIO">
+      <DO name="Mod" type="CN_INC_Mod" desc="Mode"/>
+      <DO name="Beh" type="CN_INS_Beh" desc="Behaviour"/>
+      <DO name="Health" type="CN_INS_Health" desc="Health"/>
+      <DO name="NamPlt" type="CN_LPL" desc="Name Plate"/>
+      <DO name="SAVSO1" type="CN_SAV_EX" desc="General indication"/>
+      <DO name="SAVSO2" type="CN_SAV_EX" desc="General indication"/>
+    </LNodeType>
+    <LNodeType id="HZ_TCTR_V1.00__81X__V1.00" lnClass="TCTR">
+      <DO name="Mod" type="CN_INC_Mod" desc="Mode"/>
+      <DO name="Beh" type="CN_INS_Beh" desc="Behaviour"/>
+      <DO name="Health" type="CN_INS_Health" desc="Health"/>
+      <DO name="NamPlt" type="CN_LPL" desc="Name Plate"/>
+      <DO name="Amp" type="CN_SAV" desc="Current (Sampled value) "/>
+      <DO name="AmpChB" type="CN_SAV_EX" desc="Current (Sampled value from another channel)"/>
+    </LNodeType>
+    <LNodeType id="HZ_TVTR_V1.00__81X__V1.00" lnClass="TVTR">
+      <DO name="Mod" type="CN_INC_Mod" desc="Mode"/>
+      <DO name="Beh" type="CN_INS_Beh" desc="Behaviour"/>
+      <DO name="Health" type="CN_INS_Health" desc="Health"/>
+      <DO name="NamPlt" type="CN_LPL" desc="Name Plate"/>
+      <DO name="Vol" type="CN_SAV" desc="Voltage (sampled value) "/>
+      <DO name="VolChB" type="CN_SAV_EX" desc="Voltage (sampled value from another channel) "/>
+    </LNodeType>
+    <LNodeType id="ZJRPIT_GGIO_Ind32_V1.00" lnClass="GGIO">
+      <DO name="Mod" type="CN_INC_Mod"/>
+      <DO name="Beh" type="CN_INS_Beh"/>
+      <DO name="Health" type="CN_INS_Health"/>
+      <DO name="NamPlt" type="CN_LPL"/>
+      <DO name="Ind1" type="CN_SPS"/>
+      <DO name="Ind2" type="CN_SPS"/>
+      <DO name="Ind3" type="CN_SPS"/>
+      <DO name="Ind4" type="CN_SPS"/>
+      <DO name="Ind5" type="CN_SPS"/>
+      <DO name="Ind6" type="CN_SPS"/>
+      <DO name="Ind7" type="CN_SPS"/>
+      <DO name="Ind8" type="CN_SPS"/>
+      <DO name="Ind9" type="CN_SPS"/>
+      <DO name="Ind10" type="CN_SPS"/>
+      <DO name="Ind11" type="CN_SPS"/>
+      <DO name="Ind12" type="CN_SPS"/>
+      <DO name="Ind13" type="CN_SPS"/>
+      <DO name="Ind14" type="CN_SPS"/>
+      <DO name="Ind15" type="CN_SPS"/>
+      <DO name="Ind16" type="CN_SPS"/>
+      <DO name="Ind17" type="CN_SPS"/>
+      <DO name="Ind18" type="CN_SPS"/>
+      <DO name="Ind19" type="CN_SPS"/>
+      <DO name="Ind20" type="CN_SPS"/>
+      <DO name="Ind21" type="CN_SPS"/>
+      <DO name="Ind22" type="CN_SPS"/>
+      <DO name="Ind23" type="CN_SPS"/>
+      <DO name="Ind24" type="CN_SPS"/>
+      <DO name="Ind25" type="CN_SPS"/>
+      <DO name="Ind26" type="CN_SPS"/>
+      <DO name="Ind27" type="CN_SPS"/>
+      <DO name="Ind28" type="CN_SPS"/>
+      <DO name="Ind29" type="CN_SPS"/>
+      <DO name="Ind30" type="CN_SPS"/>
+      <DO name="Ind31" type="CN_SPS"/>
+      <DO name="Ind32" type="CN_SPS"/>
+    </LNodeType>
+    <LNodeType id="ZJRPIT_GGIO_AnIn8_V1.00" lnClass="GGIO">
+      <DO name="Mod" type="CN_INC_Mod"/>
+      <DO name="Beh" type="CN_INS_Beh"/>
+      <DO name="Health" type="CN_INS_Health"/>
+      <DO name="NamPlt" type="CN_LPL"/>
+      <DO name="AnIn1" type="CN_MV"/>
+      <DO name="AnIn2" type="CN_MV"/>
+      <DO name="AnIn3" type="CN_MV"/>
+      <DO name="AnIn4" type="CN_MV"/>
+      <DO name="AnIn5" type="CN_MV"/>
+      <DO name="AnIn6" type="CN_MV"/>
+      <DO name="AnIn7" type="CN_MV"/>
+      <DO name="AnIn8" type="CN_MV"/>
+    </LNodeType>
+    <DOType id="CN_SPS" cdc="SPS">
+      <DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+      <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+      <DA name="subVal" bType="BOOLEAN" fc="SV"/>
+      <DA name="subQ" bType="Quality" fc="SV"/>
+      <DA name="subID" bType="VisString64" fc="SV"/>
+      <DA name="dU" bType="Unicode255" fc="DC"/>
+    </DOType>
+    <DOType id="CN_INS_Beh" cdc="INS">
+      <DA name="stVal" bType="Enum" type="Beh" dchg="true" fc="ST"/>
+      <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+    </DOType>
+    <DOType id="CN_INS_Health" cdc="INS">
+      <DA name="stVal" bType="Enum" type="Health" dchg="true" fc="ST"/>
+      <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+    </DOType>
+    <DOType id="CN_MV" cdc="MV">
+      <DA name="mag" bType="Struct" type="CN_AnalogueValue" dchg="true" fc="MX"/>
+      <DA name="q" bType="Quality" qchg="true" fc="MX"/>
+      <DA name="t" bType="Timestamp" fc="MX"/>
+      <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+      <DA name="subMag" bType="Struct" type="CN_AnalogueValue" fc="SV"/>
+      <DA name="subQ" bType="Quality" fc="SV"/>
+      <DA name="subID" bType="VisString64" fc="SV"/>
+      <DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+      <DA name="db" bType="INT32U" fc="CF"/>
+      <DA name="zeroDb" bType="INT32U" fc="CF"/>
+      <DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+      <DA name="rangeC" bType="Struct" type="CN_RangeConfig" fc="CF"/>
+      <DA name="smpRate" bType="INT32U" fc="CF"/>
+      <DA name="dU" bType="Unicode255" fc="DC"/>
+    </DOType>
+    <DOType id="CN_SAV" cdc="SAV">
+      <DA name="instMag" bType="Struct" type="CN_AnalogueValue_I" fc="MX"/>
+      <DA name="q" bType="Quality" qchg="true" fc="MX"/>
+      <DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+      <DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+      <DA name="min" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+      <DA name="max" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+      <DA name="dU" bType="Unicode255" fc="DC"/>
+    </DOType>
+    <DOType id="CN_SAV_EX" cdc="SAV">
+      <DA name="instMag" bType="Struct" type="CN_AnalogueValue_I" fc="MX"/>
+      <DA name="q" bType="Quality" qchg="true" fc="MX"/>
+      <DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+      <DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+      <DA name="min" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+      <DA name="max" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+      <DA name="dU" bType="Unicode255" fc="DC"/>
+      <DA name="dataNs" bType="VisString255" fc="EX">
+        <Val>SGCC MODEL:2012</Val>
+      </DA>
+    </DOType>
+    <DOType id="CN_DPC" cdc="DPC">
+      <DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+      <DA name="Oper" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+      <DA name="Cancel" bType="Struct" type="CN_Cancel_SDPC" fc="CO"/>
+      <DA name="stVal" bType="Dbpos" dchg="true" fc="ST"/>
+      <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+      <DA name="subVal" bType="Dbpos" fc="SV"/>
+      <DA name="subQ" bType="Quality" fc="SV"/>
+      <DA name="subID" bType="VisString64" fc="SV"/>
+      <DA name="pulseConfig" bType="Struct" type="CN_PulseConfig" fc="CF"/>
+      <DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+      <DA name="sboTimeout" bType="INT32U" fc="CF"/>
+      <DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+      <DA name="dU" bType="Unicode255" fc="DC"/>
+    </DOType>
+    <DOType id="CN_INC_Mod" cdc="INC">
+      <DA name="stVal" bType="Enum" type="Mod" dchg="true" fc="ST"/>
+      <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+      <DA name="t" bType="Timestamp" fc="ST"/>
+      <DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF">
+        <Val>0</Val>
+      </DA>
+    </DOType>
+    <DOType id="CN_DPL" cdc="DPL">
+      <DA name="vendor" bType="VisString255" fc="DC"/>
+      <DA name="hwRev" bType="VisString255" fc="DC"/>
+      <DA name="swRev" bType="VisString255" fc="DC"/>
+      <DA name="serNum" bType="VisString255" fc="DC"/>
+      <DA name="model" bType="VisString255" fc="DC"/>
+      <DA name="location" bType="VisString255" fc="DC"/>
+      <DA name="mRID" bType="VisString255" fc="DC"/>
+    </DOType>
+    <DOType id="CN_LPL_LN0" cdc="LPL">
+      <DA name="vendor" bType="VisString255" fc="DC"/>
+      <DA name="swRev" bType="VisString255" fc="DC"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+      <DA name="dU" bType="Unicode255" fc="DC"/>
+      <DA name="configRev" bType="VisString255" fc="DC"/>
+      <DA name="ldNs" bType="VisString255" fc="EX">
+        <Val>IEC 61850-7-4:2003</Val>
+      </DA>
+    </DOType>
+    <DOType id="CN_LPL" cdc="LPL">
+      <DA name="vendor" bType="VisString255" fc="DC"/>
+      <DA name="swRev" bType="VisString255" fc="DC"/>
+      <DA name="d" bType="VisString255" fc="DC"/>
+      <DA name="dU" bType="Unicode255" fc="DC"/>
+    </DOType>
+    <DAType id="CN_AnalogueValue">
+      <BDA name="f" bType="FLOAT32"/>
+    </DAType>
+    <DAType id="CN_AnalogueValue_I">
+      <BDA name="i" bType="INT32"/>
+    </DAType>
+    <DAType id="CN_RangeConfig">
+      <BDA name="hhLim" bType="Struct" type="CN_AnalogueValue"/>
+      <BDA name="hLim" bType="Struct" type="CN_AnalogueValue"/>
+      <BDA name="lLim" bType="Struct" type="CN_AnalogueValue"/>
+      <BDA name="llLim" bType="Struct" type="CN_AnalogueValue"/>
+      <BDA name="min" bType="Struct" type="CN_AnalogueValue"/>
+      <BDA name="max" bType="Struct" type="CN_AnalogueValue"/>
+    </DAType>
+    <DAType id="CN_SBOw_Oper_SDPC">
+      <BDA name="ctlVal" bType="BOOLEAN"/>
+      <BDA name="origin" bType="Struct" type="CN_Originator"/>
+      <BDA name="ctlNum" bType="INT8U"/>
+      <BDA name="T" bType="Timestamp"/>
+      <BDA name="Test" bType="BOOLEAN"/>
+      <BDA name="Check" bType="Check"/>
+    </DAType>
+    <DAType id="CN_Cancel_SDPC">
+      <BDA name="ctlVal" bType="BOOLEAN"/>
+      <BDA name="origin" bType="Struct" type="CN_Originator"/>
+      <BDA name="ctlNum" bType="INT8U"/>
+      <BDA name="T" bType="Timestamp"/>
+      <BDA name="Test" bType="BOOLEAN"/>
+    </DAType>
+    <DAType id="CN_Originator">
+      <BDA name="orCat" bType="Enum" type="orCategory"/>
+      <BDA name="orIdent" bType="Octet64"/>
+    </DAType>
+    <DAType id="CN_ScaledValueConfig">
+      <BDA name="scaleFactor" bType="FLOAT32"/>
+      <BDA name="offset" bType="FLOAT32"/>
+    </DAType>
+    <DAType id="CN_PulseConfig">
+      <BDA name="cmdQual" bType="Enum" type="PulseConfigCmdQual"/>
+      <BDA name="onDur" bType="INT32U"/>
+      <BDA name="offDur" bType="INT32U"/>
+      <BDA name="numPls" bType="INT32U"/>
+    </DAType>
+    <DAType id="CN_units">
+      <BDA name="SIUnit" bType="Enum" type="SIUnit"/>
+      <BDA name="multiplier" bType="Enum" type="multiplier"/>
+    </DAType>
+    <EnumType id="ctlModel">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="sboClass">
+      <EnumVal ord="0">operate-once</EnumVal>
+      <EnumVal ord="1">operate-many</EnumVal>
+    </EnumType>
+    <EnumType id="orCategory">
+      <EnumVal ord="0">not-supported</EnumVal>
+      <EnumVal ord="1">bay-control</EnumVal>
+      <EnumVal ord="2">station-control</EnumVal>
+      <EnumVal ord="3">remote-control</EnumVal>
+      <EnumVal ord="4">automatic-bay</EnumVal>
+      <EnumVal ord="5">automatic-station</EnumVal>
+      <EnumVal ord="6">automatic-remote</EnumVal>
+      <EnumVal ord="7">maintenance</EnumVal>
+      <EnumVal ord="8">process</EnumVal>
+    </EnumType>
+    <EnumType id="multiplier">
+      <EnumVal ord="-24">y</EnumVal>
+      <EnumVal ord="-21">z</EnumVal>
+      <EnumVal ord="-18">a</EnumVal>
+      <EnumVal ord="-15">f</EnumVal>
+      <EnumVal ord="-12">p</EnumVal>
+      <EnumVal ord="-9">n</EnumVal>
+      <EnumVal ord="-6">µ</EnumVal>
+      <EnumVal ord="-3">m</EnumVal>
+      <EnumVal ord="-2">c</EnumVal>
+      <EnumVal ord="-1">d</EnumVal>
+      <EnumVal ord="0"/>
+      <EnumVal ord="1">da</EnumVal>
+      <EnumVal ord="2">h</EnumVal>
+      <EnumVal ord="3">k</EnumVal>
+      <EnumVal ord="6">M</EnumVal>
+      <EnumVal ord="9">G</EnumVal>
+      <EnumVal ord="12">T</EnumVal>
+      <EnumVal ord="15">P</EnumVal>
+      <EnumVal ord="18">E</EnumVal>
+      <EnumVal ord="21">Z</EnumVal>
+      <EnumVal ord="24">Y</EnumVal>
+    </EnumType>
+    <EnumType id="SIUnit">
+      <EnumVal ord="1"/>
+      <EnumVal ord="2">m</EnumVal>
+      <EnumVal ord="3">kg</EnumVal>
+      <EnumVal ord="4">s</EnumVal>
+      <EnumVal ord="5">A</EnumVal>
+      <EnumVal ord="6">K</EnumVal>
+      <EnumVal ord="7">mol</EnumVal>
+      <EnumVal ord="8">cd</EnumVal>
+      <EnumVal ord="9">deg</EnumVal>
+      <EnumVal ord="10">rad</EnumVal>
+      <EnumVal ord="11">sr</EnumVal>
+      <EnumVal ord="21">Gy</EnumVal>
+      <EnumVal ord="22">q</EnumVal>
+      <EnumVal ord="23">°C</EnumVal>
+      <EnumVal ord="24">Sv</EnumVal>
+      <EnumVal ord="25">F</EnumVal>
+      <EnumVal ord="26">C</EnumVal>
+      <EnumVal ord="27">S</EnumVal>
+      <EnumVal ord="28">H</EnumVal>
+      <EnumVal ord="29">V</EnumVal>
+      <EnumVal ord="30">ohm</EnumVal>
+      <EnumVal ord="31">J</EnumVal>
+      <EnumVal ord="32">N</EnumVal>
+      <EnumVal ord="33">Hz</EnumVal>
+      <EnumVal ord="34">lx</EnumVal>
+      <EnumVal ord="35">Lm</EnumVal>
+      <EnumVal ord="36">Wb</EnumVal>
+      <EnumVal ord="37">T</EnumVal>
+      <EnumVal ord="38">W</EnumVal>
+      <EnumVal ord="39">Pa</EnumVal>
+      <EnumVal ord="41">m²</EnumVal>
+      <EnumVal ord="42">m³</EnumVal>
+      <EnumVal ord="43">m/s</EnumVal>
+      <EnumVal ord="44">m/s²</EnumVal>
+      <EnumVal ord="45">m³/s</EnumVal>
+      <EnumVal ord="46">m/m³</EnumVal>
+      <EnumVal ord="47">M</EnumVal>
+      <EnumVal ord="48">kg/m³</EnumVal>
+      <EnumVal ord="49">m²/s</EnumVal>
+      <EnumVal ord="50">W/m K</EnumVal>
+      <EnumVal ord="51">J/K</EnumVal>
+      <EnumVal ord="52">ppm</EnumVal>
+      <EnumVal ord="53">1/s</EnumVal>
+      <EnumVal ord="54">rad/s</EnumVal>
+      <EnumVal ord="61">VA</EnumVal>
+      <EnumVal ord="62">Watts</EnumVal>
+      <EnumVal ord="63">VAr</EnumVal>
+      <EnumVal ord="64">phi</EnumVal>
+      <EnumVal ord="65">cos(phi)</EnumVal>
+      <EnumVal ord="66">Vs</EnumVal>
+      <EnumVal ord="67">V²</EnumVal>
+      <EnumVal ord="68">As</EnumVal>
+      <EnumVal ord="69">A²</EnumVal>
+      <EnumVal ord="70">A²t</EnumVal>
+      <EnumVal ord="71">VAh</EnumVal>
+      <EnumVal ord="72">Wh</EnumVal>
+      <EnumVal ord="73">VArh</EnumVal>
+      <EnumVal ord="74">V/Hz</EnumVal>
+    </EnumType>
+    <EnumType id="Beh">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="Mod">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="Health">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="PulseConfigCmdQual">
+      <EnumVal ord="0">pulse</EnumVal>
+      <EnumVal ord="1">persistent</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>

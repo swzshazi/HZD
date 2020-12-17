@@ -1,0 +1,68 @@
+[STRUCT]=Close
+
+[ALIAS]=Close
+
+[WIDTH] = 120
+
+[USER VISIBLE]=0
+
+[HELP]
+分相断路器合闸命令处理
+
+
+[BASIC]
+cn=分相断路器合闸命令处理元件 en=Close cbopt= ver=R1.00 uscp= 
+
+[IN]
+//analog
+
+//binary
+pElecTest   "pElecTest cdesc=带电检修状态  edesc=pElecTest jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pTest   "pTest cdesc=装置检修状态  edesc=pTest jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pProBd   "pProBd cdesc=保护出口压板  edesc=pProBd jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pConBd   "pConBd cdesc=控制出口压板  edesc=pConBd jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pLocalBd   "pLocalBd cdesc=就地控制把手  edesc=pLocalBd jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pSH_OPT   "pSH_OPT cdesc=手合开入  edesc=pSH_OPT jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pSTJ   "pSTJ cdesc=STJ输入  edesc=pSTJ jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pHZ_ELSE   "pHZ_ELSE cdesc=另一套合闸输入  edesc=pHZ_ELSE jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+
+[OUT]
+//analog
+RECLS1_E  "RECLS1_E cdesc=重合闸1_SOE  edesc=RECLS1_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+RECLS2_E  "RECLS2_E cdesc=重合闸2_SOE  edesc=RECLS2_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+RECLS3_E  "RECLS3_E cdesc=重合闸3_SOE  edesc=RECLS3_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+RECLS4_E  "RECLS4_E cdesc=重合闸4_SOE  edesc=RECLS4_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CBYH1_E  "CBYH1_E cdesc=遥合断路器1_SOE  edesc=CBYH1_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CBYH2_E  "CBYH2_E cdesc=遥合断路器2_SOE  edesc=CBYH2_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CBYH3_E  "CBYH3_E cdesc=遥合断路器3_SOE  edesc=CBYH3_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CBYH4_E  "CBYH4_E cdesc=遥合断路器4_SOE  edesc=CBYH4_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+BSysSH_E  "BSysSH_E cdesc=另一套手合输入_SOE  edesc=BSysSH_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestCLS_E  "TestCLS_E cdesc=测试仪保护重合闸_SOE  edesc=TestCLS_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+
+//binary
+RECLS_GSE  "RECLS_GSE cdesc=保护重合闸命令反馈  edesc=RECLS_GSE    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CBYH_GSE  "CBYH_GSE cdesc=测控合闸命令反馈  edesc=CBYH_GSE    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+SH_Else  "SH_Else cdesc=手合输出至另一套  edesc=SH_Else    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+SHJ  "SHJ cdesc=SHJ信号  edesc=SHJ    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+KKJ  "KKJ cdesc=KKJ合后  edesc=KKJ    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+RECLS_Op  "RECLS_Op cdesc=保护重合闸处理结果  edesc=RECLS_Op    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+RECLS_Out  "RECLS_Out cdesc=保护重合闸输出  edesc=RECLS_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CBYH_Op  "CBYH_Op cdesc=测控重合闸处理结果  edesc=CBYH_Op    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CBYH_Out  "CBYH_Out cdesc=测控合闸输出  edesc=CBYH_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+SH_OPT  "SH_OPT cdesc=手合处理结果  edesc=SH_OPT    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+HZ_Out  "HZ_Out cdesc=合闸输出  edesc=HZ_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+HZ_LONGTIME  "HZ_LONGTIME cdesc=合闸长时间动作  edesc=HZ_LONGTIME    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CMP_ERR  "CMP_ERR cdesc=双套比较出错  edesc=CMP_ERR    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+check_err  "check_err cdesc=指针比较出错  edesc=check_err    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+      
+[PARA]
+//no list
+
+[LN]
+
+
+[DA]
+
+[RULE]
+
+[GRAPH]

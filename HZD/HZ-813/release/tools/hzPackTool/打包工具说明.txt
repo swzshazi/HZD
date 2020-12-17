@@ -1,0 +1,21 @@
+说明：
+1. package_cfg.json文件，是打包需要的配置文件，用户也可以自定义名字
+1)必须为json格式
+2)由于兼容原因，version.txt文件必须要配置
+3)"src_path": 该字段是源文件目录和文件名，格式为"源文件目录/文件名"
+4)"dst_path": 该字段是目标板卡路径和文件名，格式为"B槽位/目录/文件名"
+5)如果板卡程序源文件一样，装置内多个板卡路径可以使用列表形式写在一起，如["B03/HZ6202.hex","B04/HZ6202.hex"]
+
+2. device.bin文件，是打包后默认生成的文件名，用户可以自定义名字，但是文件名格式需要是xxx.bin格式
+
+3. 鼠标双击hzPackTool.exe 会自动读取当前目录下的package_cfg.json 并生成device.bin 大包文件
+
+4. 建议使用批处理bat文件操作，比如命名pack_new.bat文件，里面内容如下，鼠标双击pack_new.bat即可执行打包软件：
+hzPackTool.exe package_cfg.json  device.bin
+pause
+
+5. 另外给出了package_cfg.json模板，需要自行和修改内容，确保是json格式
+
+6. 把json内容拷贝到如下网站的校验区，可以校验json格式的正确性
+https://www.sojson.com/
+

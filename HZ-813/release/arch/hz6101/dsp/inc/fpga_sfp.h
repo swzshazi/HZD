@@ -1,0 +1,166 @@
+#ifndef _FPGA_SFP_H_
+#define _FPGA_SFP_H_
+
+#include "fpga_base.h"
+
+
+#define MAX_PORT_NUM                        (8)
+#define SFP_BASE_ADDR                       (FPGA_I2C_MOD_ADDR)
+
+
+#define SFP_MONITOR_CFG_REG					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0000 << 1))
+#define SFP_MONITOR_EXADDR					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0001 << 1))
+#define SFP_NO_ACK							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0002 << 1))
+
+#define SFP_ID_WORD_LEN						(8)
+
+#define SFP1_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0100 << 1))
+#define SFP1_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0108 << 1))
+#define SFP1_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0109 << 1))
+#define SFP1_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x010A << 1))
+#define SFP1_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x010B << 1))
+#define SFP1_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x010C << 1))
+#define SFP1_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x010D << 1))
+#define SFP1_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x010E << 1))
+
+#define SFP2_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0110 << 1))
+#define SFP2_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0118 << 1))
+#define SFP2_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0119 << 1))
+#define SFP2_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x011A << 1))
+#define SFP2_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x011B << 1))
+#define SFP2_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x011C << 1))
+#define SFP2_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x011D << 1))
+#define SFP2_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x011E << 1))
+
+#define SFP3_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0120 << 1))
+#define SFP3_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0128 << 1))
+#define SFP3_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0129 << 1))
+#define SFP3_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x012A << 1))
+#define SFP3_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x012B << 1))
+#define SFP3_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x012C << 1))
+#define SFP3_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x012D << 1))
+#define SFP3_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x012E << 1))
+
+#define SFP4_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0130 << 1))
+#define SFP4_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0138 << 1))
+#define SFP4_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0139 << 1))
+#define SFP4_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x013A << 1))
+#define SFP4_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x013B << 1))
+#define SFP4_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x013C << 1))
+#define SFP4_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x013D << 1))
+#define SFP4_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x013E << 1))
+
+#define SFP5_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0140 << 1))
+#define SFP5_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0148 << 1))
+#define SFP5_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0149 << 1))
+#define SFP5_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x014A << 1))
+#define SFP5_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x014B << 1))
+#define SFP5_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x014C << 1))
+#define SFP5_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x014D << 1))
+#define SFP5_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x014E << 1))
+
+#define SFP6_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0150 << 1))
+#define SFP6_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0158 << 1))
+#define SFP6_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0159 << 1))
+#define SFP6_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x015A << 1))
+#define SFP6_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x015B << 1))
+#define SFP6_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x015C << 1))
+#define SFP6_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x015D << 1))
+#define SFP6_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x015E << 1))
+
+#define SFP7_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0160 << 1))
+#define SFP7_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0168 << 1))
+#define SFP7_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0169 << 1))
+#define SFP7_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x016A << 1))
+#define SFP7_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x016B << 1))
+#define SFP7_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x016C << 1))
+#define SFP7_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x016D << 1))
+#define SFP7_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x016E << 1))
+
+#define SFP8_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0170 << 1))
+#define SFP8_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0178 << 1))
+#define SFP8_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0179 << 1))
+#define SFP8_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x017A << 1))
+#define SFP8_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x017B << 1))
+#define SFP8_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x017C << 1))
+#define SFP8_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x017D << 1))
+#define SFP8_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x017E << 1))
+
+#define SFP9_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0180 << 1))
+#define SFP9_RT_TEMPERATURE					(volatile Uint16 *)(SFP_BASE_ADDR + (0x0188 << 1))
+#define SFP9_RT_VCC							(volatile Uint16 *)(SFP_BASE_ADDR + (0x0189 << 1))
+#define SFP9_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x018A << 1))
+#define SFP9_RT_TXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x018B << 1))
+#define SFP9_RT_RXPOWER						(volatile Uint16 *)(SFP_BASE_ADDR + (0x018C << 1))
+#define SFP9_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x018D << 1))
+#define SFP9_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x018E << 1))
+
+#define SFP10_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0190 << 1))
+#define SFP10_RT_TEMPERATURE				(volatile Uint16 *)(SFP_BASE_ADDR + (0x0198 << 1))
+#define SFP10_RT_VCC						(volatile Uint16 *)(SFP_BASE_ADDR + (0x0199 << 1))
+#define SFP10_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x019A << 1))
+#define SFP10_RT_TXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x019B << 1))
+#define SFP10_RT_RXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x019C << 1))
+#define SFP10_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x019D << 1))
+#define SFP10_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x019E << 1))
+
+#define SFP11_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01A0 << 1))
+#define SFP11_RT_TEMPERATURE				(volatile Uint16 *)(SFP_BASE_ADDR + (0x01A8 << 1))
+#define SFP11_RT_VCC						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01A9 << 1))
+#define SFP11_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01AA << 1))
+#define SFP11_RT_TXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01AB << 1))
+#define SFP11_RT_RXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01AC << 1))
+#define SFP11_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01AD << 1))
+#define SFP11_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01AE << 1))
+
+#define SFP12_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01B0 << 1))
+#define SFP12_RT_TEMPERATURE				(volatile Uint16 *)(SFP_BASE_ADDR + (0x01B8 << 1))
+#define SFP12_RT_VCC						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01B9 << 1))
+#define SFP12_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01BA << 1))
+#define SFP12_RT_TXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01BB << 1))
+#define SFP12_RT_RXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01BC << 1))
+#define SFP12_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01BD << 1))
+#define SFP12_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01BE << 1))
+
+#define SFP13_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01C0 << 1))
+#define SFP13_RT_TEMPERATURE				(volatile Uint16 *)(SFP_BASE_ADDR + (0x01C8 << 1))
+#define SFP13_RT_VCC						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01C9 << 1))
+#define SFP13_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01CA << 1))
+#define SFP13_RT_TXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01CB << 1))
+#define SFP13_RT_RXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01CC << 1))
+#define SFP13_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01CD << 1))
+#define SFP13_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01CE << 1))
+
+#define SFP14_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01D0 << 1))
+#define SFP14_RT_TEMPERATURE				(volatile Uint16 *)(SFP_BASE_ADDR + (0x01D8 << 1))
+#define SFP14_RT_VCC						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01D9 << 1))
+#define SFP14_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01DA << 1))
+#define SFP14_RT_TXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01DB << 1))
+#define SFP14_RT_RXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01DC << 1))
+#define SFP14_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01DD << 1))
+#define SFP14_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01DE << 1))
+
+#define SFP15_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01E0 << 1))
+#define SFP15_RT_TEMPERATURE				(volatile Uint16 *)(SFP_BASE_ADDR + (0x01E8 << 1))
+#define SFP15_RT_VCC						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01E9 << 1))
+#define SFP15_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01EA << 1))
+#define SFP15_RT_TXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01EB << 1))
+#define SFP15_RT_RXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01EC << 1))
+#define SFP15_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01ED << 1))
+#define SFP15_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01EE << 1))
+
+#define SFP16_UNIQUE_ID						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01F0 << 1))
+#define SFP16_RT_TEMPERATURE				(volatile Uint16 *)(SFP_BASE_ADDR + (0x01F8 << 1))
+#define SFP16_RT_VCC						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01F9 << 1))
+#define SFP16_RT_TXBIAS						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01FA << 1))
+#define SFP16_RT_TXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01FB << 1))
+#define SFP16_RT_RXPOWER					(volatile Uint16 *)(SFP_BASE_ADDR + (0x01FC << 1))
+#define SFP16_EXINFO1						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01FD << 1))
+#define SFP16_EXINFO2						(volatile Uint16 *)(SFP_BASE_ADDR + (0x01FE << 1))
+
+
+#endif 
+
+
+
+

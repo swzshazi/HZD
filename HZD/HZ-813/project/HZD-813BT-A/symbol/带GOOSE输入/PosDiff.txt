@@ -1,0 +1,53 @@
+[STRUCT]=PosDiff
+
+[ALIAS]=PosDiff
+
+[WIDTH] = 120
+
+[USER VISIBLE]=0
+
+[HELP]
+断路器位置不一致告警、断路器非全相保护、事故总
+
+
+[BASIC]
+cn=断路器位置不一致处理元件 en=PosDiff cbopt= ver=R1.00 uscp= 
+
+[IN]
+//analog
+
+//binary
+pKKJ   "pKKJ cdesc=KKJ合后状态  edesc=pKKJ jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pHwjA   "pHwjA cdesc=A相断路器合位  edesc=pHwjA jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pHwjB   "pHwjB cdesc=B相断路器合位  edesc=pHwjB jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pHwjC   "pHwjC cdesc=C相断路器合位  edesc=pHwjC jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pTwjA   "pTwjA cdesc=A相断路器分位  edesc=pTwjA jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pTwjB   "pTwjA cdesc=B相断路器分位  edesc=pTwjB jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pTwjC   "pTwjA cdesc=C相断路器分位  edesc=pTwjC jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pBreakPh_ELSE   "pBreakPh_ELSE cdesc=另一套非全相保护  edesc=pBreakPh_ELSE jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+
+[OUT]
+//analog
+
+//binary
+Diff  "Diff cdesc=断路器位置不一致告警  edesc=Diff    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+BreakPhPro  "BreakPhPro cdesc=断路器非全相保护  edesc=BreakPhPro    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+FaultTotal  "FaultTotal cdesc=事故总  edesc=FaultTotal    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+CMP_ERR  "CMP_ERR cdesc=双套比较出错  edesc=CMP_ERR    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+check_err  "check_err cdesc=指针比较出错  edesc=check_err    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+      
+[PARA]
+//no list
+DiffDelay   "DiffDelay   cdesc=三相不一致告警延时时间  edesc=DiffDelay   jn=是 type=f min=0.01 max=100   norm= prm= lntp= doref= daref= spre= scp=用户级 attr=15 syn=%f step=1 unit=s  option=1 default=0.5" 
+BreakPh_Delay   "BreakPh_Delay   cdesc=非全相保护延时时间  edesc=BreakPh_Delay   jn=是 type=f min=0.01 max=100   norm= prm= lntp= doref= daref= spre= scp=用户级 attr=15 syn=%f step=1 unit=s  option=1 default=3" 
+FaultTotal_Delay   "FaultTotal_Delay   cdesc=事故总延时时间  edesc=FaultTotal_Delay   jn=是 type=f min=0.01 max=100   norm= prm= lntp= doref= daref= spre= scp=用户级 attr=15 syn=%f step=1 unit=s  option=1 default=0.2" 
+
+
+[LN]
+
+
+[DA]
+
+[RULE]
+
+[GRAPH]

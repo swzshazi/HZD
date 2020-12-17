@@ -1,0 +1,53 @@
+[STRUCT]=BlkReCls
+
+[ALIAS]=BlkReCls
+
+[WIDTH] = 120
+
+[USER VISIBLE]=0
+
+[HELP]
+闭锁重合闸逻辑处理
+
+
+[BASIC]
+cn=闭锁重合闸逻辑元件 en=BlkReCls cbopt= ver=R1.00 uscp= 
+
+[IN]
+//analog
+
+//binary
+pElecTest   "pElecTest cdesc=带电检修状态  edesc=pElecTest jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pTest   "pTest cdesc=装置检修状态  edesc=pTest jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pCBYF   "pCBYF cdesc=遥分断路器  edesc=pCBYF jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pCBYH   "pCBYF cdesc=遥合断路器  edesc=pCBYF jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pSH_OPT   "pSH_OPT cdesc=手合开入  edesc=pSH_OPT jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pST_OPT   "pST_OPT cdesc=手跳开入  edesc=pST_OPT jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pTJR_OPT   "pTJR_OPT cdesc=TJR开入  edesc=pTJR_OPT jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pTJF_OPT   "pTJF_OPT cdesc=TJF开入  edesc=pTJF_OPT jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+pGS_TJR   "pGS_TJR cdesc=GOOSE_TJR  edesc=pGS_TJR jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+
+[OUT]
+//analog
+BlkReCLS1_E  "BlkReCLS1_E cdesc=GOOSE闭重1_SOE  edesc=BlkReCLS1_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+BlkReCLS2_E  "BlkReCLS2_E cdesc=GOOSE闭重2_SOE  edesc=BlkReCLS2_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+BlkReCLS3_E  "BlkReCLS3_E cdesc=GOOSE闭重3_SOE  edesc=BlkReCLS3_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+BSysBlkReCls_E  "BSysBlkReCls_E cdesc=另一套闭重输入SOE  edesc=BSysBlkReCls_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+TestBlkReCLS_E  "TestBlkReCLS_E cdesc=测试仪GOOSE闭重SOE  edesc=TestBlkReCLS_E  jn=是 type=e level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+
+//binary
+BlkReCls_Out  "BlkReCls_Out cdesc=闭锁本套重合闸  edesc=BlkReCls_Out    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+BlkReCls_Bsys  "BlkReCls_Bsys cdesc=闭锁另一套重合闸  edesc=BlkReCls_Bsys    jn=是 type=b level=1 scp=用户级 STR= attr= src= inlntp="  //$hide=0
+
+      
+[PARA]
+//no list
+
+[LN]
+
+
+[DA]
+
+[RULE]
+
+[GRAPH]

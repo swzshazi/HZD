@@ -1,0 +1,2447 @@
+[GOOSE Tx]
+numGoCb = 5
+
+[GoCB1] #主控模块
+[Common]
+GoCBRef = HZMB01RPIT/LLN0$GO$gocb0
+AppID = HZMB01RPIT/LLN0.gocb0
+DatSet = HZMB01RPIT/LLN0$dsGOOSE1
+ConfRev = 1
+numDatSetEntries = 57
+FiberChNo = 1,10,11,12,13,14,2,3,4,5,6,7,8,9
+
+[DstAddr]
+Addr = 01-0C-CD-01-30-00
+Priority = 4
+VID = 0
+Appid = 3000
+MinTime = 2
+MaxTime = 5000
+
+[FCDA1] #A相断路器位置
+Ref = HZMB01RPIT/Q0XCBR1$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPosA.Twj_Out,B01.InDPosA.Hwj_Out
+ACT = 0
+
+[FCDA2] #A相断路器位置
+Ref = HZMB01RPIT/Q0XCBR1$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPosA.Twj_Out,B01.InDPosA.Hwj_Out
+ACT = 0
+
+[FCDA3] #B相断路器位置
+Ref = HZMB01RPIT/Q0XCBR2$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPosB.Twj_Out,B01.InDPosB.Hwj_Out
+ACT = 0
+
+[FCDA4] #B相断路器位置
+Ref = HZMB01RPIT/Q0XCBR2$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPosB.Twj_Out,B01.InDPosB.Hwj_Out
+ACT = 0
+
+[FCDA5] #C相断路器位置
+Ref = HZMB01RPIT/Q0XCBR3$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPosC.Twj_Out,B01.InDPosC.Hwj_Out
+ACT = 0
+
+[FCDA6] #C相断路器位置
+Ref = HZMB01RPIT/Q0XCBR3$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPosC.Twj_Out,B01.InDPosC.Hwj_Out
+ACT = 0
+
+[FCDA7] #刀闸1位置
+Ref = HZMB01RPIT/QDZXSWI1$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPos1.Twj_Out,B01.InDPos1.Hwj_Out
+ACT = 0
+
+[FCDA8] #刀闸1位置
+Ref = HZMB01RPIT/QDZXSWI1$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPos1.Twj_Out,B01.InDPos1.Hwj_Out
+ACT = 0
+
+[FCDA9] #刀闸2位置
+Ref = HZMB01RPIT/QDZXSWI2$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPos2.Twj_Out,B01.InDPos2.Hwj_Out
+ACT = 0
+
+[FCDA10] #刀闸2位置
+Ref = HZMB01RPIT/QDZXSWI2$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPos2.Twj_Out,B01.InDPos2.Hwj_Out
+ACT = 0
+
+[FCDA11] #刀闸3位置
+Ref = HZMB01RPIT/QDZXSWI3$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPos3.Twj_Out,B01.InDPos3.Hwj_Out
+ACT = 0
+
+[FCDA12] #刀闸3位置
+Ref = HZMB01RPIT/QDZXSWI3$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPos3.Twj_Out,B01.InDPos3.Hwj_Out
+ACT = 0
+
+[FCDA13] #刀闸4位置
+Ref = HZMB01RPIT/QDZXSWI4$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPos4.Twj_Out,B01.InDPos4.Hwj_Out
+ACT = 0
+
+[FCDA14] #刀闸4位置
+Ref = HZMB01RPIT/QDZXSWI4$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPos4.Twj_Out,B01.InDPos4.Hwj_Out
+ACT = 0
+
+[FCDA15] #刀闸5位置
+Ref = HZMB01RPIT/QDZXSWI5$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPos5.Twj_Out,B01.InDPos5.Hwj_Out
+ACT = 0
+
+[FCDA16] #刀闸5位置
+Ref = HZMB01RPIT/QDZXSWI5$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPos5.Twj_Out,B01.InDPos5.Hwj_Out
+ACT = 0
+
+[FCDA17] #刀闸6位置
+Ref = HZMB01RPIT/QDZXSWI6$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPos6.Twj_Out,B01.InDPos6.Hwj_Out
+ACT = 0
+
+[FCDA18] #刀闸6位置
+Ref = HZMB01RPIT/QDZXSWI6$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPos6.Twj_Out,B01.InDPos6.Hwj_Out
+ACT = 0
+
+[FCDA19] #刀闸7位置
+Ref = HZMB01RPIT/QDZXSWI7$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPos7.Twj_Out,B01.InDPos7.Hwj_Out
+ACT = 0
+
+[FCDA20] #刀闸7位置
+Ref = HZMB01RPIT/QDZXSWI7$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPos7.Twj_Out,B01.InDPos7.Hwj_Out
+ACT = 0
+
+[FCDA21] #刀闸8位置
+Ref = HZMB01RPIT/QDZXSWI8$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPos8.Twj_Out,B01.InDPos8.Hwj_Out
+ACT = 0
+
+[FCDA22] #刀闸8位置
+Ref = HZMB01RPIT/QDZXSWI8$ST$Pos$t
+Type = Utctime
+InVarName = B01.InDPos8.Twj_Out,B01.InDPos8.Hwj_Out
+ACT = 0
+
+[FCDA23] #TJR动作出口
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind23$stVal
+Type = Bool
+InVarName = B01.Trip.TJR_Op
+ACT = 0
+
+[FCDA24] #跳闸动作
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind24$stVal
+Type = Bool
+InVarName = B01.Trip.TZ_Out
+ACT = 0
+
+[FCDA25] #闭锁重合闸
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind25$stVal
+Type = Bool
+InVarName = B01.BlkReCls.BlkReCls_Out
+ACT = 0
+
+[FCDA26] #SHJ信号
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind26$stVal
+Type = Bool
+InVarName = B01.Close.SHJ
+ACT = 0
+
+[FCDA27] #STJ信号
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind27$stVal
+Type = Bool
+InVarName = B01.Trip.STJ
+ACT = 0
+
+[FCDA28] #KKJ合后
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind28$stVal
+Type = Bool
+InVarName = B01.Close.KKJ
+ACT = 0
+
+[FCDA29] #事故总信号
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind29$stVal
+Type = Bool
+InVarName = B01.PosDiff.FaultTotal
+ACT = 0
+
+[FCDA30] #控制回路断线
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind30$stVal
+Type = Bool
+InVarName = B01.BreakInfo.CtrOff4
+ACT = 0
+
+[FCDA31] #A相断路器控回断线
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind31$stVal
+Type = Bool
+InVarName = B01.BreakInfo.CtrOff1
+ACT = 0
+
+[FCDA32] #B相断路器控回断线
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind32$stVal
+Type = Bool
+InVarName = B01.BreakInfo.CtrOff2
+ACT = 0
+
+[FCDA33] #C相断路器控回断线
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind33$stVal
+Type = Bool
+InVarName = B01.BreakInfo.CtrOff3
+ACT = 0
+
+[FCDA34] #断路器位置不一致
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind34$stVal
+Type = Bool
+InVarName = B01.PosDiff.Diff
+ACT = 0
+
+[FCDA35] #本体非全相保护
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind35$stVal
+Type = Bool
+InVarName = B01.PosDiff.BreakPhPro
+ACT = 0
+
+[FCDA36] #压力低闭重开入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind36$stVal
+Type = Bool
+InVarName = B01.BreakInfo.BlkClsIn4
+ACT = 0
+
+[FCDA37] #A相断路器压力低闭重开入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind37$stVal
+Type = Bool
+InVarName = B01.BreakInfo.BlkClsIn1
+ACT = 0
+
+[FCDA38] #B相断路器压力低闭重开入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind38$stVal
+Type = Bool
+InVarName = B01.BreakInfo.BlkClsIn2
+ACT = 0
+
+[FCDA39] #C相断路器压力低闭重开入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind39$stVal
+Type = Bool
+InVarName = B01.BreakInfo.BlkClsIn3
+ACT = 0
+
+[FCDA40] #合闸压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind40$stVal
+Type = Bool
+InVarName = B01.BreakInfo.HzPressLow4
+ACT = 0
+
+[FCDA41] #A相断路器合闸压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind41$stVal
+Type = Bool
+InVarName = B01.BreakInfo.HzPressLow1
+ACT = 0
+
+[FCDA42] #B相断路器合闸压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind42$stVal
+Type = Bool
+InVarName = B01.BreakInfo.HzPressLow2
+ACT = 0
+
+[FCDA43] #C相断路器合闸压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind43$stVal
+Type = Bool
+InVarName = B01.BreakInfo.HzPressLow3
+ACT = 0
+
+[FCDA44] #跳闸压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind44$stVal
+Type = Bool
+InVarName = B01.BreakInfo.TzPressLow4
+ACT = 0
+
+[FCDA45] #A相断路器跳闸压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind45$stVal
+Type = Bool
+InVarName = B01.BreakInfo.TzPressLow1
+ACT = 0
+
+[FCDA46] #B相断路器跳闸压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind46$stVal
+Type = Bool
+InVarName = B01.BreakInfo.TzPressLow2
+ACT = 0
+
+[FCDA47] #C相断路器跳闸压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind47$stVal
+Type = Bool
+InVarName = B01.BreakInfo.TzPressLow3
+ACT = 0
+
+[FCDA48] #操作压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind52$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OpPressLow4
+ACT = 0
+
+[FCDA49] #A相断路器操作压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind53$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OpPressLow1
+ACT = 0
+
+[FCDA50] #B相断路器操作压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind54$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OpPressLow2
+ACT = 0
+
+[FCDA51] #C相断路器操作压力低
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind55$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OpPressLow3
+ACT = 0
+
+[FCDA52] #复归开入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind56$stVal
+Type = Bool
+InVarName = B01.Trip.ResetCmd
+ACT = 0
+
+[FCDA53] #带电检修压板投入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind57$stVal
+Type = Bool
+InVarName = B01.TestBoard1.test_Elec_out
+ACT = 0
+
+[FCDA54] #停电检修压板投入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind58$stVal
+Type = Bool
+InVarName = B01.TestBoard1.test_cut_out
+ACT = 0
+
+[FCDA55] #A相断路器检修投入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind59$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Repair1
+ACT = 0
+
+[FCDA56] #B相断路器检修投入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind60$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Repair2
+ACT = 0
+
+[FCDA57] #C相断路器检修投入
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind61$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Repair3
+ACT = 0
+
+[GoCB2] #主控模块
+[Common]
+GoCBRef = HZMB01RPIT/LLN0$GO$gocb1
+AppID = HZMB01RPIT/LLN0.gocb1
+DatSet = HZMB01RPIT/LLN0$dsGOOSE2
+ConfRev = 1
+numDatSetEntries = 100
+FiberChNo = 1,10,11,12,13,14,2,3,4,5,6,7,8,9
+
+[DstAddr]
+Addr = 01-0C-CD-01-30-01
+Priority = 4
+VID = 0
+Appid = 3001
+MinTime = 2
+MaxTime = 5000
+
+[FCDA1] #GOOSE1接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind1$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_0
+ACT = 0
+
+[FCDA2] #GOOSE1接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind2$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_0
+ACT = 0
+
+[FCDA3] #GOOSE2接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind3$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_1
+ACT = 0
+
+[FCDA4] #GOOSE2接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind4$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_1
+ACT = 0
+
+[FCDA5] #GOOSE3接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind62$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_2
+ACT = 0
+
+[FCDA6] #GOOSE3接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind63$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_2
+ACT = 0
+
+[FCDA7] #GOOSE4接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind64$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_3
+ACT = 0
+
+[FCDA8] #GOOSE4接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind13$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_3
+ACT = 0
+
+[FCDA9] #GOOSE5接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind14$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_4
+ACT = 0
+
+[FCDA10] #GOOSE5接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind15$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_4
+ACT = 0
+
+[FCDA11] #GOOSE6接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind16$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_5
+ACT = 0
+
+[FCDA12] #GOOSE6接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind17$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_5
+ACT = 0
+
+[FCDA13] #GOOSE7接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind18$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_6
+ACT = 0
+
+[FCDA14] #GOOSE7接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind19$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_6
+ACT = 0
+
+[FCDA15] #GOOSE8接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind20$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_7
+ACT = 0
+
+[FCDA16] #GOOSE8接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind21$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_7
+ACT = 0
+
+[FCDA17] #GOOSE9接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind22$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_8
+ACT = 0
+
+[FCDA18] #GOOSE9接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind23$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_8
+ACT = 0
+
+[FCDA19] #GOOSE10接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind24$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_9
+ACT = 0
+
+[FCDA20] #GOOSE10接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind25$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_9
+ACT = 0
+
+[FCDA21] #GOOSE11接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind26$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_10
+ACT = 0
+
+[FCDA22] #GOOSE11接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind27$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_10
+ACT = 0
+
+[FCDA23] #GOOSE12接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind28$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_11
+ACT = 0
+
+[FCDA24] #GOOSE12接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind29$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_11
+ACT = 0
+
+[FCDA25] #GOOSE13接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind30$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_12
+ACT = 0
+
+[FCDA26] #GOOSE13接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind31$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_12
+ACT = 0
+
+[FCDA27] #GOOSE14接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind32$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_13
+ACT = 0
+
+[FCDA28] #GOOSE14接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind33$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_13
+ACT = 0
+
+[FCDA29] #GOOSE15接收A网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind34$stVal
+Type = Bool
+InVarName = B01.goose1.link_a_down_14
+ACT = 0
+
+[FCDA30] #GOOSE15接收B网断链
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind35$stVal
+Type = Bool
+InVarName = B01.goose1.link_b_down_14
+ACT = 0
+
+[FCDA31] #GOOSE总告警
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind5$stVal
+Type = Bool
+InVarName = B01.goose1.bjj
+ACT = 0
+
+[FCDA32] #B02_GOOSE总告警
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind36$stVal
+Type = Bool
+InVarName = B02.goose1.bjj
+ACT = 0
+
+[FCDA33] #A相断路器GOOSE告警
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind37$stVal
+Type = Bool
+InVarName = B01.BreakInfo.GsAlam1
+ACT = 0
+
+[FCDA34] #B相断路器GOOSE告警
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind38$stVal
+Type = Bool
+InVarName = B01.BreakInfo.GsAlam2
+ACT = 0
+
+[FCDA35] #C相断路器GOOSE告警
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind39$stVal
+Type = Bool
+InVarName = B01.BreakInfo.GsAlam3
+ACT = 0
+
+[FCDA36] #GOOSE检修不一致
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind7$stVal
+Type = Bool
+InVarName = B01.goose1.test_ns
+ACT = 0
+
+[FCDA37] #A相断路器GOOSE检修不一致
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind40$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RepairDiff1 
+ACT = 0
+
+[FCDA38] #B相断路器GOOSE检修不一致
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind41$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RepairDiff2
+ACT = 0
+
+[FCDA39] #C相断路器GOOSE检修不一致
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind42$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RepairDiff3
+ACT = 0
+
+[FCDA40] #对时异常
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind8$stVal
+Type = Bool
+InVarName = B01.SyncTime.pps_error
+ACT = 0
+
+[FCDA41] #A相断路器对时异常
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind43$stVal
+Type = Bool
+InVarName = B01.BreakInfo.SynAlam1
+ACT = 0
+
+[FCDA42] #B相断路器对时异常
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind44$stVal
+Type = Bool
+InVarName = B01.BreakInfo.SynAlam2
+ACT = 0
+
+[FCDA43] #C相断路器对时异常
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind45$stVal
+Type = Bool
+InVarName = B01.BreakInfo.SynAlam3
+ACT = 0
+
+[FCDA44] #A相断路器操作电源掉电
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind46$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OpPwrOff1
+ACT = 0
+
+[FCDA45] #B相断路器操作电源掉电
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind47$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OpPwrOff2
+ACT = 0
+
+[FCDA46] #C相断路器操作电源掉电
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind48$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OpPwrOff3
+ACT = 0
+
+[FCDA47] #光耦电源异常
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind11$stVal
+Type = Bool
+InVarName = B01.TestBoard1.opt_err
+ACT = 0
+
+[FCDA48] #A相断路器光耦失电
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind49$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OptLoss1
+ACT = 0
+
+[FCDA49] #B相断路器光耦失电
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind50$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OptLoss2
+ACT = 0
+
+[FCDA50] #C相断路器光耦失电
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind51$stVal
+Type = Bool
+InVarName = B01.BreakInfo.OptLoss3
+ACT = 0
+
+[FCDA51] #运行异常
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind9$stVal
+Type = Bool
+InVarName = B01.BS_BJ.bjj_sum
+ACT = 0
+
+[FCDA52] #A相断路器运行异常
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind52$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Alam1
+ACT = 0
+
+[FCDA53] #B相断路器运行异常
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind53$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Alam2
+ACT = 0
+
+[FCDA54] #C相断路器运行异常
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind54$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Alam3
+ACT = 0
+
+[FCDA55] #装置故障
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind10$stVal
+Type = Bool
+InVarName = B01.BS_BJ.bsj_sum
+ACT = 0
+
+[FCDA56] #A相断路器装置故障
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind55$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Fault1
+ACT = 0
+
+[FCDA57] #B相断路器装置故障
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind56$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Fault2
+ACT = 0
+
+[FCDA58] #C相断路器装置故障
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind57$stVal
+Type = Bool
+InVarName = B01.BreakInfo.Fault3
+ACT = 0
+
+[FCDA59] #收到保护跳A命令
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind58$stVal
+Type = Bool
+InVarName = B01.Trip.TA_GSE
+ACT = 0
+
+[FCDA60] #收到保护跳B命令
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind59$stVal
+Type = Bool
+InVarName = B01.Trip.TB_GSE
+ACT = 0
+
+[FCDA61] #收到保护跳C命令
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind60$stVal
+Type = Bool
+InVarName = B01.Trip.TC_GSE
+ACT = 0
+
+[FCDA62] #收到保护三合命令
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind61$stVal
+Type = Bool
+InVarName = B01.Close.RECLS_GSE
+ACT = 0
+
+[FCDA63] #收到测控跳闸命令
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind62$stVal
+Type = Bool
+InVarName = B01.Trip.CBYF_GSE
+ACT = 0
+
+[FCDA64] #收到测控合闸命令
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind63$stVal
+Type = Bool
+InVarName = B01.Close.CBYH_GSE
+ACT = 0
+
+[FCDA65] #A相断路器收到跳A命令
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind1$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RevTrip1
+ACT = 0
+
+[FCDA66] #B相断路器收到跳B命令
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind2$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RevTrip2
+ACT = 0
+
+[FCDA67] #C相断路器收到跳C命令
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind3$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RevTrip3
+ACT = 0
+
+[FCDA68] #A相断路器收到三合命令
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind4$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RevCls1
+ACT = 0
+
+[FCDA69] #B相断路器收到三合命令
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind5$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RevCls2
+ACT = 0
+
+[FCDA70] #C相断路器收到三合命令
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind6$stVal
+Type = Bool
+InVarName = B01.BreakInfo.RevCls3
+ACT = 0
+
+[FCDA71] #A相断路器跳闸出口回采
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind7$stVal
+Type = Bool
+InVarName = B01.BreakInfo.TripMon1
+ACT = 0
+
+[FCDA72] #B相断路器跳闸出口回采
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind8$stVal
+Type = Bool
+InVarName = B01.BreakInfo.TripMon2
+ACT = 0
+
+[FCDA73] #C相断路器跳闸出口回采
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind9$stVal
+Type = Bool
+InVarName = B01.BreakInfo.TripMon3
+ACT = 0
+
+[FCDA74] #A相断路器合闸出口回采
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind10$stVal
+Type = Bool
+InVarName = B01.BreakInfo.ClsMon1
+ACT = 0
+
+[FCDA75] #B相断路器合闸出口回采
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind11$stVal
+Type = Bool
+InVarName = B01.BreakInfo.ClsMon2
+ACT = 0
+
+[FCDA76] #C相断路器合闸出口回采
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind12$stVal
+Type = Bool
+InVarName = B01.BreakInfo.ClsMon3
+ACT = 0
+
+[FCDA77] #另一套手合输入
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind16$stVal
+Type = Bool
+InVarName = B01.Close.BSysSH_E
+ACT = 0
+
+[FCDA78] #另一套手跳输入
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind17$stVal
+Type = Bool
+InVarName = B01.Trip.BSysST_E
+ACT = 0
+
+[FCDA79] #另一套闭重输入
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind18$stVal
+Type = Bool
+InVarName = B01.BlkReCls.BSysBlkReCls_E 
+ACT = 0
+
+[FCDA80] #A相断路器跳合闸电流异常
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind13$stVal
+Type = Bool
+InVarName = B01.BreakInfo.CurAlam1
+ACT = 0
+
+[FCDA81] #B相断路器跳合闸电流异常
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind14$stVal
+Type = Bool
+InVarName = B01.BreakInfo.CurAlam2
+ACT = 0
+
+[FCDA82] #C相断路器跳合闸电流异常
+Ref = HZMB01RPIT/DEVAlmGGIO3$ST$Ind15$stVal
+Type = Bool
+InVarName = B01.BreakInfo.CurAlam3
+ACT = 0
+
+[FCDA83] #同时返回
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind1$stVal
+Type = Bool
+InVarName = B01.SmvDeal1.SyncBack_out
+ACT = 0
+
+[FCDA84] #同时动作
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind2$stVal
+Type = Bool
+InVarName = B01.SmvDeal1.SyncDone_out
+ACT = 0
+
+[FCDA85] #I母位置异常
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind3$stVal
+Type = Bool
+InVarName = B01.DzPosSelect1.pos_bjj
+ACT = 0
+
+[FCDA86] #II母位置异常
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind4$stVal
+Type = Bool
+InVarName = B01.DzPosSelect2.pos_bjj
+ACT = 0
+
+[FCDA87] #第一路采样出错
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind5$stVal
+Type = Bool
+InVarName = B01.AdcDma.ptr_err
+ACT = 0
+
+[FCDA88] #第一路采样校验错
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind6$stVal
+Type = Bool
+InVarName = B01.AdcDma.stru_err
+ACT = 0
+
+[FCDA89] #第一路采样溢出错
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind7$stVal
+Type = Bool
+InVarName = B01.AdcDma.index_err
+ACT = 0
+
+[FCDA90] #第二路采样出错
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind8$stVal
+Type = Bool
+InVarName = B02.AdcDma.ptr_err
+ACT = 0
+
+[FCDA91] #第二路采样校验错
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind9$stVal
+Type = Bool
+InVarName = B02.AdcDma.stru_err
+ACT = 0
+
+[FCDA92] #第二路采样溢出错
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind10$stVal
+Type = Bool
+InVarName = B02.AdcDma.index_err
+ACT = 0
+
+[FCDA93] #采样同步异常
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind12$stVal
+Type = Bool
+InVarName = B01.SynPps.syn_alarm
+ACT = 0
+
+[FCDA94] #SV级联告警
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind18$stVal
+Type = Bool
+InVarName = B01.SmvDeal1.smv_wrong
+ACT = 0
+
+[FCDA95] #级联1额定延迟异常
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind19$stVal
+Type = Bool
+InVarName = B01.SmvDeal1.delay_err_1
+ACT = 0
+
+[FCDA96] #间隔1延迟超限
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind20$stVal
+Type = Bool
+InVarName = B02.SmvDeal1.delay_out_1
+ACT = 0
+
+[FCDA97] #压切取I母
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind21$stVal
+Type = Bool
+InVarName = B01.SmvDeal1.use_bus_I
+ACT = 0
+
+[FCDA98] #压切取II母
+Ref = HZMB01RPIT/DEVAlmGGIO1$ST$Ind22$stVal
+Type = Bool
+InVarName = B01.SmvDeal1.use_bus_II
+ACT = 0
+
+[FCDA99] #SV总告警
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind6$stVal
+Type = Bool
+InVarName = B01.Or161.f_func_out
+ACT = 0
+
+[FCDA100] #SV检修不一致
+Ref = HZMB01RPIT/DEVAlmGGIO2$ST$Ind12$stVal
+Type = Bool
+InVarName = B01.Or24.f_func_out
+ACT = 0
+
+[GoCB3] #主控模块
+[Common]
+GoCBRef = HZMB01RPIT/LLN0$GO$gocb2
+AppID = HZMB01RPIT/LLN0.gocb2
+DatSet = HZMB01RPIT/LLN0$dsGOOSE3
+ConfRev = 1
+numDatSetEntries = 36
+FiberChNo = 1,10,11,12,13,14,2,3,4,5,6,7,8,9
+
+[DstAddr]
+Addr = 01-0C-CD-01-30-02
+Priority = 4
+VID = 0
+Appid = 3002
+MinTime = 2
+MaxTime = 5000
+
+[FCDA1] #光口1发送功率
+Ref = HZMB01RPIT/ConMeaGGIO1$MX$AnIn1$mag$f
+Type = Float
+InVarName = B01.SFPU.tx1_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA2] #光口2发送功率
+Ref = HZMB01RPIT/ConMeaGGIO1$MX$AnIn2$mag$f
+Type = Float
+InVarName = B01.SFPU.tx2_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA3] #光口3发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO1$MX$AnIn3$mag$f
+Type = Float
+InVarName = B01.SFPU.tx3_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA4] #光口4发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO1$MX$AnIn4$mag$f
+Type = Float
+InVarName = B01.SFPU.tx4_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA5] #光口5发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO1$MX$AnIn5$mag$f
+Type = Float
+InVarName = B01.SFPU.tx5_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA6] #光口6发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO1$MX$AnIn6$mag$f
+Type = Float
+InVarName = B01.SFPU.tx6_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA7] #光口7发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO1$MX$AnIn7$mag$f
+Type = Float
+InVarName = B01.SFPU.tx7_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA8] #光口8发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO1$MX$AnIn8$mag$f
+Type = Float
+InVarName = B01.SFPU.tx8_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA9] #光口9发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO2$MX$AnIn1$mag$f
+Type = Float
+InVarName = B01.SFPU.tx9_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA10] #光口10发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO2$MX$AnIn2$mag$f
+Type = Float
+InVarName = B01.SFPU.tx10_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA11] #光口11发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO2$MX$AnIn3$mag$f
+Type = Float
+InVarName = B01.SFPU.tx11_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA12] #光口12发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO2$MX$AnIn4$mag$f
+Type = Float
+InVarName = B01.SFPU.tx12_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA13] #光口13发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO2$MX$AnIn5$mag$f
+Type = Float
+InVarName = B01.SFPU.tx13_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA14] #光口14发送1功率
+Ref = HZMB01RPIT/ConMeaGGIO2$MX$AnIn6$mag$f
+Type = Float
+InVarName = B01.SFPU.tx14_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA15] #装置内部工作电压
+Ref = HZMB01RPIT/ConMeaGGIO2$MX$AnIn7$mag$f
+Type = Float
+InVarName = B01.SFPU.VCC500:0.0001:0.2
+ACT = 0
+
+[FCDA16] #光口1接收功率
+Ref = HZMB01RPIT/ConMeaGGIO3$MX$AnIn1$mag$f
+Type = Float
+InVarName = B01.SFPU.rx1_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA17] #光口2接收功率
+Ref = HZMB01RPIT/ConMeaGGIO3$MX$AnIn2$mag$f
+Type = Float
+InVarName = B01.SFPU.rx2_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA18] #光口3发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO3$MX$AnIn3$mag$f
+Type = Float
+InVarName = B01.SFPU.rx3_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA19] #光口4发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO3$MX$AnIn4$mag$f
+Type = Float
+InVarName = B01.SFPU.rx4_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA20] #光口5发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO3$MX$AnIn5$mag$f
+Type = Float
+InVarName = B01.SFPU.rx5_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA21] #光口6发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO3$MX$AnIn6$mag$f
+Type = Float
+InVarName = B01.SFPU.rx6_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA22] #光口7发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO3$MX$AnIn7$mag$f
+Type = Float
+InVarName = B01.SFPU.rx7_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA23] #光口8发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO3$MX$AnIn8$mag$f
+Type = Float
+InVarName = B01.SFPU.rx8_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA24] #光口9发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO4$MX$AnIn1$mag$f
+Type = Float
+InVarName = B01.SFPU.rx9_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA25] #光口10发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO4$MX$AnIn2$mag$f
+Type = Float
+InVarName = B01.SFPU.rx10_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA26] #光口11发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO4$MX$AnIn3$mag$f
+Type = Float
+InVarName = B01.SFPU.rx11_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA27] #光口12发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO4$MX$AnIn4$mag$f
+Type = Float
+InVarName = B01.SFPU.rx12_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA28] #光口13发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO4$MX$AnIn5$mag$f
+Type = Float
+InVarName = B01.SFPU.rx13_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA29] #光口14发送2功率
+Ref = HZMB01RPIT/ConMeaGGIO4$MX$AnIn6$mag$f
+Type = Float
+InVarName = B01.SFPU.rx14_pwr:0.0001:0.5
+ACT = 0
+
+[FCDA30] #装置内部温度
+Ref = HZMB01RPIT/ConMeaGGIO4$MX$AnIn7$mag$f
+Type = Float
+InVarName = B01.SFPU.dev_temp:0.0001:0.5
+ACT = 0
+
+[FCDA31] #A相断路器合圈最大动作电流
+Ref = HZMB01RPIT/ConMeaGGIO5$MX$AnIn1$mag$f
+Type = Float
+InVarName = B01.BreakInfo.HzCurMax1:0.00001:0.02
+ACT = 0
+
+[FCDA32] #B相断路器合圈最大动作电流
+Ref = HZMB01RPIT/ConMeaGGIO5$MX$AnIn2$mag$f
+Type = Float
+InVarName = B01.BreakInfo.HzCurMax2:0.00001:0.02
+ACT = 0
+
+[FCDA33] #C相断路器合圈最大动作电流
+Ref = HZMB01RPIT/ConMeaGGIO5$MX$AnIn3$mag$f
+Type = Float
+InVarName = B01.BreakInfo.HzCurMax3:0.00001:0.02
+ACT = 0
+
+[FCDA34] #A相断路器跳圈最大动作电流
+Ref = HZMB01RPIT/ConMeaGGIO5$MX$AnIn4$mag$f
+Type = Float
+InVarName = B01.BreakInfo.TzCurMax1:0.00001:0.02
+ACT = 0
+
+[FCDA35] #B相断路器跳圈最大动作电流
+Ref = HZMB01RPIT/ConMeaGGIO5$MX$AnIn5$mag$f
+Type = Float
+InVarName = B01.BreakInfo.TzCurMax2:0.00001:0.02
+ACT = 0
+
+[FCDA36] #C相断路器跳圈最大动作电流
+Ref = HZMB01RPIT/ConMeaGGIO5$MX$AnIn6$mag$f
+Type = Float
+InVarName = B01.BreakInfo.TzCurMax3:0.00001:0.02
+ACT = 0
+
+[GoCB4] #主控模块
+[Common]
+GoCBRef = HZMB01RPIT/LLN0$GO$gocb3
+AppID = HZMB01RPIT/LLN0.gocb3
+DatSet = HZMB01RPIT/LLN0$dsGOOSE4
+ConfRev = 1
+numDatSetEntries = 5
+FiberChNo = 1,10,11,12,13,14,2,3,4,5,6,7,8,9
+
+[DstAddr]
+Addr = 01-0C-CD-01-30-03
+Priority = 4
+VID = 0
+Appid = 3003
+MinTime = 2
+MaxTime = 5000
+
+[FCDA1] #跳A输出
+Ref = HZMB01RPIT/ToCBGGIO1$ST$Ind1$stVal
+Type = Bool
+InVarName = B01.Trip.TA_Out
+ACT = 0
+
+[FCDA2] #跳B输出
+Ref = HZMB01RPIT/ToCBGGIO1$ST$Ind2$stVal
+Type = Bool
+InVarName = B01.Trip.TB_Out
+ACT = 0
+
+[FCDA3] #跳C输出
+Ref = HZMB01RPIT/ToCBGGIO1$ST$Ind3$stVal
+Type = Bool
+InVarName = B01.Trip.TC_Out
+ACT = 0
+
+[FCDA4] #合闸输出
+Ref = HZMB01RPIT/ToCBGGIO1$ST$Ind4$stVal
+Type = Bool
+InVarName = B01.Close.HZ_Out
+ACT = 0
+
+[FCDA5] #断路器解闭锁
+Ref = HZMB01RPIT/ToCBGGIO1$ST$Ind5$stVal
+Type = Bool
+InVarName = B01.Trip.CBBLK_Op
+ACT = 0
+
+[GoCB5] #主控模块
+[Common]
+GoCBRef = HZMB01RPIT/LLN0$GO$gocb4
+AppID = HZMB01RPIT/LLN0.gocb4
+DatSet = HZMB01RPIT/LLN0$dsGOOSE5
+ConfRev = 1
+numDatSetEntries = 36
+FiberChNo = 1,10,11,12,13,14,2,3,4,5,6,7,8,9
+
+[DstAddr]
+Addr = 01-0C-CD-01-30-04
+Priority = 4
+VID = 0
+Appid = 3004
+MinTime = 2
+MaxTime = 5000
+
+[FCDA1] #刀闸1遥分输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind1$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ1YF_Out
+ACT = 0
+
+[FCDA2] #刀闸1遥合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind2$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ1YH_Out
+ACT = 0
+
+[FCDA3] #刀闸1解闭锁输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind3$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ1BLK_Out
+ACT = 0
+
+[FCDA4] #刀闸2遥分输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind4$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ2YF_Out
+ACT = 0
+
+[FCDA5] #刀闸2遥合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind5$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ2YH_Out
+ACT = 0
+
+[FCDA6] #刀闸2解闭锁输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind6$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ2BLK_Out
+ACT = 0
+
+[FCDA7] #刀闸3遥分输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind7$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ3YF_Out
+ACT = 0
+
+[FCDA8] #刀闸3遥合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind8$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ3YH_Out
+ACT = 0
+
+[FCDA9] #刀闸3解闭锁输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind9$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ3BLK_Out
+ACT = 0
+
+[FCDA10] #刀闸4遥分输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind10$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ4YF_Out
+ACT = 0
+
+[FCDA11] #刀闸4遥合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind11$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ4YH_Out
+ACT = 0
+
+[FCDA12] #刀闸4解闭锁输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind12$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ4BLK_Out
+ACT = 0
+
+[FCDA13] #刀闸5遥分输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind13$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ5YF_Out
+ACT = 0
+
+[FCDA14] #刀闸5遥合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind14$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ5YH_Out
+ACT = 0
+
+[FCDA15] #刀闸5解闭锁输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind15$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ5BLK_Out
+ACT = 0
+
+[FCDA16] #刀闸6遥分输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind16$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ6YF_Out
+ACT = 0
+
+[FCDA17] #刀闸6遥合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind17$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ6YH_Out
+ACT = 0
+
+[FCDA18] #刀闸6解闭锁输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind18$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ6BLK_Out
+ACT = 0
+
+[FCDA19] #刀闸7遥分输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind19$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ7YF_Out
+ACT = 0
+
+[FCDA20] #刀闸7遥合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind20$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ7YH_Out
+ACT = 0
+
+[FCDA21] #刀闸7解闭锁输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind21$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ7BLK_Out
+ACT = 0
+
+[FCDA22] #刀闸8遥分输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind22$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ8YF_Out
+ACT = 0
+
+[FCDA23] #刀闸8遥合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind23$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ8YH_Out
+ACT = 0
+
+[FCDA24] #刀闸8解闭锁输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind24$stVal
+Type = Bool
+InVarName = B01.DzCtr.DZ8BLK_Out
+ACT = 0
+
+[FCDA25] #至另一套手合输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind25$stVal
+Type = Bool
+InVarName = B01.Close.SH_Else
+ACT = 0
+
+[FCDA26] #至另一套手跳输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind26$stVal
+Type = Bool
+InVarName = B01.Trip.ST_Else
+ACT = 0
+
+[FCDA27] #至另一套闭重输出
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind27$stVal
+Type = Bool
+InVarName = B01.BlkReCls.BlkReCls_Bsys
+ACT = 0
+
+[FCDA28] #间隔有压
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind28$stVal
+Type = Bool
+InVarName = B01.TestBoard1.ExistVol
+ACT = 0
+
+[FCDA29] #间隔有流
+Ref = HZMB01RPIT/ToBTGGIO1$ST$Ind29$stVal
+Type = Bool
+InVarName = B01.TestBoard1.ExistCur
+ACT = 0
+
+[FCDA30] #A相断路器位置联锁用
+Ref = HZMB01RPIT/ToBTXCBR1$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPosA.Twj_Lock,B01.InDPosA.Hwj_Lock
+ACT = 0
+
+[FCDA31] #B相断路器位置联锁用
+Ref = HZMB01RPIT/ToBTXCBR2$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPosB.Twj_Lock,B01.InDPosB.Hwj_Lock
+ACT = 0
+
+[FCDA32] #C相断路器位置联锁用
+Ref = HZMB01RPIT/ToBTXCBR3$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.InDPosC.Twj_Lock,B01.InDPosC.Hwj_Lock
+ACT = 0
+
+[FCDA33] #I母地刀位置联锁用
+Ref = HZMB01RPIT/ToBTXSWI4$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.OutDPos1.Twj_Lock,B01.OutDPos1.Hwj_Lock
+ACT = 0
+
+[FCDA34] #II母地刀位置联锁用
+Ref = HZMB01RPIT/ToBTXSWI5$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.OutDPos2.Twj_Lock,B01.OutDPos2.Hwj_Lock
+ACT = 0
+
+[FCDA35] #III母地刀位置联锁用
+Ref = HZMB01RPIT/ToBTXSWI6$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.OutDPos3.Twj_Lock,B01.OutDPos3.Hwj_Lock
+ACT = 0
+
+[FCDA36] #旁母地刀位置联锁用
+Ref = HZMB01RPIT/ToBTXSWI7$ST$Pos$stVal
+Type = Bstring2
+InVarName = B01.OutDPos4.Twj_Lock,B01.OutDPos4.Hwj_Lock
+ACT = 0
+
+[GOOSE Rx]
+numGoCb = 7
+numInput = 107
+
+[GoCB1] #合智集成单元
+Addr = 01-0C-CD-01-05-01
+Appid = 0501
+GoCBRef = IM001RPIT/LLN0$GO$gocb0
+AppID = IM001RPIT/LLN0$GO$gocb0
+DatSet = IM001RPIT/LLN0$dsGOOSE1
+ConfRev = 1
+numDatSetEntries = 34
+FiberChNo = 1
+
+[GoCB2] #合智集成单元
+Addr = 01-0C-CD-01-05-13
+Appid = 0513
+GoCBRef = HZIMA1.0RPIT/LLN0$GO$gocb0
+AppID = HZIMA1.0RPIT/LLN0.gocb0
+DatSet = HZIMA1.0RPIT/LLN0$dsGOOSE1
+ConfRev = 1
+numDatSetEntries = 34
+FiberChNo = 1
+
+[GoCB3] #合智集成单元
+Addr = 01-0C-CD-01-05-05
+Appid = 0505
+GoCBRef = IM002RPIT/LLN0$GO$gocb0
+AppID = IM002RPIT/LLN0.gocb0
+DatSet = IM002RPIT/LLN0$dsGOOSE1
+ConfRev = 1
+numDatSetEntries = 34
+FiberChNo = 1
+
+[GoCB4] #WMH-801D-DG-G
+Addr = 01-0C-CD-01-01-10
+Appid = 0110
+GoCBRef = PMHPIGO/LLN0$GO$GO_Gcb1
+AppID = PMHPIGO/LLN0.GO_Gcb1
+DatSet = PMHPIGO/LLN0$dsGOOSE
+ConfRev = 1
+numDatSetEntries = 33
+FiberChNo = 1
+
+[GoCB5] #线路保护装置
+Addr = 01-0C-CD-01-01-09
+Appid = 0109
+GoCBRef = PXH1002PIGO/LLN0$GO$GO_Gcb1
+AppID = PXH1002PIGO/LLN0.GO_Gcb1
+DatSet = PXH1002PIGO/LLN0$dsGOOSE
+ConfRev = 1
+numDatSetEntries = 21
+FiberChNo = 1
+
+[GoCB6] #间隔测控装置
+Addr = 01-0C-CD-01-01-06
+Appid = 0106
+GoCBRef = FCK-851APIGO/LLN0$GO$GO_Gcb1
+AppID = FCK-851APIGO/LLN0.GO_Gcb1
+DatSet = FCK-851APIGO/LLN0$dsGOOSE1
+ConfRev = 1
+numDatSetEntries = 49
+FiberChNo = 1
+
+[GoCB7] #间隔测控装置
+Addr = 01-0C-CD-01-01-13
+Appid = 0113
+GoCBRef = FCK851A2PIGO/LLN0$GO$GO_Gcb1
+AppID = FCK851A2PIGO/LLN0.GO_Gcb1
+DatSet = FCK851A2PIGO/LLN0$dsGOOSE1
+ConfRev = 1
+numDatSetEntries = 49
+FiberChNo = 1
+
+[INPUT1] #断路器位置
+GoCbIndex = 1
+GoCbEntryIndex = 1
+Ref = IM001RPIT/Q0XCBR1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPosA.pTwj_GSE__AB,B01.InDPosA.pHwj_GSE__AB
+
+[INPUT2] #刀闸1位置
+GoCbIndex = 1
+GoCbEntryIndex = 4
+Ref = IM001RPIT/QDZ1XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPosB.pTwj_GSE__AB,B01.InDPosB.pHwj_GSE__AB
+
+[INPUT3] #刀闸2位置
+GoCbIndex = 1
+GoCbEntryIndex = 6
+Ref = IM001RPIT/QDZ2XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPosC.pTwj_GSE__AB,B01.InDPosC.pHwj_GSE__AB
+
+[INPUT4] #刀闸1位置
+GoCbIndex = 2
+GoCbEntryIndex = 4
+Ref = HZIMA1$0RPIT/QDZ1XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPos1.pTwj_GSE__AB,B01.InDPos1.pHwj_GSE__AB
+
+[INPUT5] #刀闸2位置
+GoCbIndex = 2
+GoCbEntryIndex = 6
+Ref = HZIMA1$0RPIT/QDZ2XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPos2.pTwj_GSE__AB,B01.InDPos2.pHwj_GSE__AB
+
+[INPUT6] #刀闸3位置
+GoCbIndex = 2
+GoCbEntryIndex = 8
+Ref = HZIMA1$0RPIT/QDZ3XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPos3.pTwj_GSE__AB,B01.InDPos3.pHwj_GSE__AB
+
+[INPUT7] #刀闸4位置
+GoCbIndex = 2
+GoCbEntryIndex = 10
+Ref = HZIMA1$0RPIT/QDZ4XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPos4.pTwj_GSE__AB,B01.InDPos4.pHwj_GSE__AB
+
+[INPUT8] #刀闸5位置
+GoCbIndex = 2
+GoCbEntryIndex = 12
+Ref = HZIMA1$0RPIT/QDZ5XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPos5.pTwj_GSE__AB,B01.InDPos5.pHwj_GSE__AB
+
+[INPUT9] #刀闸6位置
+GoCbIndex = 2
+GoCbEntryIndex = 14
+Ref = HZIMA1$0RPIT/QDZ6XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPos6.pTwj_GSE__AB,B01.InDPos6.pHwj_GSE__AB
+
+[INPUT10] #刀闸7位置
+GoCbIndex = 2
+GoCbEntryIndex = 16
+Ref = HZIMA1$0RPIT/QDZ7XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPos7.pTwj_GSE__AB,B01.InDPos7.pHwj_GSE__AB
+
+[INPUT11] #刀闸8位置
+GoCbIndex = 2
+GoCbEntryIndex = 18
+Ref = HZIMA1$0RPIT/QDZ8XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.InDPos8.pTwj_GSE__AB,B01.InDPos8.pHwj_GSE__AB
+
+[INPUT12] #刀闸1位置
+GoCbIndex = 3
+GoCbEntryIndex = 4
+Ref = IM002RPIT/QDZ1XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.OutDPos1.pTwj_GSE__AB,B01.OutDPos1.pHwj_GSE__AB
+
+[INPUT13] #刀闸2位置
+GoCbIndex = 3
+GoCbEntryIndex = 6
+Ref = IM002RPIT/QDZ2XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.OutDPos2.pTwj_GSE__AB,B01.OutDPos2.pHwj_GSE__AB
+
+[INPUT14] #刀闸3位置
+GoCbIndex = 3
+GoCbEntryIndex = 8
+Ref = IM002RPIT/QDZ3XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.OutDPos3.pTwj_GSE__AB,B01.OutDPos3.pHwj_GSE__AB
+
+[INPUT15] #刀闸4位置
+GoCbIndex = 3
+GoCbEntryIndex = 10
+Ref = IM002RPIT/QDZ4XSWI1$ST$Pos$stVal
+Type = Bstring2
+OutVarName = B01.OutDPos4.pTwj_GSE__AB,B01.OutDPos4.pHwj_GSE__AB
+
+[INPUT16] #母联1_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 1
+Ref = PMHPIGO/PTRC1$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTA1_GSE__AB
+
+[INPUT17] #分段_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 2
+Ref = PMHPIGO/PTRC2$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTA2_GSE__AB
+
+[INPUT18] #母联2_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 3
+Ref = PMHPIGO/PTRC3$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTA3_GSE__AB
+
+[INPUT19] #主变1_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 4
+Ref = PMHPIGO/PTRC4$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTB1_GSE__AB
+
+[INPUT20] #主变2_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 5
+Ref = PMHPIGO/PTRC5$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTB2_GSE__AB
+
+[INPUT21] #支路6_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 6
+Ref = PMHPIGO/PTRC6$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTB3_GSE__AB
+
+[INPUT22] #支路7_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 7
+Ref = PMHPIGO/PTRC7$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTC1_GSE__AB
+
+[INPUT23] #支路8_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 8
+Ref = PMHPIGO/PTRC8$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTC2_GSE__AB
+
+[INPUT24] #支路9_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 9
+Ref = PMHPIGO/PTRC9$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTC3_GSE__AB
+
+[INPUT25] #支路10_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 10
+Ref = PMHPIGO/PTRC10$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJQ1_GSE__AB
+
+[INPUT26] #支路11_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 11
+Ref = PMHPIGO/PTRC11$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJQ2_GSE__AB
+
+[INPUT27] #支路12_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 12
+Ref = PMHPIGO/PTRC12$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJQ3_GSE__AB
+
+[INPUT28] #支路13_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 13
+Ref = PMHPIGO/PTRC13$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR1_GSE__AB
+
+[INPUT29] #主变3_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 14
+Ref = PMHPIGO/PTRC14$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR2_GSE__AB
+
+[INPUT30] #主变4_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 15
+Ref = PMHPIGO/PTRC15$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR3_GSE__AB
+
+[INPUT31] #支路16_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 16
+Ref = PMHPIGO/PTRC16$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR4_GSE__AB
+
+[INPUT32] #支路17_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 17
+Ref = PMHPIGO/PTRC17$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR5_GSE__AB
+
+[INPUT33] #支路18_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 18
+Ref = PMHPIGO/PTRC18$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR6_GSE__AB
+
+[INPUT34] #支路19_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 19
+Ref = PMHPIGO/PTRC19$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR7_GSE__AB
+
+[INPUT35] #支路20_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 20
+Ref = PMHPIGO/PTRC20$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR8_GSE__AB
+
+[INPUT36] #支路21_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 21
+Ref = PMHPIGO/PTRC21$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR9_GSE__AB
+
+[INPUT37] #支路22_保护跳闸
+GoCbIndex = 4
+GoCbEntryIndex = 22
+Ref = PMHPIGO/PTRC22$ST$Tr$general
+Type = Bool
+OutVarName = B01.Trip.pTJR10_GSE__AB
+
+[INPUT38] #启动边断路器失灵
+GoCbIndex = 5
+GoCbEntryIndex = 4
+Ref = PXH1002PIGO/PTRC2$ST$StrBF$phsA
+Type = Bool
+OutVarName = B01.Close.pRECLS1_GSE__AB
+
+[INPUT39] #启动边断路器失灵
+GoCbIndex = 5
+GoCbEntryIndex = 5
+Ref = PXH1002PIGO/PTRC2$ST$StrBF$phsB
+Type = Bool
+OutVarName = B01.Close.pRECLS2_GSE__AB
+
+[INPUT40] #启动边断路器失灵
+GoCbIndex = 5
+GoCbEntryIndex = 6
+Ref = PXH1002PIGO/PTRC2$ST$StrBF$phsC
+Type = Bool
+OutVarName = B01.Close.pRECLS3_GSE__AB
+
+[INPUT41] #启动中断路器失灵
+GoCbIndex = 5
+GoCbEntryIndex = 11
+Ref = PXH1002PIGO/PTRC3$ST$StrBF$phsA
+Type = Bool
+OutVarName = B01.Close.pRECLS4_GSE__AB
+
+[INPUT42] #闭锁边断路器重合闸
+GoCbIndex = 5
+GoCbEntryIndex = 7
+Ref = PXH1002PIGO/PTRC2$ST$BlkRecST$stVal
+Type = Bool
+OutVarName = B01.BlkReCls.pBlkReCLS1_GSE__AB
+
+[INPUT43] #闭锁中断路器重合闸
+GoCbIndex = 5
+GoCbEntryIndex = 14
+Ref = PXH1002PIGO/PTRC3$ST$BlkRecST$stVal
+Type = Bool
+OutVarName = B01.BlkReCls.pBlkReCLS2_GSE__AB
+
+[INPUT44] #远传1开出
+GoCbIndex = 5
+GoCbEntryIndex = 15
+Ref = PXH1002PIGO/PSCH1$ST$ProRx$stVal
+Type = Bool
+OutVarName = B01.BlkReCls.pBlkReCLS3_GSE__AB
+
+[INPUT45] #调压升开出
+GoCbIndex = 6
+GoCbEntryIndex = 47
+Ref = FCK-851APIGO/ATCC1$ST$OpHi$stVal
+Type = Bool
+OutVarName = B01.Close.pBSysSH_GSE__AB
+
+[INPUT46] #调压降开出
+GoCbIndex = 6
+GoCbEntryIndex = 48
+Ref = FCK-851APIGO/ATCC1$ST$OpLo$stVal
+Type = Bool
+OutVarName = B01.Trip.pBSysST_GSE__AB
+
+[INPUT47] #调压急停开出
+GoCbIndex = 6
+GoCbEntryIndex = 49
+Ref = FCK-851APIGO/ATCC1$ST$OpStop$stVal
+Type = Bool
+OutVarName = B01.BlkReCls.pBSysBlkReCls_GSE__AB
+
+[INPUT48] #断路器分开出
+GoCbIndex = 6
+GoCbEntryIndex = 14
+Ref = FCK-851APIGO/CSWI1$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.Trip.pCBYF1_GSE__AB
+
+[INPUT49] #断路器合开出
+GoCbIndex = 6
+GoCbEntryIndex = 15
+Ref = FCK-851APIGO/CSWI1$ST$OpCls$general
+Type = Bool
+OutVarName = B01.Close.pCBYH1_GSE__AB
+
+[INPUT50] #断路器操作允许
+GoCbIndex = 6
+GoCbEntryIndex = 1
+Ref = FCK-851APIGO/CILO1$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.Trip.pCBBLK1_GSE__AB
+
+[INPUT51] #直控4
+GoCbIndex = 6
+GoCbEntryIndex = 43
+Ref = FCK-851APIGO/GOGGIO1$ST$SPCSO4$stVal
+Type = Bool
+OutVarName = B01.Trip.pCBYF3_GSE__AB
+
+[INPUT52] #直控5
+GoCbIndex = 6
+GoCbEntryIndex = 44
+Ref = FCK-851APIGO/GOGGIO1$ST$SPCSO5$stVal
+Type = Bool
+OutVarName = B01.Close.pCBYH3_GSE__AB
+
+[INPUT53] #对象13分开出
+GoCbIndex = 6
+GoCbEntryIndex = 38
+Ref = FCK-851APIGO/CSWI13$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.Trip.pReset1_GSE__AB
+
+[INPUT54] #对象13合开出
+GoCbIndex = 6
+GoCbEntryIndex = 39
+Ref = FCK-851APIGO/CSWI13$ST$OpCls$general
+Type = Bool
+OutVarName = B01.Trip.pReset2_GSE__AB
+
+[INPUT55] #直控1
+GoCbIndex = 6
+GoCbEntryIndex = 40
+Ref = FCK-851APIGO/GOGGIO1$ST$SPCSO1$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ1YF1_GSE__AB
+
+[INPUT56] #直控2
+GoCbIndex = 6
+GoCbEntryIndex = 41
+Ref = FCK-851APIGO/GOGGIO1$ST$SPCSO2$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ1YH1_GSE__AB
+
+[INPUT57] #直控3
+GoCbIndex = 6
+GoCbEntryIndex = 42
+Ref = FCK-851APIGO/GOGGIO1$ST$SPCSO3$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ1BLK1_GSE__AB
+
+[INPUT58] #对象2分开出
+GoCbIndex = 6
+GoCbEntryIndex = 16
+Ref = FCK-851APIGO/CSWI2$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ2YF1_GSE__AB
+
+[INPUT59] #对象2合开出
+GoCbIndex = 6
+GoCbEntryIndex = 17
+Ref = FCK-851APIGO/CSWI2$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ2YH1_GSE__AB
+
+[INPUT60] #对象2操作允许
+GoCbIndex = 6
+GoCbEntryIndex = 2
+Ref = FCK-851APIGO/CILO2$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ2BLK1_GSE__AB
+
+[INPUT61] #对象3分开出
+GoCbIndex = 6
+GoCbEntryIndex = 18
+Ref = FCK-851APIGO/CSWI3$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ3YF1_GSE__AB
+
+[INPUT62] #对象3合开出
+GoCbIndex = 6
+GoCbEntryIndex = 19
+Ref = FCK-851APIGO/CSWI3$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ3YH1_GSE__AB
+
+[INPUT63] #对象3操作允许
+GoCbIndex = 6
+GoCbEntryIndex = 3
+Ref = FCK-851APIGO/CILO3$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ3BLK1_GSE__AB
+
+[INPUT64] #对象4分开出
+GoCbIndex = 6
+GoCbEntryIndex = 20
+Ref = FCK-851APIGO/CSWI4$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ4YF1_GSE__AB
+
+[INPUT65] #对象4合开出
+GoCbIndex = 6
+GoCbEntryIndex = 21
+Ref = FCK-851APIGO/CSWI4$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ4YH1_GSE__AB
+
+[INPUT66] #对象4操作允许
+GoCbIndex = 6
+GoCbEntryIndex = 4
+Ref = FCK-851APIGO/CILO4$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ4BLK1_GSE__AB
+
+[INPUT67] #对象5分开出
+GoCbIndex = 6
+GoCbEntryIndex = 22
+Ref = FCK-851APIGO/CSWI5$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ5YF1_GSE__AB
+
+[INPUT68] #对象5合开出
+GoCbIndex = 6
+GoCbEntryIndex = 23
+Ref = FCK-851APIGO/CSWI5$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ5YH1_GSE__AB
+
+[INPUT69] #对象5操作允许
+GoCbIndex = 6
+GoCbEntryIndex = 5
+Ref = FCK-851APIGO/CILO5$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ5BLK1_GSE__AB
+
+[INPUT70] #对象6分开出
+GoCbIndex = 6
+GoCbEntryIndex = 24
+Ref = FCK-851APIGO/CSWI6$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ6YF1_GSE__AB
+
+[INPUT71] #对象6合开出
+GoCbIndex = 6
+GoCbEntryIndex = 25
+Ref = FCK-851APIGO/CSWI6$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ6YH1_GSE__AB
+
+[INPUT72] #对象6操作允许
+GoCbIndex = 6
+GoCbEntryIndex = 6
+Ref = FCK-851APIGO/CILO6$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ6BLK1_GSE__AB
+
+[INPUT73] #对象7分开出
+GoCbIndex = 6
+GoCbEntryIndex = 26
+Ref = FCK-851APIGO/CSWI7$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ7YF1_GSE__AB
+
+[INPUT74] #对象7合开出
+GoCbIndex = 6
+GoCbEntryIndex = 27
+Ref = FCK-851APIGO/CSWI7$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ7YH1_GSE__AB
+
+[INPUT75] #对象7操作允许
+GoCbIndex = 6
+GoCbEntryIndex = 7
+Ref = FCK-851APIGO/CILO7$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ7BLK1_GSE__AB
+
+[INPUT76] #对象8分开出
+GoCbIndex = 6
+GoCbEntryIndex = 28
+Ref = FCK-851APIGO/CSWI8$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ8YF1_GSE__AB
+
+[INPUT77] #对象8合开出
+GoCbIndex = 6
+GoCbEntryIndex = 29
+Ref = FCK-851APIGO/CSWI8$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ8YH1_GSE__AB
+
+[INPUT78] #对象8操作允许
+GoCbIndex = 6
+GoCbEntryIndex = 8
+Ref = FCK-851APIGO/CILO8$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ8BLK1_GSE__AB
+
+[INPUT79] #断路器分开出
+GoCbIndex = 7
+GoCbEntryIndex = 14
+Ref = FCK851A2PIGO/CSWI1$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.Trip.pCBYF2_GSE__AB
+
+[INPUT80] #断路器合开出
+GoCbIndex = 7
+GoCbEntryIndex = 15
+Ref = FCK851A2PIGO/CSWI1$ST$OpCls$general
+Type = Bool
+OutVarName = B01.Close.pCBYH2_GSE__AB
+
+[INPUT81] #断路器操作允许
+GoCbIndex = 7
+GoCbEntryIndex = 1
+Ref = FCK851A2PIGO/CILO1$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.Trip.pCBBLK2_GSE__AB
+
+[INPUT82] #直控4
+GoCbIndex = 7
+GoCbEntryIndex = 43
+Ref = FCK851A2PIGO/GOGGIO1$ST$SPCSO4$stVal
+Type = Bool
+OutVarName = B01.Trip.pCBYF4_GSE__AB
+
+[INPUT83] #直控5
+GoCbIndex = 7
+GoCbEntryIndex = 44
+Ref = FCK851A2PIGO/GOGGIO1$ST$SPCSO5$stVal
+Type = Bool
+OutVarName = B01.Close.pCBYH4_GSE__AB
+
+[INPUT84] #直控1
+GoCbIndex = 7
+GoCbEntryIndex = 40
+Ref = FCK851A2PIGO/GOGGIO1$ST$SPCSO1$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ1YF2_GSE__AB
+
+[INPUT85] #直控2
+GoCbIndex = 7
+GoCbEntryIndex = 41
+Ref = FCK851A2PIGO/GOGGIO1$ST$SPCSO2$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ1YH2_GSE__AB
+
+[INPUT86] #直控3
+GoCbIndex = 7
+GoCbEntryIndex = 42
+Ref = FCK851A2PIGO/GOGGIO1$ST$SPCSO3$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ1BLK2_GSE__AB
+
+[INPUT87] #对象2分开出
+GoCbIndex = 7
+GoCbEntryIndex = 16
+Ref = FCK851A2PIGO/CSWI2$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ2YF2_GSE__AB
+
+[INPUT88] #对象2合开出
+GoCbIndex = 7
+GoCbEntryIndex = 17
+Ref = FCK851A2PIGO/CSWI2$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ2YH2_GSE__AB
+
+[INPUT89] #对象2操作允许
+GoCbIndex = 7
+GoCbEntryIndex = 2
+Ref = FCK851A2PIGO/CILO2$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ2BLK2_GSE__AB
+
+[INPUT90] #对象3分开出
+GoCbIndex = 7
+GoCbEntryIndex = 18
+Ref = FCK851A2PIGO/CSWI3$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ3YF2_GSE__AB
+
+[INPUT91] #对象3合开出
+GoCbIndex = 7
+GoCbEntryIndex = 19
+Ref = FCK851A2PIGO/CSWI3$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ3YH2_GSE__AB
+
+[INPUT92] #对象3操作允许
+GoCbIndex = 7
+GoCbEntryIndex = 3
+Ref = FCK851A2PIGO/CILO3$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ3BLK2_GSE__AB
+
+[INPUT93] #对象4分开出
+GoCbIndex = 7
+GoCbEntryIndex = 20
+Ref = FCK851A2PIGO/CSWI4$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ4YF2_GSE__AB
+
+[INPUT94] #对象4合开出
+GoCbIndex = 7
+GoCbEntryIndex = 21
+Ref = FCK851A2PIGO/CSWI4$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ4YH2_GSE__AB
+
+[INPUT95] #对象4操作允许
+GoCbIndex = 7
+GoCbEntryIndex = 4
+Ref = FCK851A2PIGO/CILO4$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ4BLK2_GSE__AB
+
+[INPUT96] #对象5分开出
+GoCbIndex = 7
+GoCbEntryIndex = 22
+Ref = FCK851A2PIGO/CSWI5$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ5YF2_GSE__AB
+
+[INPUT97] #对象5合开出
+GoCbIndex = 7
+GoCbEntryIndex = 23
+Ref = FCK851A2PIGO/CSWI5$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ5YH2_GSE__AB
+
+[INPUT98] #对象5操作允许
+GoCbIndex = 7
+GoCbEntryIndex = 5
+Ref = FCK851A2PIGO/CILO5$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ5BLK2_GSE__AB
+
+[INPUT99] #对象6分开出
+GoCbIndex = 7
+GoCbEntryIndex = 24
+Ref = FCK851A2PIGO/CSWI6$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ6YF2_GSE__AB
+
+[INPUT100] #对象6合开出
+GoCbIndex = 7
+GoCbEntryIndex = 25
+Ref = FCK851A2PIGO/CSWI6$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ6YH2_GSE__AB
+
+[INPUT101] #对象6操作允许
+GoCbIndex = 7
+GoCbEntryIndex = 6
+Ref = FCK851A2PIGO/CILO6$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ6BLK2_GSE__AB
+
+[INPUT102] #对象7分开出
+GoCbIndex = 7
+GoCbEntryIndex = 26
+Ref = FCK851A2PIGO/CSWI7$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ7YF2_GSE__AB
+
+[INPUT103] #对象7合开出
+GoCbIndex = 7
+GoCbEntryIndex = 27
+Ref = FCK851A2PIGO/CSWI7$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ7YH2_GSE__AB
+
+[INPUT104] #对象7操作允许
+GoCbIndex = 7
+GoCbEntryIndex = 7
+Ref = FCK851A2PIGO/CILO7$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ7BLK2_GSE__AB
+
+[INPUT105] #对象8分开出
+GoCbIndex = 7
+GoCbEntryIndex = 28
+Ref = FCK851A2PIGO/CSWI8$ST$OpOpn$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ8YF2_GSE__AB
+
+[INPUT106] #对象8合开出
+GoCbIndex = 7
+GoCbEntryIndex = 29
+Ref = FCK851A2PIGO/CSWI8$ST$OpCls$general
+Type = Bool
+OutVarName = B01.DzCtr.pDZ8YH2_GSE__AB
+
+[INPUT107] #对象8操作允许
+GoCbIndex = 7
+GoCbEntryIndex = 8
+Ref = FCK851A2PIGO/CILO8$ST$EnaOp$stVal
+Type = Bool
+OutVarName = B01.DzCtr.pDZ8BLK2_GSE__AB
+
+[SMV Tx]
+numSmvCb = 1
+
+[SMVCB1] #主控模块
+[Common]
+SvID = HZMB01MUSV/LLN0.smvcb0
+ConfRev = 1
+NoASDU = 1
+NumofSmpdata = 35
+FiberChNo = 1,10,11,12,13,14,2,3,4,5,6,7,8,9
+
+[DstAddr]
+Addr = 01-0C-CD-04-00-00
+Priority = 4
+VID = 0
+Appid = 4000
+
+[DATA1] #延迟时间
+InVarName = B01.DataMerge1.delay_time
+
+[DATA2] #A相保护电流1(9-2)
+InVarName = B01.DataMerge1.Ipa_9_2
+
+[DATA3] #A相保护电流2(9-2)
+InVarName = B02.DataMerge1.Ipa_9_2
+
+[DATA4] #B相保护电流1(9-2)
+InVarName = B01.DataMerge1.Ipb_9_2
+
+[DATA5] #B相保护电流2(9-2)
+InVarName = B02.DataMerge1.Ipb_9_2
+
+[DATA6] #C相保护电流1(9-2)
+InVarName = B01.DataMerge1.Ipc_9_2
+
+[DATA7] #C相保护电流2(9-2)
+InVarName = B02.DataMerge1.Ipc_9_2
+
+[DATA8] #A相测量电流(9-2)
+InVarName = B01.DataMerge1.Ima_9_2
+
+[DATA9] #B相测量电流(9-2)
+InVarName = B01.DataMerge1.Imb_9_2
+
+[DATA10] #C相测量电流(9-2)
+InVarName = B01.DataMerge1.Imc_9_2
+
+[DATA11] #零序电流1(9-2)
+InVarName = B01.DataMerge1.I0_9_2
+
+[DATA12] #零序电流2(9-2)
+InVarName = B02.DataMerge1.I0_9_2
+
+[DATA13] #间隙电流1(9-2)
+InVarName = B01.DataMerge1.In_9_2
+
+[DATA14] #间隙电流2(9-2)
+InVarName = B02.DataMerge1.In_9_2
+
+[DATA15] #备用通道电流1
+InVarName = B01.DataMerge1.Ibak_9_2
+
+[DATA16] #备用通道电流2
+InVarName = B02.DataMerge1.Ibak_9_2
+
+[DATA17] #A相保护电压1(9-2)
+InVarName = B01.DataMerge1.Upa_9_2
+
+[DATA18] #A相保护电压2(9-2)
+InVarName = B02.DataMerge1.Upa_9_2
+
+[DATA19] #B相保护电压1(9-2)
+InVarName = B01.DataMerge1.Upb_9_2
+
+[DATA20] #B相保护电压2(9-2)
+InVarName = B02.DataMerge1.Upb_9_2
+
+[DATA21] #C相保护电压1(9-2)
+InVarName = B01.DataMerge1.Upc_9_2
+
+[DATA22] #C相保护电压2(9-2)
+InVarName = B02.DataMerge1.Upc_9_2
+
+[DATA23] #零序电压1(9-2)
+InVarName = B01.DataMerge1.U0_9_2
+
+[DATA24] #零序电压2(9-2)
+InVarName = B02.DataMerge1.U0_9_2
+
+[DATA25] #A相测量电压(9-2)
+InVarName = B02.DataMerge1.Uma_9_2
+
+[DATA26] #B相测量电压(9-2)
+InVarName = B02.DataMerge1.Umb_9_2
+
+[DATA27] #C相测量电压(9-2)
+InVarName = B02.DataMerge1.Umc_9_2
+
+[DATA28] #同期电压1(9-2)
+InVarName = B01.DataMerge1.Ux_9_2
+
+[DATA29] #同期电压2(9-2)
+InVarName = B02.DataMerge1.Ux_9_2
+
+[DATA30] #A相同期电压1(9-2)
+InVarName = B01.DataMerge1.Uxa_9_2
+
+[DATA31] #A相同期电压2(9-2)
+InVarName = B02.DataMerge1.Uxa_9_2
+
+[DATA32] #B相同期电压1(9-2)
+InVarName = B01.DataMerge1.Uxb_9_2
+
+[DATA33] #B相同期电压2(9-2)
+InVarName = B02.DataMerge1.Uxb_9_2
+
+[DATA34] #C相同期电压1(9-2)
+InVarName = B01.DataMerge1.Uxc_9_2
+
+[DATA35] #C相同期电压2(9-2)
+InVarName = B02.DataMerge1.Uxc_9_2
+
+[SMV Rx]
+numSmvCb = 0
+numInput = 0
+
+[FILE INFO]
+IcdCrc = B7A6408D
+
+[Private Info]
+slotId = B01
+fileCrc = 43C94144
